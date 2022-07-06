@@ -2,6 +2,8 @@ function SonnenkompassPlot()
     clc
     clear
 
+    format long
+
     ort    = 'LasPalmas';
     datum  = '12.10.2021';
 

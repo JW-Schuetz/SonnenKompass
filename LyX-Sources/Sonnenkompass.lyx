@@ -1576,7 +1576,7 @@ stem durch
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\underline{P}^{T}\left(\underline{x}-\underline{P}\right)=0\label{eq:Tangentialebene}
+\underline{P}^{T}\left(\underline{x}-\underline{P}\right)=\left(\underline{P}-\underline{x}\right)^{T}\underline{P}=0\label{eq:Tangentialebene}
 \end{equation}
 
 \end_inset
@@ -2531,7 +2531,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename SchattenTrajektorie.eps
+	filename LasPalmas-21.06.2021.eps
 	lyxscale 230
 	scale 50
 
@@ -2709,7 +2709,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename SchattenTrajektorieSSW.eps
+	filename LasPalmas-21.06.2021.eps
 	lyxscale 160
 	scale 50
 
@@ -2751,7 +2751,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename SchattenTrajektorieFAE.eps
+	filename LasPalmas-21.03.2021.eps
 	lyxscale 160
 	scale 50
 
@@ -4600,7 +4600,7 @@ Normalenform: Stützvektor
 \end_inset
 
  auf der Ebene gelten 
-\begin_inset Formula $\left(\underline{x}-\underline{p}\right)^{T}\underline{n}=0$
+\begin_inset Formula $\left(\underline{p}-\underline{x}\right)^{T}\underline{n}=0$
 \end_inset
 
 .
@@ -5372,8 +5372,8 @@ Jeder Trajektorienpunkt in
 \end_inset
 
  projiziert.
- Die Projektion des Stabes ist der Ursprung des Koordinatensystems auf der
- Tangentialebene.
+ Die Projektion des Stabes ist dabei der Ursprung des Koordinatensystems
+ auf der Tangentialebene.
  
 \end_layout
 
@@ -5396,6 +5396,7 @@ Eine Orthogonalprojektion
 \begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
+P\left(\alpha\underline{x}+\beta\underline{y}\right) & = & \alpha P\left(\underline{x}\right)+\beta P\left(\underline{y}\right)\\
 P\left(\underline{x}\right) & \in & U\\
 \forall\underline{u}\in U:\left[P\left(\underline{x}\right)-\underline{x}\right]^{T}\underline{u} & = & 0.
 \end{eqnarray*}
@@ -5412,14 +5413,20 @@ Die Punkte
 
  der Tangentialebene erfüllen die Beziehung 
 \begin_inset Formula 
-\[
-\left(\underline{x}-\underline{s}\right)^{T}\underline{s}=0
-\]
+\begin{eqnarray*}
+\left(\underline{s}-\underline{x}\right)^{T}\underline{s} & = & 0\\
+\underline{s}^{T}\underline{s} & = & \underline{x}^{T}\underline{s}
+\end{eqnarray*}
 
 \end_inset
 
- mit dem Stützvektor 
+mit dem Stützvektor 
 \begin_inset Formula $\underline{s}$
+\end_inset
+
+.
+ Der Stützvektor ist gleich dem Ebenen-Normalenvektor 
+\begin_inset Formula $\underline{n}$
 \end_inset
 
 .

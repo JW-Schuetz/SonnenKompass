@@ -10,7 +10,7 @@ function SonnenkompassNumeric
 
     % Variable Daten
     ort   = 'LasPalmas';
-    datum = '12.10.2021';
+    datum = '21.03.2021';
 
     fileName = [ ort, '-', datum, '.mat' ];
 
