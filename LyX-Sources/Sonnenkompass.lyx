@@ -5396,9 +5396,9 @@ Eine Orthogonalprojektion
 \begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
-P\left(\alpha\underline{x}+\beta\underline{y}\right) & = & \alpha P\left(\underline{x}\right)+\beta P\left(\underline{y}\right)\\
-P\left(\underline{x}\right) & \in & U\\
-\forall\underline{u}\in U:\left[P\left(\underline{x}\right)-\underline{x}\right]^{T}\underline{u} & = & 0.
+P\left(\alpha\underline{x}+\beta\underline{y}\right) & = & \alpha P\left(\underline{x}\right)+\beta P\left(\underline{y}\right)\qquad\text{(Linearität)}\\
+P\left(\underline{x}\right) & \in & U\qquad\text{(Projektion)}\\
+\forall\underline{u}\in U:\left[P\left(\underline{x}\right)-\underline{x}\right]^{T}\underline{u} & = & 0\qquad\text{(Orthogonalität)}
 \end{eqnarray*}
 
 \end_inset
@@ -5424,13 +5424,140 @@ mit dem Stützvektor
 \begin_inset Formula $\underline{s}$
 \end_inset
 
-.
- Der Stützvektor ist gleich dem Ebenen-Normalenvektor 
-\begin_inset Formula $\underline{n}$
+, für den Ebenen-Normalenvektor gilt 
+\begin_inset Formula $\underline{n}=\frac{\underline{s}}{\left\Vert \underline{s}\right\Vert }$
 \end_inset
 
 .
  
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename OrthogonalProjektion.eps
+	lyxscale 200
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Orthogonal"
+
+\end_inset
+
+Orthogonalprojektion, Fall 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Für die Projektion des Punktes 
+\begin_inset Formula $\underline{x}_{0}$
+\end_inset
+
+ erhält man (siehe Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Orthogonal"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\underline{x}_{0}^{'}=\underline{x}_{0}+\left(\underline{n}^{T}\underline{x}_{0}\right)\underline{n}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Es gilt 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\underline{n}^{T}\underline{x}_{0}\right)\underline{n} & = & \left[\left(n_{1},n_{2},n_{3}\right)\left(\begin{array}{c}
+a\\
+b\\
+c
+\end{array}\right)\right]\left(\begin{array}{c}
+n_{1}\\
+n_{2}\\
+n_{3}
+\end{array}\right)\\
+ & = & \left(n_{1}a+n_{2}b+n_{3}c\right)\left(\begin{array}{c}
+n_{1}\\
+n_{2}\\
+n_{3}
+\end{array}\right)\\
+ & = & \left(\begin{array}{c}
+n_{1}^{2}a+n_{1}n_{2}b+n_{1}n_{3}c\\
+n_{1}n_{2}a+n_{2}^{2}b+n_{1}n_{3}c\\
+n_{1}n_{3}a+n_{2}n_{3}b+n_{3}^{2}c
+\end{array}\right)\\
+ & = & \left(\begin{array}{ccc}
+n_{1}^{2} & n_{1}n_{2} & n_{1}n_{3}\\
+n_{1}n_{2} & n_{2}^{2} & n_{1}n_{3}\\
+n_{1}n_{3} & n_{2}n_{3} & n_{3}^{2}
+\end{array}\right)\left(\begin{array}{c}
+a\\
+b\\
+c
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+und somit 
+\begin_inset Formula 
+\[
+\underline{x}_{0}^{'}=\left(\begin{array}{ccc}
+1+n_{1}^{2} & n_{1}n_{2} & n_{1}n_{3}\\
+n_{1}n_{2} & 1+n_{2}^{2} & n_{1}n_{3}\\
+n_{1}n_{3} & n_{2}n_{3} & 1+n_{3}^{2}
+\end{array}\right)\underline{x}_{0}.
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
