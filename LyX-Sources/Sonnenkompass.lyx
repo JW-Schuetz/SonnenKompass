@@ -4521,13 +4521,19 @@ beschreiben.
 \begin_inset Formula $\underline{n}=\left(a,b,c\right)^{T}$
 \end_inset
 
- der Normalenvektor der Ebene.
+ der Normalenvektor der Ebene (siehe dazu z.B.
  
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wikipedia10"
+literal "false"
 
-\begin_layout Standard
+\end_inset
+
+).
+ 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Itemize
 Hessesche Normalform: Normalenvektor 
@@ -4609,7 +4615,7 @@ Normalenform: Stützvektor
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Standard
@@ -5293,10 +5299,14 @@ Mit der Definition
 \end_inset
 
  folgt für die Lösung 
-\begin_inset Formula $\underline{x}_{0}=R_{1}^{-1}\underline{c}$
+\begin_inset Formula 
+\begin{equation}
+\underline{x}_{0}=R_{1}^{-1}\underline{c}\label{eq:LösungQR}
+\end{equation}
+
 \end_inset
 
- und für den Wert des Minimums 
+und für den Wert des Minimums 
 \begin_inset Formula $\left\Vert \underline{d}\right\Vert ^{2}$
 \end_inset
 
@@ -5322,11 +5332,15 @@ Mit der Definition
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
+Damit sind die Parameter 
+\begin_inset Formula $a,b,c$
+\end_inset
 
-\begin_layout Plain Layout
-Jetzt habe ich die 3-dimensionale Trajektorie 
+ der Tangentialebene 
+\begin_inset Formula $T$
+\end_inset
+
+ bekannt und die 3-dimensionalen Trajektorienpunkte 
 \begin_inset Formula $\underline{x}_{0}^{S}\left(\alpha\right)$
 \end_inset
 
@@ -5340,48 +5354,15 @@ noprefix "false"
 
 \end_inset
 
-) und die numerisch bestimmten Parameter 
-\begin_inset Formula $a,b,c$
-\end_inset
-
- der Tangentialebene 
-\begin_inset Formula $T$
-\end_inset
-
- nach (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:TangentialEbene"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) und damit ihren Normalenvektor 
-\begin_inset Formula $\underline{n}$
-\end_inset
-
-.
+) können orthogonal auf diese Ebene projiziert werden.
  
 \end_layout
 
-\begin_layout Plain Layout
-Jeder Trajektorienpunkt in 
-\begin_inset Formula $\underline{x}_{0}^{S}\left(\alpha\right)$
-\end_inset
-
- und der Punkt des Stabes wird orthogonal auf die Tangentialebene 
-\begin_inset Formula $T$
-\end_inset
-
- projiziert.
- Die Projektion des Stabes ist dabei der Ursprung des Koordinatensystems
- auf der Tangentialebene.
- 
+\begin_layout Subsubsection*
+Orthogonalprojektion 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -5390,7 +5371,8 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename OrthogonalProjektion.eps
-	lyxscale 200
+	lyxscale 250
+	scale 70
 
 \end_inset
 
@@ -5404,19 +5386,11 @@ name "fig:Orthogonal"
 
 \end_inset
 
-Orthogonalprojektion, Fall 
-\begin_inset Formula $\mathbb{R}^{2}$
-\end_inset
-
-
+Orthogonalprojektion
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -5425,7 +5399,7 @@ Orthogonalprojektion, Fall
 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 Für die Orthogonalprojektion eines Punktes 
 \begin_inset Formula $\underline{x}_{0}$
 \end_inset
@@ -5456,10 +5430,10 @@ noprefix "false"
 
 \end_inset
 
- 
+ den Ausdruck 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset Formula 
 \[
 P\left(\underline{x}_{0}\right)=\underline{x}_{0}+\left(\underline{n}^{T}\underline{x}_{0}\right)\underline{n}
@@ -5470,13 +5444,12 @@ P\left(\underline{x}_{0}\right)=\underline{x}_{0}+\left(\underline{n}^{T}\underl
 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 oder in Matrixformulierung 
 \begin_inset Note Note
 status collapsed
 
 \begin_layout Plain Layout
-Es gilt 
 \begin_inset Formula 
 \begin{eqnarray*}
 \left(\underline{n}^{T}\underline{x}_{0}\right)\underline{n} & = & \left[\left(n_{1},n_{2},n_{3}\right)\left(\begin{array}{c}
@@ -5495,12 +5468,12 @@ n_{3}
 \end{array}\right)\\
  & = & \left(\begin{array}{c}
 n_{1}^{2}a+n_{1}n_{2}b+n_{1}n_{3}c\\
-n_{1}n_{2}a+n_{2}^{2}b+n_{1}n_{3}c\\
+n_{1}n_{2}a+n_{2}^{2}b+n_{2}n_{3}c\\
 n_{1}n_{3}a+n_{2}n_{3}b+n_{3}^{2}c
 \end{array}\right)\\
  & = & \left(\begin{array}{ccc}
 n_{1}^{2} & n_{1}n_{2} & n_{1}n_{3}\\
-n_{1}n_{2} & n_{2}^{2} & n_{1}n_{3}\\
+n_{1}n_{2} & n_{2}^{2} & n_{2}n_{3}\\
 n_{1}n_{3} & n_{2}n_{3} & n_{3}^{2}
 \end{array}\right)\left(\begin{array}{c}
 a\\
@@ -5521,15 +5494,10 @@ c
 \[
 P\left(\underline{x}_{0}\right)=\left(\begin{array}{ccc}
 1+n_{1}^{2} & n_{1}n_{2} & n_{1}n_{3}\\
-n_{1}n_{2} & 1+n_{2}^{2} & n_{1}n_{3}\\
+n_{1}n_{2} & 1+n_{2}^{2} & n_{2}n_{3}\\
 n_{1}n_{3} & n_{2}n_{3} & 1+n_{3}^{2}
 \end{array}\right)\underline{x}_{0}.
 \]
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
@@ -5652,7 +5620,20 @@ literal "false"
 \end_inset
 
 Solving Least Squares Problems; Lawson, C.L.; Hanson, R.J.; SIAM Classics in
- Applied Mathematics 15; 1995
+ Applied Mathematics 15; 1995 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "10"
+key "Wikipedia10"
+literal "false"
+
+\end_inset
+
+https://de.wikipedia.org/wiki/Koordinatenform; Abschnitt: Koordinatenform
+ einer Ebenengleichung 
 \end_layout
 
 \end_body
