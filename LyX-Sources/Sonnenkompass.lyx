@@ -2698,7 +2698,7 @@ name "fig:SchattentrajektorieFAE"
 \end_inset
 
 Schattentrajektorie zum Frühlings-Äquinoktikum am 21.
- März in Las Palmas
+ März in Las Palmas 
 \end_layout
 
 \end_inset
@@ -4004,14 +4004,6 @@ noprefix "false"
  Dies ist offensichtlich richtig.
  Also existiert für diesen Fall eine Lösung, nämlich 
 \begin_inset Formula $\varOmega^{S}<-1.$
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset Formula $\blacksquare$
 \end_inset
 
 
@@ -5405,7 +5397,7 @@ name "fig:Orthogonal"
 
 \end_inset
 
-Orthogonalprojektion
+Orthogonalprojektion 
 \end_layout
 
 \end_inset
