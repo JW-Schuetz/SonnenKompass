@@ -1332,86 +1332,6 @@ koordinatensystem
 
 \begin_layout Standard
 Für die Komponenten des Stab-Fusspunkts 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Subsection*
-Nebenrechnung 
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../../Hobby - Kopie/LyX-Sources/SonnenKompass3.eps
-	lyxscale 200
-	scale 65
-	BoundingBox 0bp 0bp 769bp 259bp
-	clip
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Problemskizze3"
-
-\end_inset
-
-Problemskizze, SSW, astronomischer Mittag
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Gegeben ist im nicht geneigten 
-\begin_inset Formula $\left(x_{1},x_{2},x_{3}\right)$
-\end_inset
-
--Koordinatensystem die geographische Breite 
-\begin_inset Formula $\Theta_{G}$
-\end_inset
-
- des Stabfusspunktes.
- Es gilt für den Polarwinkel des Stabfusspunktes 
-\begin_inset Formula $\Theta=\frac{\pi}{2}-\Theta_{G}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Plain Layout
-Im um den Winkel 
-\begin_inset Formula $\psi$
-\end_inset
-
- geneigten Koordinatensystem wird der Polarwinkel 
-\begin_inset Formula $\Theta$
-\end_inset
-
- des Stabfusspunktes grösser.
- Es folgt 
-\begin_inset Formula $\Theta=\frac{\pi}{2}-\Theta_{G}+\psi=\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)$
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
- 
 \begin_inset Formula 
 \begin{equation}
 \underline{P}=\left(p_{1},p_{2},p_{3}\right)^{T}\label{eq:StabFusspunkt}
@@ -1433,7 +1353,17 @@ noprefix "false"
 \begin_inset Formula $\varphi=0$
 \end_inset
 
- die Gleichungen 
+ die Gleichungen (siehe dazu auch die Skizze in Abschnitt 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Nebenrechnung-und-Skizze"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
 \begin_inset Formula 
 \begin{eqnarray*}
 p_{1} & = & R_{E}\sin\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]\\
@@ -2843,8 +2773,8 @@ Anhang
 \end_layout
 
 \begin_layout Standard
-In diesem Anhang werden einige Überprüfungen, Beweise und Alternativen dargestel
-lt, die den obigen Gedankenfluss zu sehr gestört hätten.
+In diesem Anhang werden Nebenrechnungen, Überprüfungen, Beweise und Alternativen
+ dargestellt, die den obigen Gedankenfluss zu sehr gestört hätten.
  
 \end_layout
 
@@ -3608,6 +3538,91 @@ R_{E}\\
 
 \end_inset
 
+ 
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Nebenrechnung-und-Skizze"
+
+\end_inset
+
+Nebenrechnung und Skizze 
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename SonnenKompass3.eps
+	lyxscale 200
+	scale 65
+	BoundingBox 0bp 0bp 769bp 259bp
+	clip
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Problemskizze3-1"
+
+\end_inset
+
+Problemskizze, SSW, astronomischer Mittag 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Gegeben ist im nicht geneigten 
+\begin_inset Formula $\left(x_{1},x_{2},x_{3}\right)$
+\end_inset
+
+-Koordinatensystem die geographische Breite 
+\begin_inset Formula $\Theta_{G}$
+\end_inset
+
+ des Stabfusspunktes.
+ Es gilt für den Polarwinkel des Stabfusspunktes 
+\begin_inset Formula $\Theta=\frac{\pi}{2}-\Theta_{G}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Im um den Winkel 
+\begin_inset Formula $\psi$
+\end_inset
+
+ geneigten Koordinatensystem wird der Polarwinkel 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ des Stabfusspunktes grösser.
+ Es folgt 
+\begin_inset Formula $\Theta=\frac{\pi}{2}-\Theta_{G}+\psi=\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)$
+\end_inset
+
+.
  
 \end_layout
 
@@ -5358,11 +5373,15 @@ noprefix "false"
  
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
 \begin_layout Subsubsection*
 Orthogonalprojektion 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -5399,7 +5418,7 @@ Orthogonalprojektion
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Für die Orthogonalprojektion eines Punktes 
 \begin_inset Formula $\underline{x}_{0}$
 \end_inset
@@ -5433,7 +5452,7 @@ noprefix "false"
  den Ausdruck 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \[
 P\left(\underline{x}_{0}\right)=\left(\underline{n}^{T}\underline{x}_{0}\right)\underline{n}
@@ -5444,7 +5463,7 @@ P\left(\underline{x}_{0}\right)=\left(\underline{n}^{T}\underline{x}_{0}\right)\
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 oder in Matrixformulierung 
 \begin_inset Note Note
 status collapsed
@@ -5498,6 +5517,11 @@ n_{1}n_{2} & n_{2}^{2} & n_{2}n_{3}\\
 n_{1}n_{3} & n_{2}n_{3} & n_{3}^{2}
 \end{array}\right)\underline{x}_{0}.
 \]
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
