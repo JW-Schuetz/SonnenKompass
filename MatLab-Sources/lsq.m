@@ -1,5 +1,7 @@
 function [ a, b, c ] = lsq( x, rE )
-    b = rE * ones( size( x, 1 ), 1 );
+    N  = size( x, 1 );
+    b  = rE * ones( N, 1 );
+    xs = zeros( N, 3 );
 
     method = 1;
 
@@ -9,18 +11,33 @@ function [ a, b, c ] = lsq( x, rE )
             [ q, r ] = qr( x );
         
             c = q' * b;
-            x = r \ c;
+            z = r \ c;
 
         case 2
             % Least Squares, Fehler: 2.5053e-07
-            [ x, flag ] = lsqr( x, b );
+            [ z, flag ] = lsqr( x, b );
 
         case 3
             % SVD, Fehler: ?
             [ u, s, v ] = svd( x );
     end
 
-    a = x( 1 );
-    b = x( 2 );
-    c = x( 3 );
+    a = z( 1 );
+    b = z( 2 );
+    c = z( 3 );
+
+    A = [ a^2,   a * b, a * c;
+          a * b, b^2,   b * c;
+          a * c, b * c, c^2 ];
+
+    % Überprüfung
+    maximum = 0;
+    for n = 1 : length( x )
+        xs( n, : ) = A * x( n, : )';
+
+        delta = abs( a * xs( n, 1 ) + b * xs( n, 2 ) + c * xs( n, 3 ) - rE );
+        if( delta > maximum )
+            maximum = delta;
+        end
+    end
 end

@@ -5436,7 +5436,7 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \[
-P\left(\underline{x}_{0}\right)=\underline{x}_{0}+\left(\underline{n}^{T}\underline{x}_{0}\right)\underline{n}
+P\left(\underline{x}_{0}\right)=\left(\underline{n}^{T}\underline{x}_{0}\right)\underline{n}
 \]
 
 \end_inset
@@ -5493,9 +5493,9 @@ c
 \begin_inset Formula 
 \[
 P\left(\underline{x}_{0}\right)=\left(\begin{array}{ccc}
-1+n_{1}^{2} & n_{1}n_{2} & n_{1}n_{3}\\
-n_{1}n_{2} & 1+n_{2}^{2} & n_{2}n_{3}\\
-n_{1}n_{3} & n_{2}n_{3} & 1+n_{3}^{2}
+n_{1}^{2} & n_{1}n_{2} & n_{1}n_{3}\\
+n_{1}n_{2} & n_{2}^{2} & n_{2}n_{3}\\
+n_{1}n_{3} & n_{2}n_{3} & n_{3}^{2}
 \end{array}\right)\underline{x}_{0}.
 \]
 
