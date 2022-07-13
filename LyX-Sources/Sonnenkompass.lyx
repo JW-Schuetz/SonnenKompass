@@ -1326,7 +1326,17 @@ koordinatensystem
 \begin_inset Formula $\Theta=\frac{\pi}{2}-\Theta_{G}+\psi=\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)$
 \end_inset
 
-.
+ (siehe dazu auch die Skizze in Abschnitt 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Nebenrechnung-und-Skizze"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
  
 \end_layout
 
@@ -1353,17 +1363,7 @@ noprefix "false"
 \begin_inset Formula $\varphi=0$
 \end_inset
 
- die Gleichungen (siehe dazu auch die Skizze in Abschnitt 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "subsec:Nebenrechnung-und-Skizze"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) 
+ die Gleichungen 
 \begin_inset Formula 
 \begin{eqnarray*}
 p_{1} & = & R_{E}\sin\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]\\
@@ -3883,11 +3883,14 @@ Aus
 \end_inset
 
 folgt 
-\begin_inset Formula $\varOmega^{S}<-1$
+\begin_inset Formula 
+\[
+\varOmega^{S}<-1.
+\]
+
 \end_inset
 
-.
- 
+
 \end_layout
 
 \begin_layout Subsubsection*
@@ -4487,11 +4490,15 @@ Nebenrechnung
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Subsection*
 Alternative zur Bestimmung der zweidimensionalen Trajektorie 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Die Tangentialebene wird nach Gleichung (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -4510,12 +4517,19 @@ noprefix "false"
 \begin_inset Formula $\underline{P}$
 \end_inset
 
- ist der Ort des Stabes und der Berührpunkt der Ebene mit der Erdkugel.
+ ist der Ort des Stabes und der Berührpunkt der Tangentialebene 
+\begin_inset Formula $T$
+\end_inset
+
+ mit der Erdkugel.
  
 \end_layout
 
-\begin_layout Standard
-Die Tangentialebene kann man durch 
+\begin_layout Plain Layout
+\begin_inset Formula $T$
+\end_inset
+
+ kann man durch 
 \begin_inset Formula 
 \begin{equation}
 \left(a,b,c\right)\underline{x}=d\label{eq:TangentialEbene}
@@ -4565,7 +4579,6 @@ Hessesche Normalform: Normalenvektor
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Itemize
@@ -4617,7 +4630,6 @@ Normalenform: Stützvektor
 \end_inset
 
 .
- 
 \end_layout
 
 \end_inset
@@ -4625,7 +4637,7 @@ Normalenform: Stützvektor
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Die numerischen Parameter 
 \begin_inset Formula $a,b,c$
 \end_inset
@@ -4654,7 +4666,7 @@ Die numerischen Parameter
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 gelöst (siehe dazu zB.
  
 \begin_inset CommandInset citation
@@ -4680,7 +4692,7 @@ literal "false"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 mit der 
 \begin_inset Formula $M\times3$
 \end_inset
@@ -4701,7 +4713,7 @@ x_{1}^{M} & x_{2}^{M} & x_{3}^{M}
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 dem Vektor 
 \begin_inset Formula $\underline{R}_{E}=\left(R_{E},\cdots,R_{E}\right)^{T}$
 \end_inset
@@ -4715,12 +4727,12 @@ dem Vektor
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Note Note
 status collapsed
 
 \begin_layout Subsubsection*
-Allgemeines LS-Problem 
+Allgemeines LS-Problem
 \end_layout
 
 \begin_layout Plain Layout
@@ -4732,7 +4744,7 @@ literal "false"
 
 \end_inset
 
- beschrieben durch 
+ beschrieben durch
 \end_layout
 
 \begin_layout Plain Layout
@@ -4773,11 +4785,10 @@ mit der
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Subsubsection*
-Allgemeine Lösung des LS-Problems 
+Allgemeine Lösung des LS-Problems
 \end_layout
 
 \begin_layout Plain Layout
@@ -4861,7 +4872,6 @@ mit der invertierbaren
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Plain Layout
@@ -4973,7 +4983,6 @@ mit dem
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Plain Layout
@@ -4999,7 +5008,7 @@ noprefix "false"
 
 \end_inset
 
-) durch 
+) durch
 \end_layout
 
 \begin_layout Plain Layout
@@ -5036,7 +5045,6 @@ darstellbar.
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Subsubsection*
@@ -5050,7 +5058,7 @@ noprefix "false"
 
 \end_inset
 
-) 
+)
 \end_layout
 
 \begin_layout Plain Layout
@@ -5072,7 +5080,7 @@ noprefix "false"
 \begin_inset Formula $H$
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -5177,7 +5185,7 @@ noprefix "false"
 
 \end_inset
 
-) in liefert 
+) in liefert
 \end_layout
 
 \begin_layout Plain Layout
@@ -5212,7 +5220,6 @@ Das Minimum
 \end_inset
 
  angenommen.
- 
 \end_layout
 
 \end_inset
@@ -5224,7 +5231,7 @@ Das Minimum
 Lösung durch QR-Zerlegung 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Die Matrix 
 \begin_inset Formula $A$
 \end_inset
@@ -5259,7 +5266,7 @@ R_{1}\\
 ) zerlegt 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \[
 A=QR.
@@ -5297,7 +5304,7 @@ R_{1}\\
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Mit der Definition 
 \begin_inset Formula $\left(\begin{array}{c}
 \underline{c}\\
@@ -5338,7 +5345,7 @@ und für den Wert des Minimums
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Damit sind die Parameter 
 \begin_inset Formula $a,b,c$
 \end_inset
@@ -5364,10 +5371,6 @@ noprefix "false"
 ) können orthogonal auf diese Ebene projiziert werden.
  
 \end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
 
 \begin_layout Subsubsection*
 Orthogonalprojektion 
@@ -5397,7 +5400,7 @@ name "fig:Orthogonal"
 
 \end_inset
 
-Orthogonalprojektion 
+Orthogonalprojektion
 \end_layout
 
 \end_inset
@@ -5517,7 +5520,7 @@ n_{1}n_{3} & n_{2}n_{3} & n_{3}^{2}
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Bibliography
