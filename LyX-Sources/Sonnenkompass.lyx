@@ -370,7 +370,7 @@ die Erde benötige 365 Tage für einen Umlauf um die Sonne
 \end_layout
 
 \begin_layout Itemize
-die Erde habe ideale Kugelgestalt mit dem Radius 
+die Erdoberfläche habe ideale Kugelgestalt mit dem Radius 
 \begin_inset Formula $R_{E}$
 \end_inset
 
@@ -2611,8 +2611,15 @@ SSW und WSW
 
 \begin_layout Standard
 Die Schattentrajektorie und den Standort des Stabes für den Strand in Las
- Palmas \SpecialChar allowbreak
-(28.136746041614316° Breite) für die SSW am 21.
+ Palmas (28.136683° Breite, -15.438392° Länge, nach 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "GoogleMaps"
+literal "false"
+
+\end_inset
+
+) für die SSW am 21.
  Juni findet sich in der Abbildung
 \begin_inset space ~
 \end_inset
@@ -2773,8 +2780,8 @@ Anhang
 \end_layout
 
 \begin_layout Standard
-In diesem Anhang werden Nebenrechnungen, Überprüfungen, Beweise und Alternativen
- dargestellt, die den obigen Gedankenfluss zu sehr gestört hätten.
+In diesem Anhang werden Nebenrechnungen, Überprüfungen und Beweise dargestellt,
+ die den obigen Gedankenfluss zu sehr gestört hätten.
  
 \end_layout
 
@@ -3600,7 +3607,7 @@ Gegeben ist im nicht geneigten
 \end_inset
 
  des Stabfusspunktes.
- Es gilt für den Polarwinkel des Stabfusspunktes 
+ Für den Polarwinkel des Stabfusspunktes gilt 
 \begin_inset Formula $\Theta=\frac{\pi}{2}-\Theta_{G}$
 \end_inset
 
@@ -4642,7 +4649,7 @@ Die numerischen Parameter
 \begin_inset Formula $a,b,c$
 \end_inset
 
- dieses Unterraumes können aus den 
+ dieser Ebene können aus den 
 \begin_inset Formula $M>3$
 \end_inset
 
@@ -5255,7 +5262,7 @@ R_{1}\\
 \end{array}\right)$
 \end_inset
 
- (mit der 
+ (mit der invertierbaren 
 \begin_inset Formula $3\times3$
 \end_inset
 
@@ -5450,7 +5457,7 @@ noprefix "false"
 \begin_layout Plain Layout
 \begin_inset Formula 
 \[
-P\left(\underline{x}_{0}\right)=\left(\underline{n}^{T}\underline{x}_{0}\right)\underline{n}
+P\left(\underline{x}_{0}\right)=\underline{x}_{0}+\left(\underline{n}^{T}\underline{x}_{0}\right)\underline{n}
 \]
 
 \end_inset
@@ -5653,6 +5660,18 @@ literal "false"
 
 https://de.wikipedia.org/wiki/Koordinatenform; Abschnitt: Koordinatenform
  einer Ebenengleichung 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "11"
+key "GoogleMaps"
+literal "false"
+
+\end_inset
+
+https://www.google.de/maps
 \end_layout
 
 \end_body
