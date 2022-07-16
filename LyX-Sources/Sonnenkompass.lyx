@@ -4499,7 +4499,7 @@ Nebenrechnung
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Subsection*
 Alternative zur Bestimmung der zweidimensionalen Trajektorie 
@@ -4528,28 +4528,28 @@ noprefix "false"
 \begin_inset Formula $T$
 \end_inset
 
- mit der Erdkugel.
- 
-\end_layout
+ mit der Erdkugel mit Radius 
+\begin_inset Formula $R_{E}$
+\end_inset
 
-\begin_layout Plain Layout
+.
+ Die Ebene 
 \begin_inset Formula $T$
 \end_inset
 
  kann man durch 
 \begin_inset Formula 
 \begin{equation}
-\left(a,b,c\right)\underline{x}=d\label{eq:TangentialEbene}
+\left(a,b,c\right)\underline{x}=R_{E}\label{eq:TangentialEbene}
 \end{equation}
 
 \end_inset
 
-beschreiben.
- Dabei ist 
+beschreiben, dabei ist 
 \begin_inset Formula $\underline{n}=\left(a,b,c\right)^{T}$
 \end_inset
 
- der Normalenvektor der Ebene (siehe dazu z.B.
+ ihr Normalenvektor (siehe dazu z.B.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -4649,7 +4649,7 @@ Die numerischen Parameter
 \begin_inset Formula $a,b,c$
 \end_inset
 
- dieser Ebene können aus den 
+ können aus den 
 \begin_inset Formula $M>3$
 \end_inset
 
@@ -4688,6 +4688,10 @@ literal "false"
 \begin_inset Formula $\underline{x}=\left(a,b,c\right)^{T}$
 \end_inset
 
+ und 
+\begin_inset Formula $\underline{R}_{E}=R_{E}\left(1,\cdots,1\right)^{T}$
+\end_inset
+
  umformulieren 
 \begin_inset Formula 
 \begin{equation}
@@ -4700,7 +4704,11 @@ literal "false"
 \end_layout
 
 \begin_layout Plain Layout
-mit der 
+dabei ist 
+\begin_inset Formula $A$
+\end_inset
+
+ die 
 \begin_inset Formula $M\times3$
 \end_inset
 
@@ -4712,7 +4720,7 @@ x_{1}^{1} & x_{2}^{1} & x_{3}^{1}\\
 x_{1}^{2} & x_{2}^{2} & x_{3}^{2}\\
 \vdots & \vdots & \vdots\\
 x_{1}^{M} & x_{2}^{M} & x_{3}^{M}
-\end{array}\right)
+\end{array}\right).
 \end{eqnarray*}
 
 \end_inset
@@ -4721,12 +4729,7 @@ x_{1}^{M} & x_{2}^{M} & x_{3}^{M}
 \end_layout
 
 \begin_layout Plain Layout
-dem Vektor 
-\begin_inset Formula $\underline{R}_{E}=\left(R_{E},\cdots,R_{E}\right)^{T}$
-\end_inset
-
-.
- Die Spalten der Matrix 
+Die Spalten der Matrix 
 \begin_inset Formula $A$
 \end_inset
 
@@ -5514,9 +5517,9 @@ c
 \begin_inset Formula 
 \[
 P\left(\underline{x}_{0}\right)=\left(\begin{array}{ccc}
-n_{1}^{2} & n_{1}n_{2} & n_{1}n_{3}\\
-n_{1}n_{2} & n_{2}^{2} & n_{2}n_{3}\\
-n_{1}n_{3} & n_{2}n_{3} & n_{3}^{2}
+1+n_{1}^{2} & n_{1}n_{2} & n_{1}n_{3}\\
+n_{1}n_{2} & 1+n_{2}^{2} & n_{2}n_{3}\\
+n_{1}n_{3} & n_{2}n_{3} & 1+n_{3}^{2}
 \end{array}\right)\underline{x}_{0}.
 \]
 

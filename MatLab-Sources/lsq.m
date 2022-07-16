@@ -9,7 +9,7 @@ function [ a, b, c ] = lsq( x, rE )
         case 1
             % QR-Zerlegung, Fehler: 3.7253e-09
             [ q, r ] = qr( x );
-        
+
             c = q' * b;
             z = r \ c;
 
