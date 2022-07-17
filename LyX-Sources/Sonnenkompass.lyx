@@ -2218,10 +2218,6 @@ Zur Bestimmung dieser Abbildung wird der Punkt
 \begin_inset Formula $\underline{P}$
 \end_inset
 
-, die Tangentialebene 
-\begin_inset Formula $T$
-\end_inset
-
  und die Trajektorienpunkte 
 \begin_inset Formula $\underline{x}_{0}^{S}\left(\alpha\right)$
 \end_inset
@@ -2230,7 +2226,7 @@ Zur Bestimmung dieser Abbildung wird der Punkt
 \begin_inset Formula $\underline{P}$
 \end_inset
 
- auf der Achse der 
+ auf der positiven Achse der 
 \begin_inset Formula $x_{1}$
 \end_inset
 
@@ -2245,7 +2241,7 @@ Zur Bestimmung dieser Abbildung wird der Punkt
 \end_layout
 
 \begin_layout Standard
-Da vorausgesetzt wurde dass 
+Da vorausgesetzt wurde, dass 
 \begin_inset Formula $\varphi=0$
 \end_inset
 
@@ -2355,40 +2351,22 @@ auf die
 \end_inset
 
  projiziert werden.
- Der Punkt 
+ 
+\end_layout
+
+\begin_layout Standard
+Der Punkt 
 \begin_inset Formula $\underline{P}$
 \end_inset
 
- wird durch 
-\begin_inset Formula $A$
+ wird auf die positive 
+\begin_inset Formula $x_{1}$
 \end_inset
 
- auf den Ursprung 
-\begin_inset Formula $\underline{0}$
-\end_inset
-
- abgebildet.
- 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Subsection*
-Überprüfung 
+-Achse abgebildet, denn es gilt 
 \end_layout
 
-\begin_layout Plain Layout
-Nachrechnung (siehe 
-\begin_inset Quotes gld
-\end_inset
-
-SonnenkompassHelper.m
-\begin_inset Quotes grd
-\end_inset
-
-): 
-\end_layout
-
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
 D_{\left(\Theta_{G}-\psi\right)}\underline{P} & = & \left(\begin{array}{ccc}
@@ -2409,13 +2387,8 @@ R_{E}\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]
 1\\
 0\\
 0
-\end{array}\right)
+\end{array}\right).
 \end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
