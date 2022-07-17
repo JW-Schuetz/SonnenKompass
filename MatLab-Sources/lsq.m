@@ -3,7 +3,7 @@ function [ a, b, c ] = lsq( x, rE )
     b  = rE * ones( N, 1 );
     xs = zeros( N, 3 );
 
-    method = 1;
+    method = 3;
 
     switch method
         case 1
@@ -20,6 +20,7 @@ function [ a, b, c ] = lsq( x, rE )
         case 3
             % SVD, Fehler: ?
             [ u, s, v ] = svd( x );
+            delta = norm( x - u * s * v' );
     end
 
     a = z( 1 );

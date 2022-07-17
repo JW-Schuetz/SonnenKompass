@@ -411,7 +411,7 @@ für die geographische Länge des Punktes
 \begin_inset Formula $\varphi=0$
 \end_inset
 
- angenommen 
+ angenommen (astronomischer Mittag) 
 \end_layout
 
 \begin_layout Itemize
@@ -2218,42 +2218,57 @@ Zur Bestimmung dieser Abbildung wird der Punkt
 \begin_inset Formula $\underline{P}$
 \end_inset
 
- so um die 
-\begin_inset Formula $x_{2}$
-\end_inset
-
--Achse gedreht, dass er in der Ekliptik zu liegen kommt.
- Mitgedreht werden die Trajektorienpunkte 
-\begin_inset Formula $\underline{x}_{0}^{S}\left(\alpha\right)$
-\end_inset
-
- und die Tangentialebene 
+, die Tangentialebene 
 \begin_inset Formula $T$
 \end_inset
 
- - damit ist dann die Tangentialebene parallel zur 
-\begin_inset Formula $\left(x_{2},x_{3}\right)$
-\end_inset
-
--Ebene angeordnet.
- Anschliessend werden die Trajektorienpunkte 
+ und die Trajektorienpunkte 
 \begin_inset Formula $\underline{x}_{0}^{S}\left(\alpha\right)$
 \end_inset
 
- auf die 
+ gemeinsam so gedreht, dass 
+\begin_inset Formula $\underline{P}$
+\end_inset
+
+ auf der Achse der 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+-Koordinate zu liegen kommt.
+ Anschliessend werden die gedrehten Trajektorienpunkte orthogonal auf die
+ 
 \begin_inset Formula $\left(x_{2},x_{3}\right)$
 \end_inset
 
--Ebene, oder dazu äquivalent: die Tangentialebene 
-\begin_inset Formula $T$
-\end_inset
-
-, projiziert.
+-Ebene projiziert.
  
 \end_layout
 
 \begin_layout Standard
-Der notwendige Drehwinkel um die 
+Da vorausgesetzt wurde dass 
+\begin_inset Formula $\varphi=0$
+\end_inset
+
+ gilt (siehe Abschnitt 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Annahmen"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), genügt es, 
+\begin_inset Formula $\underline{P}$
+\end_inset
+
+ so um die 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+-Achse zu drehen, dass er in der Ekliptik zu liegen kommt.
+ Der notwendige Drehwinkel um die 
 \begin_inset Formula $x_{2}$
 \end_inset
 
@@ -4742,7 +4757,7 @@ Die Spalten der Matrix
 status collapsed
 
 \begin_layout Subsubsection*
-Allgemeines LS-Problem
+Allgemeines LS-Problem 
 \end_layout
 
 \begin_layout Plain Layout
@@ -4754,7 +4769,7 @@ literal "false"
 
 \end_inset
 
- beschrieben durch
+ beschrieben durch 
 \end_layout
 
 \begin_layout Plain Layout
@@ -4795,10 +4810,11 @@ mit der
 \end_inset
 
 .
+ 
 \end_layout
 
 \begin_layout Subsubsection*
-Allgemeine Lösung des LS-Problems
+Allgemeine Lösung des LS-Problems 
 \end_layout
 
 \begin_layout Plain Layout
@@ -4882,6 +4898,7 @@ mit der invertierbaren
 \end_inset
 
 .
+ 
 \end_layout
 
 \begin_layout Plain Layout
@@ -4993,6 +5010,7 @@ mit dem
 \end_inset
 
 .
+ 
 \end_layout
 
 \begin_layout Plain Layout
@@ -5018,7 +5036,7 @@ noprefix "false"
 
 \end_inset
 
-) durch
+) durch 
 \end_layout
 
 \begin_layout Plain Layout
@@ -5055,20 +5073,11 @@ darstellbar.
 \end_inset
 
 .
+ 
 \end_layout
 
 \begin_layout Subsubsection*
-Beweis von (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Lösung-LS"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-)
+Begründung 
 \end_layout
 
 \begin_layout Plain Layout
@@ -5090,7 +5099,7 @@ noprefix "false"
 \begin_inset Formula $H$
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Plain Layout
@@ -5152,7 +5161,7 @@ k\times1\\
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Plain Layout
@@ -5195,7 +5204,7 @@ noprefix "false"
 
 \end_inset
 
-) in liefert
+) in liefert 
 \end_layout
 
 \begin_layout Plain Layout
@@ -5230,6 +5239,7 @@ Das Minimum
 \end_inset
 
  angenommen.
+ 
 \end_layout
 
 \end_inset
@@ -5380,6 +5390,64 @@ noprefix "false"
 
 ) können orthogonal auf diese Ebene projiziert werden.
  
+\end_layout
+
+\begin_layout Subsubsection*
+Lösung durch Singulärwertzerlegung (SVD) 
+\end_layout
+
+\begin_layout Plain Layout
+Die Matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ wird in eine orthogonale 
+\begin_inset Formula $M\times M$
+\end_inset
+
+-Matrix 
+\begin_inset Formula $U$
+\end_inset
+
+, in eine obere 
+\begin_inset Formula $M\times3$
+\end_inset
+
+-Dreiecksmatrix 
+\begin_inset Formula $S=\left(\begin{array}{c}
+S_{1}\\
+0
+\end{array}\right)$
+\end_inset
+
+ (mit der invertierbaren 
+\begin_inset Formula $3\times3$
+\end_inset
+
+-Diagonalmatrix 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+) und in eine orthogonale 
+\begin_inset Formula $3\times3$
+\end_inset
+
+-Matrix 
+\begin_inset Formula $V$
+\end_inset
+
+ zerlegt 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+A=USV^{T}.
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection*
