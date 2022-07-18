@@ -2305,7 +2305,11 @@ literal "false"
 \end_inset
 
 ).
- Der Punkt 
+ 
+\end_layout
+
+\begin_layout Standard
+Der Punkt 
 \begin_inset Formula $\underline{P}$
 \end_inset
 
@@ -2317,8 +2321,33 @@ literal "false"
 \begin_inset Formula $x_{2}=x_{3}=0$
 \end_inset
 
- abgebildet.
- 
+ abgebildet, denn es gilt 
+\begin_inset Formula 
+\begin{eqnarray*}
+D_{\left(\Theta_{G}-\psi\right)}^{x_{2}}\underline{P} & = & \left(\begin{array}{ccc}
+\cos\left(\Theta_{G}-\psi\right) & 0 & \sin\left(\Theta_{G}-\psi\right)\\
+0 & 1 & 0\\
+-\sin\left(\Theta_{G}-\psi\right) & 0 & \cos\left(\Theta_{G}-\psi\right)
+\end{array}\right)\left(\begin{array}{c}
+R_{E}\sin\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]\\
+0\\
+R_{E}\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]
+\end{array}\right)\\
+ & = & R_{E}\left(\begin{array}{c}
+\cos\left(\Theta_{G}-\psi\right)\sin\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]+\sin\left(\Theta_{G}-\psi\right)\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]\\
+0\\
+-\sin\left(\Theta_{G}-\psi\right)\sin\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]+\cos\left(\Theta_{G}-\psi\right)\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]
+\end{array}\right)\\
+ & = & R_{E}\left(\begin{array}{c}
+1\\
+0\\
+0
+\end{array}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2351,47 +2380,6 @@ auf die
 \end_inset
 
  projiziert werden.
- 
-\end_layout
-
-\begin_layout Standard
-Der Punkt 
-\begin_inset Formula $\underline{P}$
-\end_inset
-
- wird auf die positive 
-\begin_inset Formula $x_{1}$
-\end_inset
-
--Achse abgebildet, denn es gilt 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray*}
-D_{\left(\Theta_{G}-\psi\right)}\underline{P} & = & \left(\begin{array}{ccc}
-\cos\left(\Theta_{G}-\psi\right) & 0 & \sin\left(\Theta_{G}-\psi\right)\\
-0 & 1 & 0\\
--\sin\left(\Theta_{G}-\psi\right) & 0 & \cos\left(\Theta_{G}-\psi\right)
-\end{array}\right)\left(\begin{array}{c}
-R_{E}\sin\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]\\
-0\\
-R_{E}\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]
-\end{array}\right)\\
- & = & R_{E}\left(\begin{array}{c}
-\cos\left(\Theta_{G}-\psi\right)\sin\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]+\sin\left(\Theta_{G}-\psi\right)\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]\\
-0\\
--\sin\left(\Theta_{G}-\psi\right)\sin\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]+\cos\left(\Theta_{G}-\psi\right)\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]
-\end{array}\right)\\
- & = & R_{E}\left(\begin{array}{c}
-1\\
-0\\
-0
-\end{array}\right).
-\end{eqnarray*}
-
-\end_inset
-
  
 \end_layout
 
