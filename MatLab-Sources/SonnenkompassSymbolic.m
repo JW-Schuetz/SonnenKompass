@@ -5,6 +5,7 @@ function SonnenkompassSymbolic
     clc
     clear
 
+    % symbolische Variablen
     omega  = sym( 'omega', 'real' );            % Jahreszeiteinfluss
     thetaG = sym( 'thetaG', 'real' );           % Geographische Breite des Stabes
     psi    = sym( 'psi', 'real' );              % Komplementwinkel Erd-Rotationsachse zur Ekliptik
@@ -17,10 +18,10 @@ function SonnenkompassSymbolic
     p      = sym( 'p', [ 3, 1 ], 'real' );      % Fusspunkt des Stabes auf der Erdoberfläche und Stabende
     s      = sym( 's', [ 3, 1 ], 'real' );      % Sonnenposition in Bezug zum Erdmittelpunkt
 
-    % der Längengrad ist stets 0°
+    % der Längengrad ist stets 0° (siehe Annahmen)
     p( 2 ) = 0;
 
-    % Einheitsvektor Rotationsachse
+    % Einheitsvektor Erd-Rotationsachse
     e( 1 ) = sin( psi );
     e( 2 ) = 0;
     e( 3 ) = cos( psi );

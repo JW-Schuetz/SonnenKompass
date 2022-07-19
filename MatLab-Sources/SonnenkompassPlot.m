@@ -54,7 +54,7 @@ function SonnenkompassPlot()
             end
     end
 
-    % Ergebnisdaten laden
+    % Ergebnisdaten laden, Trajektorien (x: 3-dim, y: 2-dim)
     load( [ ort, '-', datum, '.mat' ], 'rE', 'x', 'y' )
 
     % Least-Squares für a,b,c

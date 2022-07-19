@@ -46,7 +46,7 @@ function SonnenkompassNumeric
     alphaHighNoon = double( atan2( tan( omega ), cos( psi ) ) + pi );
     tHighNoon     = 60 * 12 * alphaHighNoon / pi;
 
-    % Überprüfung von alphaHighNoon: Steigung sollte 0 sein
+    % Überprüfung von alphaHighNoon: Steigung dy/dx sollte 0 sein
     sPlusHN = subs( y0Strich( 2 ), 'alpha', alphaHighNoon );
     if( double( subs( sPlusHN ) ) > 1e-12 )
         error( 'Interner Fehler: Steigung am astronomischen Mittag ~= 0' )
@@ -61,6 +61,10 @@ function SonnenkompassNumeric
     y = zeros( N, 2 );              % Trajektorie 2-dim [m]
 
     % Position und Zeitpunkt berechnen
+    % Rechenzeit halbieren durch Nutzung der Symmetrie, es gilt:
+    %   x(i,1) =  x(end-i,1)
+    %   x(i,2) = -x(end-i,2)
+    %   x(i,3) =  x(end-i,3)
     for i = 1 : N
         t          = tStart + ( i - 1 );                % t in Minuten
         alpha( i ) = double( pi / ( 12 * 60 ) * t );    % zugehöriger Winkel
