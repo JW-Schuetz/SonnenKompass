@@ -3,7 +3,7 @@ function [ a, b, c ] = lsq( x, rE )
     b  = rE * ones( N, 1 );
     xs = zeros( N, 3 );
 
-    method = 3;
+    method = 1;
 
     switch method
         case 1

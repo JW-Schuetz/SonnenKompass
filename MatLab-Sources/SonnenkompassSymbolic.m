@@ -71,7 +71,7 @@ function SonnenkompassSymbolic
     y0 = MapToPlane( x0, thetaG, psi );
 
     % Ableitung der Trajektorien-Komponenten nach alpha bestimmen
-    y0Strich = diff( y0, 'alpha' );
+    y0Strich = simplify( diff( y0, 'alpha' ) );
 
     save( 'SonnenkompassSymbolic.mat', 'alpha', 'x0', 'y0', 'y0Strich' )
 end

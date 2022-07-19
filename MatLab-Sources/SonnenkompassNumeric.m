@@ -6,11 +6,11 @@ function SonnenkompassNumeric
     clc
     clear
 
-    load( 'SonnenkompassSymbolic.mat', 'alpha', 'x0', 'y0', 'y0Strich' )
+    load( 'SonnenkompassSymbolic.mat', 'alpha', 'x0', 'y0' )
 
     % Variable Daten
     ort   = 'LasPalmas';
-    datum = '21.03.2021';
+    datum = '12.10.2021';
 
     fileName = [ ort, '-', datum, '.mat' ];
 
@@ -45,12 +45,6 @@ function SonnenkompassNumeric
     % astronomischer Mittag
     alphaHighNoon = double( atan2( tan( omega ), cos( psi ) ) + pi );
     tHighNoon     = 60 * 12 * alphaHighNoon / pi;
-
-    % Überprüfung von alphaHighNoon: Steigung dy/dx sollte 0 sein
-    sPlusHN = subs( y0Strich( 2 ), 'alpha', alphaHighNoon );
-    if( double( subs( sPlusHN ) ) > 1e-12 )
-        error( 'Interner Fehler: Steigung am astronomischen Mittag ~= 0' )
-    end
 
     tStart = tHighNoon - TNum;      % Endzeitpunkt = AM - TNum Minuten
     tEnd   = tHighNoon + 1 + TNum;	% Endzeitpunkt = AM + TNum Minuten

@@ -379,7 +379,7 @@ die Erdoberfläche habe ideale Kugelgestalt mit dem Radius
 
 \begin_layout Itemize
 die Erd-Rotationsachse habe den Neigungswinkel 
-\begin_inset Formula $\psi$
+\begin_inset Formula $\psi=23.44°$
 \end_inset
 
  zur Achse senkrecht auf der Ekliptikalebene 
@@ -2911,6 +2911,25 @@ Bewertung der Methode
 \end_layout
 
 \begin_layout Standard
+Die oben beschriebenen Methode zur Bestimmung der Nord-Richtung per Sonnenstand
+ setzt voraus, dass der Neigungswinkel 
+\begin_inset Formula $\psi$
+\end_inset
+
+ der Erd-Rotationsachse sekrecht zur Ekliptik gleich 
+\begin_inset Formula $0°$
+\end_inset
+
+ ist.
+ Die Erd-Rotationsachse hat aber den Neigungswinkel 
+\begin_inset Formula $\psi=23.44°$
+\end_inset
+
+ zur Achse senkrecht auf der Ekliptikalebene.
+ 
+\end_layout
+
+\begin_layout Standard
 Entgegen der Annahme der oben beschriebenen Methode zur Bestimmung der Nord-Rich
 tung per Sonnenstand, ist die Schattentrajektorie für den Fall 
 \begin_inset Formula $\psi\neq0$
@@ -2921,8 +2940,9 @@ tung per Sonnenstand, ist die Schattentrajektorie für den Fall
 \end_layout
 
 \begin_layout Standard
-Die dadurch verursachte Missweisung zur Nordrichtung ist durchaus nicht
- vernachlässigbar - sie kann z.B.
+Die dadurch verursachte Missweisung zur Nordrichtung ist gravierend und
+ durchaus nicht vernachlässigbar.
+ Sie kann z.B.
  in Las Palmas je nach Tages- und Jahreszeit um 45° betragen! 
 \end_layout
 
@@ -3865,235 +3885,6 @@ R_{E}\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]
 \end_layout
 
 \begin_layout Subsection
-Trigonometrische Überprüfung 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename SonnenKompassHelp.eps
-	lyxscale 170
-	scale 50
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Überprüfung per Trigonometrie 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Für das linke rechtwinklige Dreieck (A) mit dem Winkel 
-\begin_inset Formula $\alpha$
-\end_inset
-
-, der Hypotenuse 
-\begin_inset Formula $R_{E}+L$
-\end_inset
-
- und den Katheten 
-\begin_inset Formula $h$
-\end_inset
-
- und 
-\begin_inset Formula $R_{E}+d$
-\end_inset
-
- gilt 
-\begin_inset Formula 
-\begin{eqnarray*}
-\sin\alpha & = & \frac{h}{R_{E}+L}\\
-h & = & \left(R_{E}+L\right)\sin\alpha
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-und 
-\begin_inset Formula 
-\begin{eqnarray*}
-\cos\alpha & = & \frac{R_{E}+d}{R_{E}+L}\\
-d & = & \left(R_{E}+L\right)\cos\alpha-R_{E}
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Für die Hypotenuse 
-\begin_inset Formula $H$
-\end_inset
-
- des rechten rechtwinkligen Dreiecks (B) mit dem Winkel 
-\begin_inset Formula $\gamma$
-\end_inset
-
-, der Hypotenuse 
-\begin_inset Formula $H$
-\end_inset
-
- und den Katheten 
-\begin_inset Formula $h$
-\end_inset
-
- und 
-\begin_inset Formula $R_{S}-R_{E}-d$
-\end_inset
-
- gilt 
-\begin_inset Formula 
-\[
-H^{2}=h^{2}+\left(R_{S}-R_{E}-d\right)^{2}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-und für 
-\begin_inset Formula $\gamma$
-\end_inset
-
- gilt 
-\begin_inset Formula 
-\begin{eqnarray*}
-\sin\gamma & = & \frac{h}{H}\\
-\gamma & = & \arcsin\left(\frac{h}{H}\right).
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Für 
-\begin_inset Formula $\psi$
-\end_inset
-
- folgt wegen der Winkelsumme 
-\begin_inset Formula $\alpha+\psi+\gamma=\pi$
-\end_inset
-
- im Dreieck (A,B) die Gleichung 
-\begin_inset Formula $\psi=\pi-\alpha-\gamma$
-\end_inset
-
-.
- Für 
-\begin_inset Formula $\lambda$
-\end_inset
-
- folgt damit wegen 
-\begin_inset Formula $\lambda+\psi=\pi$
-\end_inset
-
- die Gleichung 
-\begin_inset Formula $\lambda=\pi-\psi.$
-\end_inset
-
- Wir haben ein rechtwinkliges Dreieck (C) mit dem Winkel 
-\begin_inset Formula $\lambda$
-\end_inset
-
-, und mit den Katheten 
-\begin_inset Formula $L$
-\end_inset
-
- und 
-\begin_inset Formula $x$
-\end_inset
-
-.
- Es gilt weiterhin für den gesuchten Punkt 
-\begin_inset Formula $x$
-\end_inset
-
- auf der Tangente 
-\begin_inset Formula $\tan\lambda=\frac{x}{L}$
-\end_inset
-
- oder umgeformt 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Subsection*
-Nebenrechnung 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-x & = & L\tan\lambda\\
- & = & L\tan\left(\pi-\psi\right)\\
- & = & L\tan\left[\pi-\left(\pi-\alpha-\gamma\right)\right]\\
- & = & L\tan\left(\alpha+\gamma\right)\\
- & = & L\tan\left[\alpha+\arcsin\left(\frac{h}{H}\right)\right]
-\end{eqnarray*}
-
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray}
-x & = & L\tan\left[\alpha+\arcsin\left(\frac{h}{H}\right)\right].\label{eq:TestTrigonometrie}
-\end{eqnarray}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Die Lösung dieser Gleichung stimmt mit den oben errechneten Ergebnissen
- überein (siehe MatLab-Quelle 
-\begin_inset Quotes gld
-\end_inset
-
-TigonometrischerTest.m
-\begin_inset Quotes grd
-\end_inset
-
-).
- 
-\end_layout
-
-\begin_layout Subsection
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Beweis"
@@ -4676,16 +4467,16 @@ SonnenKompassSymbolic.m
 \end_layout
 
 \begin_layout Standard
-Der astronomische Mittag ist durch den Erdrotationswinkel 
-\begin_inset Formula $\alpha_{M}$
-\end_inset
-
- gekennzeichnet, der zu einer verschwindenden Steigung der Tajektorie 
-\begin_inset Formula $y\left(x\right)$
-\end_inset
-
- gehört.
+Aus ihm folgt die notwendige Bedingung für das Verschwinden der Steigung
  
+\begin_inset Formula 
+\[
+\cos\alpha\sin\Omega-\cos\Omega\cos\psi\sin\alpha=0.
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4693,7 +4484,202 @@ Mit
 \begin_inset Formula $n\in\mathbb{N}$
 \end_inset
 
- ergibt sich 
+ ist also der astronomische Mittag durch den Erdrotationswinkel 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha_{M} & = & \arctan\left(\frac{\tan\Omega}{\cos\psi}\right)+n\pi
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+gekennzeichnet.
+ 
+\end_layout
+
+\begin_layout Subsection
+Trigonometrische Überprüfung 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename SonnenKompassHelp.eps
+	lyxscale 170
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Überprüfung per Trigonometrie 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für das linke rechtwinklige Dreieck (A) mit dem Winkel 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, der Hypotenuse 
+\begin_inset Formula $R_{E}+L$
+\end_inset
+
+ und den Katheten 
+\begin_inset Formula $h$
+\end_inset
+
+ und 
+\begin_inset Formula $R_{E}+d$
+\end_inset
+
+ gilt 
+\begin_inset Formula 
+\begin{eqnarray*}
+\sin\alpha & = & \frac{h}{R_{E}+L}\\
+h & = & \left(R_{E}+L\right)\sin\alpha
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und 
+\begin_inset Formula 
+\begin{eqnarray*}
+\cos\alpha & = & \frac{R_{E}+d}{R_{E}+L}\\
+d & = & \left(R_{E}+L\right)\cos\alpha-R_{E}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für die Hypotenuse 
+\begin_inset Formula $H$
+\end_inset
+
+ des rechten rechtwinkligen Dreiecks (B) mit dem Winkel 
+\begin_inset Formula $\gamma$
+\end_inset
+
+, der Hypotenuse 
+\begin_inset Formula $H$
+\end_inset
+
+ und den Katheten 
+\begin_inset Formula $h$
+\end_inset
+
+ und 
+\begin_inset Formula $R_{S}-R_{E}-d$
+\end_inset
+
+ gilt 
+\begin_inset Formula 
+\[
+H^{2}=h^{2}+\left(R_{S}-R_{E}-d\right)^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und für 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ gilt 
+\begin_inset Formula 
+\begin{eqnarray*}
+\sin\gamma & = & \frac{h}{H}\\
+\gamma & = & \arcsin\left(\frac{h}{H}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für 
+\begin_inset Formula $\psi$
+\end_inset
+
+ folgt wegen der Winkelsumme 
+\begin_inset Formula $\alpha+\psi+\gamma=\pi$
+\end_inset
+
+ im Dreieck (A,B) die Gleichung 
+\begin_inset Formula $\psi=\pi-\alpha-\gamma$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ folgt damit wegen 
+\begin_inset Formula $\lambda+\psi=\pi$
+\end_inset
+
+ die Gleichung 
+\begin_inset Formula $\lambda=\pi-\psi.$
+\end_inset
+
+ Wir haben ein rechtwinkliges Dreieck (C) mit dem Winkel 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, und mit den Katheten 
+\begin_inset Formula $L$
+\end_inset
+
+ und 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Es gilt weiterhin für den gesuchten Punkt 
+\begin_inset Formula $x$
+\end_inset
+
+ auf der Tangente 
+\begin_inset Formula $\tan\lambda=\frac{x}{L}$
+\end_inset
+
+ oder umgeformt 
 \begin_inset Note Note
 status collapsed
 
@@ -4704,16 +4690,11 @@ Nebenrechnung
 \begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
-\sin\left(\Theta_{G}-\psi\right)\left(-\cos^{2}\psi\sin\alpha\cos\Omega+\cos\psi\cos\alpha\sin\Omega\right)+\cos\left(\Theta_{G}-\psi\right)\left(-\cos\psi\sin\psi\sin\alpha\cos\Omega+\sin\psi\cos\alpha\sin\Omega\right) & = & 0\\
-\tan\left(\Theta_{G}-\psi\right)\left(-\cos^{2}\psi\sin\alpha\cos\Omega+\cos\psi\cos\alpha\sin\Omega\right)+\left(-\cos\psi\sin\psi\sin\alpha\cos\Omega+\sin\psi\cos\alpha\sin\Omega\right) & = & 0\\
--T_{G}\cos^{2}\psi\sin\alpha\cos\Omega+T_{G}\cos\psi\cos\alpha\sin\Omega-\cos\psi\sin\psi\sin\alpha\cos\Omega+\sin\psi\cos\alpha\sin\Omega & = & 0\\
--T_{G}\cos^{2}\psi\sin\alpha\cos\Omega-\cos\psi\sin\psi\sin\alpha\cos\Omega+T_{G}\cos\psi\cos\alpha\sin\Omega+\sin\psi\cos\alpha\sin\Omega & = & 0\\
-\left(-T_{G}\cos^{2}\psi-\cos\psi\sin\psi\right)\sin\alpha\cos\Omega+\left(T_{G}\cos\psi+\sin\psi\right)\cos\alpha\sin\Omega & = & 0\\
-\left(T_{G}\cos\psi+\sin\psi\right)\cos\alpha\sin\Omega & = & \left(T_{G}\cos^{2}\psi+\cos\psi\sin\psi\right)\sin\alpha\cos\Omega\\
-\left(T_{G}\cos\psi+\sin\psi\right)\tan\Omega & = & \left(T_{G}\cos^{2}\psi+\cos\psi\sin\psi\right)\tan\alpha\\
-\tan\alpha & = & \frac{\left(T_{G}\cos\psi+\sin\psi\right)\tan\Omega}{T_{G}\cos^{2}\psi+\cos\psi\sin\psi}\\
- & = & \frac{\left(T_{G}\cos\psi+\sin\psi\right)\tan\Omega}{\left(T_{G}\cos\psi+\sin\psi\right)\cos\psi}\\
- & = & \frac{\tan\Omega}{\cos\psi}
+x & = & L\tan\lambda\\
+ & = & L\tan\left(\pi-\psi\right)\\
+ & = & L\tan\left[\pi-\left(\pi-\alpha-\gamma\right)\right]\\
+ & = & L\tan\left(\alpha+\gamma\right)\\
+ & = & L\tan\left[\alpha+\arcsin\left(\frac{h}{H}\right)\right]
 \end{eqnarray*}
 
 \end_inset
@@ -4724,10 +4705,13 @@ Nebenrechnung
 \end_inset
 
  
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
-\begin{eqnarray*}
-\alpha_{M} & = & \arctan\left(\frac{\tan\Omega}{\cos\psi}\right)+n\pi.
-\end{eqnarray*}
+\begin{eqnarray}
+x & = & L\tan\left[\alpha+\arcsin\left(\frac{h}{H}\right)\right].\label{eq:TestTrigonometrie}
+\end{eqnarray}
 
 \end_inset
 
@@ -4735,8 +4719,22 @@ Nebenrechnung
 \end_layout
 
 \begin_layout Standard
+Die Lösung dieser Gleichung stimmt mit den oben errechneten Ergebnissen
+ überein (siehe MatLab-Quelle 
+\begin_inset Quotes gld
+\end_inset
+
+TigonometrischerTest.m
+\begin_inset Quotes grd
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Subsection*
 Alternative zur Bestimmung der zweidimensionalen Trajektorie 
