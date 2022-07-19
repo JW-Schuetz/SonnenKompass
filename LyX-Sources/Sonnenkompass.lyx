@@ -2587,6 +2587,51 @@ Es ergibt sich schliesslich für die Punkte der gesuchten zweidimensionalen
 
 \end_layout
 
+\begin_layout Standard
+Wie man zeigen kann (siehe dazu den Unterabschnitt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Symmetrie-der-Trajektorien"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ im Anhang), sind bezüglich des astronomischen Mittags 
+\begin_inset Formula 
+\[
+\alpha^{M}=\alpha-\alpha_{M}
+\]
+
+\end_inset
+
+die 
+\begin_inset Formula $\left(x_{1},x_{3}\right)$
+\end_inset
+
+-Komponenten gerade, die 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+-Komponente ist ungerade.
+ Oder anders ausgedrückt gilt 
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{1}^{S}\left(\alpha^{M}\right) & = & x_{1}^{S}\left(-\alpha^{M}\right)\\
+x_{2}^{S}\left(\alpha^{M}\right) & = & -x_{2}^{S}\left(-\alpha^{M}\right)\\
+x_{3}^{S}\left(\alpha^{M}\right) & = & x_{3}^{S}\left(-\alpha^{M}\right).
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\end_layout
+
 \begin_layout Section
 Ergebnisse 
 \end_layout
@@ -4463,11 +4508,7 @@ SonnenKompassSymbolic.m
 \end_inset
 
 ).
- 
-\end_layout
-
-\begin_layout Standard
-Aus ihm folgt die notwendige Bedingung für das Verschwinden der Steigung
+ Aus ihm folgt die notwendige Bedingung für das Verschwinden der Steigung
  
 \begin_inset Formula 
 \[
@@ -4501,6 +4542,16 @@ Mit
 \begin_layout Standard
 gekennzeichnet.
  
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Symmetrie-der-Trajektorien"
+
+\end_inset
+
+Symmetrie der Trajektorien
 \end_layout
 
 \begin_layout Subsection
