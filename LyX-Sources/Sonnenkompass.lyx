@@ -129,7 +129,7 @@ Keine Seitennummerierung!
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Section*
@@ -187,7 +187,7 @@ das neue Schattenende des Stabes mit einem zweiten Stein markieren.
 \begin_layout Standard
 Man erhält dann die Nordrichtung mittels der folgenden Regeln
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Die Methode wird in der Nähe der Pole scheitern, da das Stabende in Abhängigkeit
@@ -382,7 +382,7 @@ die Erd-Rotationsachse habe den Neigungswinkel
 \begin_inset Formula $\psi=23.44°$
 \end_inset
 
- zur Achse senkrecht auf der Ekliptikalebene 
+ zu einer Achse, die orthogonal auf der Ekliptikalebene steht 
 \end_layout
 
 \begin_layout Itemize
@@ -1118,7 +1118,7 @@ In dieser Arbeit wird der jahreszeitliche Einfluss durch eine Kreisbewegung
  des jahreszeitlichen Umlaufwinkels 
 \begin_inset Formula 
 \begin{equation}
-\Omega\left(T^{*}\right)=\frac{2\pi}{365}T^{*}\label{eq:Omega}
+\Omega=\frac{2\pi}{365}T^{*}\label{eq:Omega}
 \end{equation}
 
 \end_inset
@@ -1129,9 +1129,9 @@ durch
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\underline{S}\left(T^{*}\right)=R_{S}\left(\begin{array}{c}
-\cos\Omega\left(T^{*}\right)\\
-\sin\Omega\left(T^{*}\right)\\
+\underline{S}=R_{S}\left(\begin{array}{c}
+\cos\Omega\\
+\sin\Omega\\
 0
 \end{array}\right)\label{eq:Ort der Sonne}
 \end{equation}
@@ -1250,110 +1250,6 @@ Umlauf der Erde um die Sonne
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Es soll nun noch für jeden Jahreszeitpunkt 
-\begin_inset Formula $T^{*}$
-\end_inset
-
- eine Näherung 
-\begin_inset Formula $\overline{\alpha}_{M}$
-\end_inset
-
- für den Tageszeit-Rotationswinkel 
-\begin_inset Formula $\alpha$
-\end_inset
-
- angegeben werden, so dass sich gerade der Sonnenhöchststand (der astronomische
- Mittag) einstellt.
- Nimmt man an, dass der Neigungswinkel der Erdachse verschwindet, dass also
- 
-\begin_inset Formula $\psi=0$
-\end_inset
-
- gilt, folgt (siehe dazu die Abbildung 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Sonnen-Jahres-Umlauf"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) 
-\begin_inset Formula 
-\[
-\overline{\alpha}_{M}=\Omega\left(T^{*}\right).
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename SonnenKompassTopHelp1.eps
-	scale 30
-
-\end_inset
-
- 
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Sonnen-Jahres-Umlauf"
-
-\end_inset
-
-Umlauf der Sonne um die Erde 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Der exakte Wert 
-\begin_inset Formula $\alpha_{M}$
-\end_inset
-
- für 
-\begin_inset Formula $\psi\neq0$
-\end_inset
-
- wird im Unterabschnitt
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "subsec:Astronomischer-Mittag"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- des Anhanges angegeben.
- 
 \end_layout
 
 \begin_layout Section
@@ -1598,7 +1494,7 @@ Die Punkte der Verbindungsgerade
 \end_inset
 
  der Sonne 
-\begin_inset Formula $\underline{S}\left(T^{*}\right)$
+\begin_inset Formula $\underline{S}$
 \end_inset
 
 , nach Gleichung
@@ -1639,7 +1535,7 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\underline{x}=\mu\underline{Q}+\left(1-\mu\right)\underline{S}\left(T^{*}\right)\label{eq:Verbindungsgerade}
+\underline{x}=\mu\underline{Q}+\left(1-\mu\right)\underline{S}\label{eq:Verbindungsgerade}
 \end{equation}
 
 \end_inset
@@ -1658,7 +1554,7 @@ gegeben.
 \end_inset
 
  den Punkt 
-\begin_inset Formula $\underline{S}^{\alpha}\left(T^{*}\right)$
+\begin_inset Formula $\underline{S}$
 \end_inset
 
  (also die Sonne) und für 
@@ -1709,7 +1605,7 @@ noprefix "false"
 ) und fixiert die Erde, dann folgt mit dem gedrehten Ort der Sonne 
 \begin_inset Formula 
 \begin{equation}
-\underline{S}^{\alpha}\left(T^{*}\right)=D_{\left(-\alpha\right)}\underline{S}\left(T^{*}\right)\label{eq:GedrehterSonnenOrt}
+\underline{S}\left(\alpha\right)=D_{\left(-\alpha\right)}\underline{S}\label{eq:GedrehterSonnenOrt}
 \end{equation}
 
 \end_inset
@@ -1733,9 +1629,9 @@ noprefix "false"
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\underline{x}=\mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}\left(T^{*}\right).
-\]
+\begin{equation}
+\underline{x}=\mu\underline{Q}+\left(1-\mu\right)\underline{S}\left(\alpha\right).\label{eq:GesuchterPunktSonneGedreht}
+\end{equation}
 
 \end_inset
 
@@ -1752,7 +1648,7 @@ Gesucht ist der Schnittpunkt dieser Geraden mit der Tangentialebene
 \end_inset
 
 , der eine Lösung 
-\begin_inset Formula $\underline{x}_{0}$
+\begin_inset Formula $\underline{x}$
 \end_inset
 
  der Gleichung
@@ -1769,19 +1665,7 @@ noprefix "false"
 
 \end_inset
 
-) mit der Bedingung 
-\begin_inset Formula 
-\begin{equation}
-\underline{x}_{0}=\mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}\left(T^{*}\right)\label{eq:GesuchterPunktSonneGedreht}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-zulässt.
+) zulässt.
  
 \end_layout
 
@@ -1827,7 +1711,7 @@ noprefix "false"
 ) liefert 
 \begin_inset Formula 
 \[
-\underline{P}^{T}\left[\mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}\left(T^{*}\right)-\underline{P}\right]=0.
+\underline{P}^{T}\left[\mu\underline{Q}+\left(1-\mu\right)\underline{S}\left(\alpha\right)-\underline{P}\right]=0.
 \]
 
 \end_inset
@@ -1853,7 +1737,7 @@ Aus den beiden Gleichungen
 \begin_inset Formula 
 \begin{eqnarray*}
 0 & = & \underline{P}^{T}\left(\underline{x}_{0}-\underline{P}\right)\\
-\underline{x}_{0} & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}
+\underline{x}_{0} & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}\left(\alpha\right)
 \end{eqnarray*}
 
 \end_inset
@@ -1868,16 +1752,16 @@ folgt durch Einsetzen
 \begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
-0 & = & \underline{P}^{T}\left[\mu\underline{Q}+\left(1-\mu\right)\underline{S}^{\alpha}-\underline{P}\right]\\
- & = & \mu\underline{P}^{T}\underline{Q}+\left(1-\mu\right)\underline{P}^{T}\underline{S}^{\alpha}-\underline{P}^{T}\underline{P}\\
- & = & \mu\underline{P}^{T}\underline{Q}+\left(1-\mu\right)\underline{P}^{T}\underline{S}^{\alpha}-R_{E}^{2}\\
- & = & \mu\left(\underline{P}^{T}\underline{Q}-\underline{P}^{T}\underline{S}^{\alpha}\right)+\underline{P}^{T}\underline{S}^{\alpha}-R_{E}^{2}\\
- & = & \mu\left[\underline{P}^{T}\left(1+\frac{L}{R_{E}}\right)\underline{P}-\underline{P}^{T}\underline{S}^{\alpha}\right]+\underline{P}^{T}\underline{S}^{\alpha}-R_{E}^{2}\\
- & = & \mu\left[\left(1+\frac{L}{R_{E}}\right)R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}\right]+\underline{P}^{T}\underline{S}^{\alpha}-R_{E}^{2}\\
- & = & \mu\left(R_{E}^{2}+LR_{E}-\underline{P}^{T}\underline{S}^{\alpha}\right)+\underline{P}^{T}\underline{S}^{\alpha}-R_{E}^{2}\\
- & = & \mu\left(R_{E}^{2}+LR_{E}-\underline{P}^{T}\underline{S}^{\alpha}\right)-\left(R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}\right)\\
- & = & \mu\left(R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}+LR_{E}\right)-\left(R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}\right)\\
- & = & \mu\left(\frac{R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}}{LR_{E}}+1\right)-\left(\frac{R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}}{LR_{E}}\right)\\
+0 & = & \underline{P}^{T}\left[\mu\underline{Q}+\left(1-\mu\right)\underline{S}\left(\alpha\right)-\underline{P}\right]\\
+ & = & \mu\underline{P}^{T}\underline{Q}+\left(1-\mu\right)\underline{P}^{T}\underline{S}\left(\alpha\right)-\underline{P}^{T}\underline{P}\\
+ & = & \mu\underline{P}^{T}\underline{Q}+\left(1-\mu\right)\underline{P}^{T}\underline{S}\left(\alpha\right)-R_{E}^{2}\\
+ & = & \mu\left(\underline{P}^{T}\underline{Q}-\underline{P}^{T}\underline{S}\left(\alpha\right)\right)+\underline{P}^{T}\underline{S}\left(\alpha\right)-R_{E}^{2}\\
+ & = & \mu\left[\underline{P}^{T}\left(1+\frac{L}{R_{E}}\right)\underline{P}-\underline{P}^{T}\underline{S}\left(\alpha\right)\right]+\underline{P}^{T}\underline{S}\left(\alpha\right)-R_{E}^{2}\\
+ & = & \mu\left[\left(1+\frac{L}{R_{E}}\right)R_{E}^{2}-\underline{P}^{T}\underline{S}\left(\alpha\right)\right]+\underline{P}^{T}\underline{S}\left(\alpha\right)-R_{E}^{2}\\
+ & = & \mu\left(R_{E}^{2}+LR_{E}-\underline{P}^{T}\underline{S}\left(\alpha\right)\right)+\underline{P}^{T}\underline{S}\left(\alpha\right)-R_{E}^{2}\\
+ & = & \mu\left(R_{E}^{2}+LR_{E}-\underline{P}^{T}\underline{S}\left(\alpha\right)\right)-\left(R_{E}^{2}-\underline{P}^{T}\underline{S}\left(\alpha\right)\right)\\
+ & = & \mu\left(R_{E}^{2}-\underline{P}^{T}\underline{S}\left(\alpha\right)+LR_{E}\right)-\left(R_{E}^{2}-\underline{P}^{T}\underline{S}\left(\alpha\right)\right)\\
+ & = & \mu\left(\frac{R_{E}^{2}-\underline{P}^{T}\underline{S}\left(\alpha\right)}{LR_{E}}+1\right)-\left(\frac{R_{E}^{2}-\underline{P}^{T}\underline{S}\left(\alpha\right)}{LR_{E}}\right)\\
  & = & \mu\left(\Omega^{S}+1\right)-\Omega^{S}
 \end{eqnarray*}
 
@@ -1909,7 +1793,7 @@ mit
 \begin_layout Plain Layout
 \begin_inset Formula 
 \[
-\Omega^{S}=\frac{R_{E}^{2}-\underline{P}^{T}\underline{S}^{\alpha}}{LR_{E}}.
+\Omega^{S}=\frac{R_{E}^{2}-\underline{P}^{T}\underline{S}\left(\alpha\right)}{LR_{E}}.
 \]
 
 \end_inset
@@ -1937,7 +1821,7 @@ mit der Abkürzung
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\varOmega^{S}\left(\alpha\right)=\frac{1}{L}\left[R_{E}-\frac{\underline{P}^{T}\underline{S}^{\alpha}\left(T^{*}\right)}{R_{E}}\right].\label{eq:OmegaS}
+\varOmega^{S}\left(\alpha\right)=\frac{R_{E}}{L}-\frac{\underline{P}^{T}\underline{S}\left(\alpha\right)}{LR_{E}}.\label{eq:OmegaS}
 \end{equation}
 
 \end_inset
@@ -2105,7 +1989,7 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\underline{x}_{0}^{S}\left(\alpha\right)=\mu_{0}\left(\alpha\right)\underline{Q}+\left[1-\mu_{0}\left(\alpha\right)\right]\underline{S}^{\alpha}\left(T^{*}\right).\label{eq:LösungspunkteSonneGedreht}
+\underline{x}_{0}^{S}\left(\alpha\right)=\mu_{0}\left(\alpha\right)\underline{Q}+\left[1-\mu_{0}\left(\alpha\right)\right]\underline{S}\left(\alpha\right).\label{eq:LösungspunkteSonneGedreht}
 \end{equation}
 
 \end_inset
@@ -2127,147 +2011,6 @@ Die mit dem Winkel
 \end_inset
 
 .
- 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Subsubsection*
-Symmetrie 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-D_{\alpha} & = & G_{\alpha}+U_{\alpha}\\
-D_{\left(-\alpha\right)} & = & G_{\alpha}-U_{\alpha}
-\end{eqnarray*}
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Plain Layout
-Es folgt zunächst aus den Gleichungen (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:LösungspunkteSonneGedreht"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Endpunkt"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:GedrehterSonnenOrt"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-\underline{x}_{0}^{S}\left(\alpha\right) & = & \mu_{0}\left(\alpha\right)\underline{Q}+\left[1-\mu_{0}\left(\alpha\right)\right]\underline{S}^{\alpha}\left(T^{*}\right)\\
- & = & \mu_{0}\left(\alpha\right)\underline{Q}+\left[1-\mu_{0}\left(\alpha\right)\right]D_{\left(-\alpha\right)}\underline{S}\left(T^{*}\right)\\
- & = & \mu_{0}\left(\alpha\right)\left(\begin{array}{c}
-q_{1}\\
-0\\
-q_{3}
-\end{array}\right)+\left[1-\mu_{0}\left(\alpha\right)\right]D_{\left(-\alpha\right)}\left(\begin{array}{c}
-S_{1}\\
-S_{2}\\
-0
-\end{array}\right)\\
- & = & \mu_{0}\left(\alpha\right)\left(\begin{array}{c}
-q_{1}\\
-0\\
-q_{3}
-\end{array}\right)+D_{\left(-\alpha\right)}\left(\begin{array}{c}
-S_{1}\\
-S_{2}\\
-0
-\end{array}\right)-\mu_{0}\left(\alpha\right)D_{\left(-\alpha\right)}\left(\begin{array}{c}
-S_{1}\\
-S_{2}\\
-0
-\end{array}\right)
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Mit der Ersetzung 
-\begin_inset Formula 
-\[
-\alpha\Rightarrow\left(-\alpha\right)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-folgt aus Gleichung (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:LösungsgleichungSonneGedreht"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) 
-\begin_inset Formula 
-\[
-\mu_{0}\left(-\alpha\right)=\frac{\varOmega^{S}\left(-\alpha\right)}{1+\varOmega^{S}\left(-\alpha\right)}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-und weiter folgt wegen 
-\begin_inset Formula $\underline{S}^{\alpha}\left(T^{*}\right)=D_{\left(-\alpha\right)}\underline{S}\left(T^{*}\right)$
-\end_inset
-
- die Gleichung 
-\begin_inset Formula 
-\begin{eqnarray*}
-\varOmega^{S}\left(-\alpha\right) & = & \frac{1}{L}\left[R_{E}-\frac{\underline{P}^{T}\underline{S}^{\left(-\alpha\right)}\left(T^{*}\right)}{R_{E}}\right]\\
- & = & \frac{1}{L}\left[R_{E}-\frac{\underline{P}^{T}D_{\alpha}\underline{S}\left(T^{*}\right)}{R_{E}}\right]
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
  
 \end_layout
 
@@ -2588,6 +2331,204 @@ Es ergibt sich schliesslich für die Punkte der gesuchten zweidimensionalen
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Es gilt nach (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:GesuchterPunktSonneGedreht"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{x}_{0} & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}\left(\alpha\right)\\
+ & = & \mu\underline{Q}-\mu\underline{S}\left(\alpha\right)+\underline{S}\left(\alpha\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Wegen (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:GedrehterSonnenOrt"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\underline{S}\left(\alpha\right)=D_{\left(-\alpha\right)}\underline{S}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+und (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Ort der Sonne"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{S} & = & R_{S}\left(\begin{array}{c}
+\cos\Omega\\
+\sin\Omega\\
+0
+\end{array}\right)\\
+ & = & \left(\begin{array}{c}
+S_{1}\\
+S_{2}\\
+0
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+sowie (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Endpunkt"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{Q} & = & \left(1+\frac{L}{R_{E}}\right)\underline{P}\\
+ & = & \left(1+\frac{L}{R_{E}}\right)\left(\begin{array}{c}
+p_{1}\\
+0\\
+p_{2}
+\end{array}\right)\\
+ & = & \left(\begin{array}{c}
+Q_{1}\\
+0\\
+Q_{3}
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+folgt 
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{x}_{0} & = & \mu\left(\begin{array}{c}
+Q_{1}\\
+0\\
+Q_{3}
+\end{array}\right)-\mu D_{\left(-\alpha\right)}\left(\begin{array}{c}
+S_{1}\\
+S_{2}\\
+0
+\end{array}\right)+D_{\left(-\alpha\right)}\left(\begin{array}{c}
+S_{1}\\
+S_{2}\\
+0
+\end{array}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Mit 
+\begin_inset Formula $\alpha=\alpha^{M}-\alpha_{M}$
+\end_inset
+
+ und (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:AlphaM"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) ergibt sich 
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha & = & \alpha^{M}-\alpha_{M}\\
+ & = & \alpha^{M}-\arctan\left(\frac{\tan\Omega}{\cos\psi}\right)-n\pi.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Es folgt 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+D_{\left(-\alpha\right)}=\begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & \cos\psi\sin\alpha & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
+-\cos\psi\sin\alpha & \cos\alpha & \sin\psi\sin\alpha\\
+\cos\psi\sin\psi\left(1-\cos\alpha\right) & -\sin\psi\sin\alpha & \cos^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
+\end{pmatrix}
+\]
+
+\end_inset
+
+ folgt 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Wie man zeigen kann (siehe dazu den Unterabschnitt
 \begin_inset space ~
 \end_inset
@@ -2602,15 +2543,12 @@ noprefix "false"
 
 \end_inset
 
- im Anhang), sind bezüglich des astronomischen Mittags 
-\begin_inset Formula 
-\[
-\alpha^{M}=\alpha-\alpha_{M}
-\]
-
+ im Anhang), sind bezüglich des astronomischen Mittags (d.h.
+ für den Drehwinkel 
+\begin_inset Formula $\alpha_{M}$
 \end_inset
 
-die 
+) die 
 \begin_inset Formula $\left(x_{1},x_{3}\right)$
 \end_inset
 
@@ -2619,12 +2557,16 @@ die
 \end_inset
 
 -Komponente ist ungerade.
- Oder anders ausgedrückt gilt 
+ Oder anders ausgedrückt: es gilt für ein geeignetes 
+\begin_inset Formula $\alpha\in\mathbb{R}$
+\end_inset
+
+ 
 \begin_inset Formula 
 \begin{eqnarray*}
-x_{1}^{S}\left(\alpha^{M}\right) & = & x_{1}^{S}\left(-\alpha^{M}\right)\\
-x_{2}^{S}\left(\alpha^{M}\right) & = & -x_{2}^{S}\left(-\alpha^{M}\right)\\
-x_{3}^{S}\left(\alpha^{M}\right) & = & x_{3}^{S}\left(-\alpha^{M}\right).
+x_{1}^{S}\left(\alpha_{M}+\alpha\right) & = & x_{1}^{S}\left(\alpha_{M}-\alpha\right)\\
+x_{2}^{S}\left(\alpha_{M}+\alpha\right) & = & -x_{2}^{S}\left(\alpha_{M}-\alpha\right)\\
+x_{3}^{S}\left(\alpha_{M}+\alpha\right) & = & x_{3}^{S}\left(\alpha_{M}-\alpha\right).
 \end{eqnarray*}
 
 \end_inset
@@ -2956,45 +2898,47 @@ Bewertung der Methode
 \end_layout
 
 \begin_layout Standard
-Die oben beschriebenen Methode zur Bestimmung der Nord-Richtung per Sonnenstand
- setzt voraus, dass der Neigungswinkel 
+Die oben beschriebenen Methode zur Bestimmung der Nord-Richtung funktioniert,
+ falls man den Neigungswinkel 
 \begin_inset Formula $\psi$
 \end_inset
 
- der Erd-Rotationsachse sekrecht zur Ekliptik gleich 
+ der Erd-Rotationsachse zu einer Achse orthogonal zur Ekliptikalebene zu
+ 
 \begin_inset Formula $0°$
 \end_inset
 
- ist.
- Die Erd-Rotationsachse hat aber den Neigungswinkel 
+ annimmt.
+ In der Realität ist dieser Neigungswinkel aber 
 \begin_inset Formula $\psi=23.44°$
 \end_inset
 
- zur Achse senkrecht auf der Ekliptikalebene.
+.
  
 \end_layout
 
 \begin_layout Standard
-Entgegen der Annahme der oben beschriebenen Methode zur Bestimmung der Nord-Rich
-tung per Sonnenstand, ist die Schattentrajektorie für den Fall 
-\begin_inset Formula $\psi\neq0$
-\end_inset
-
- keine Gerade - nicht einmal näherungsweise.
+Die Schattentrajektorie ist deshalb keine Gerade - nicht einmal näherungsweise.
  
 \end_layout
 
 \begin_layout Standard
-Die dadurch verursachte Missweisung zur Nordrichtung ist gravierend und
- durchaus nicht vernachlässigbar.
+Die dadurch verursachte Missweisung zur Nordrichtung ist nicht vernachlässigbar.
  Sie kann z.B.
- in Las Palmas je nach Tages- und Jahreszeit um 45° betragen! 
+ in Las Palmas je nach Tages- und Jahreszeit um 45° betragen.
+ 
 \end_layout
 
 \begin_layout Standard
-Die genaue Nordrichtung erhält man, z.B.
- wenn man Schattenzeitpunkte untersucht, die symmetrisch um den Zeitpunkt
- des astronomischen Mittags liegen.
+Die genaue Nordrichtung erhält man mit der beschriebenen Methode aber, wenn
+ man Zeitpunkte untersucht, die symmetrisch um den Zeitpunkt des astronomischen
+ Mittags liegen.
+ 
+\end_layout
+
+\begin_layout Standard
+Als Hilfsmittel wären neben den beiden Steinen und dem Stab zusätzliche
+ Steine sowie eine Uhr nötig.
  
 \end_layout
 
@@ -4451,12 +4395,113 @@ name "subsec:Astronomischer-Mittag"
 Der astronomische Mittag 
 \end_layout
 
-\begin_layout Standard
-Die Steigung 
-\begin_inset Formula $S\left(x\right)$
+\begin_layout Subsubsection
+Näherung für 
+\begin_inset Formula $\psi=0$
 \end_inset
 
- der Trajektorie 
+ 
+\end_layout
+
+\begin_layout Standard
+Es soll nun noch für jeden Jahreszeitpunkt 
+\begin_inset Formula $T^{*}$
+\end_inset
+
+ eine Näherung 
+\begin_inset Formula $\overline{\alpha}_{M}$
+\end_inset
+
+ für den Tageszeit-Rotationswinkel 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ angegeben werden, so dass sich gerade der Sonnenhöchststand (der astronomische
+ Mittag) einstellt (siehe dazu die Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Sonnen-Jahres-Umlauf"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename SonnenKompassTopHelp1.eps
+	scale 30
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Sonnen-Jahres-Umlauf"
+
+\end_inset
+
+Umlauf der Sonne um die Erde 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nimmt man an, dass der Neigungswinkel der Erdachse verschwindet, dass also
+ 
+\begin_inset Formula $\psi=0$
+\end_inset
+
+ gilt, folgt die Näherung 
+\begin_inset Formula 
+\[
+\overline{\alpha}_{M}=\Omega.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Der exakte Wert für 
+\begin_inset Formula $\psi\neq0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Der exakte Wert 
+\begin_inset Formula $\alpha_{M}$
+\end_inset
+
+ für 
+\begin_inset Formula $\psi\neq0$
+\end_inset
+
+ wird aus der Steigung der 2-dimensionalen Trajektorie 
 \begin_inset Formula $\underline{x}^{S}\left(\alpha\right)=\frac{y\left(\alpha\right)}{x\left(\alpha\right)}$
 \end_inset
 
@@ -4470,7 +4515,16 @@ noprefix "false"
 
 \end_inset
 
-) errechnet sich zu (siehe dazu z.B.
+) bestimmt.
+ 
+\end_layout
+
+\begin_layout Standard
+Die Steigung 
+\begin_inset Formula $S\left(x\right)$
+\end_inset
+
+ errechnet sich zu (siehe dazu z.B.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -4491,7 +4545,11 @@ S\left(x\right) & = & \frac{dy\left(x\right)}{dx}=\frac{\frac{\partial y\left(\a
 \end_layout
 
 \begin_layout Standard
-Dieser Ausdruck wird mittels der 
+Dieser (eher längliche 
+\begin_inset Formula $\smiley$
+\end_inset
+
+) Ausdruck wird mittels der 
 \begin_inset Quotes gld
 \end_inset
 
@@ -4530,9 +4588,9 @@ Mit
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{eqnarray*}
-\alpha_{M} & = & \arctan\left(\frac{\tan\Omega}{\cos\psi}\right)+n\pi
-\end{eqnarray*}
+\begin{eqnarray}
+\alpha_{M} & = & \arctan\left(\frac{\tan\Omega}{\cos\psi}\right)+n\pi\label{eq:AlphaM}
+\end{eqnarray}
 
 \end_inset
 
@@ -4544,6 +4602,23 @@ gekennzeichnet.
  
 \end_layout
 
+\begin_layout Standard
+Für 
+\begin_inset Formula $\psi=0$
+\end_inset
+
+ stimmt die Näherung 
+\begin_inset Formula $\overline{\alpha}_{M}$
+\end_inset
+
+ mit dem exakten Wert 
+\begin_inset Formula $\alpha_{M}$
+\end_inset
+
+ überein.
+ 
+\end_layout
+
 \begin_layout Subsection
 \begin_inset CommandInset label
 LatexCommand label
@@ -4551,7 +4626,7 @@ name "subsec:Symmetrie-der-Trajektorien"
 
 \end_inset
 
-Symmetrie der Trajektorien
+Symmetrie der Trajektorien 
 \end_layout
 
 \begin_layout Subsection

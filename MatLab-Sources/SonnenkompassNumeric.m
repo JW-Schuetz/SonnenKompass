@@ -46,6 +46,15 @@ function SonnenkompassNumeric
     alphaHighNoon = double( atan2( tan( omega ), cos( psi ) ) + pi );
     tHighNoon     = 60 * 12 * alphaHighNoon / pi;
 
+%     % Test
+%     t    = subs( x0, 'alpha', alphaHighNoon - 0.01 )';
+%     xHN1 = double( t );
+%     t    = subs( x0, 'alpha', alphaHighNoon )';
+%     xHN2 = double( t );
+%     t    = subs( x0, 'alpha', alphaHighNoon + 0.01 )';
+%     xHN3 = double( t );
+%     % Test
+
     tStart = tHighNoon - TNum;      % Endzeitpunkt = AM - TNum Minuten
     tEnd   = tHighNoon + 1 + TNum;	% Endzeitpunkt = AM + TNum Minuten
 
