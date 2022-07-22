@@ -1862,9 +1862,6 @@ noprefix "false"
 
  des Anhanges).
  
-\end_layout
-
-\begin_layout Standard
 \begin_inset Note Note
 status collapsed
 
@@ -2322,7 +2319,10 @@ Es ergibt sich schliesslich für die Punkte der gesuchten zweidimensionalen
  Trajektorie die Gleichung 
 \begin_inset Formula 
 \begin{equation}
-\underline{x}^{S}\left(\alpha\right)=AD_{\left(\Theta_{G}-\psi\right)}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right).\label{eq:Trajektorie2Dim}
+\left(\begin{array}{c}
+y_{1}\\
+y_{2}
+\end{array}\right)=\underline{x}^{S}\left(\alpha\right)=AD_{\left(\Theta_{G}-\psi\right)}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right).\label{eq:Trajektorie2Dim}
 \end{equation}
 
 \end_inset
@@ -2331,246 +2331,88 @@ Es ergibt sich schliesslich für die Punkte der gesuchten zweidimensionalen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
+Bei der Projektion 
+\begin_inset Formula $A$
+\end_inset
 
-\begin_layout Plain Layout
-Es gilt nach (
+ auf die Tangentialebene ist zu beachten, dass für das Sommerhalbjahr mit
+ 
+\begin_inset Formula $\Omega\in\left\{ \frac{3\pi}{2},\frac{\pi}{2}\right\} $
+\end_inset
+
+ die Projektion 
+\begin_inset Quotes gld
+\end_inset
+
+von vorne
+\begin_inset Quotes grd
+\end_inset
+
+ (also mit positiven Werten der 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+-Koordinate) stattfindet und im Winterhalbjahr mit 
+\begin_inset Formula $\Omega\in\left\{ \frac{\pi}{2},\frac{3\pi}{2}\right\} $
+\end_inset
+
+ 
+\begin_inset Quotes gld
+\end_inset
+
+von hinten
+\begin_inset Quotes grd
+\end_inset
+
+ (also mit negativen Werten der 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+-Koordinate) - siehe dazu die beiden Abbildungen 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:GesuchterPunktSonneGedreht"
+reference "fig:Problemskizze1"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
-) 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-\underline{x}_{0} & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}\left(\alpha\right)\\
- & = & \mu\underline{Q}-\mu\underline{S}\left(\alpha\right)+\underline{S}\left(\alpha\right).
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Wegen (
+, 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:GedrehterSonnenOrt"
+reference "fig:Problemskizze2"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
-) 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-\underline{S}\left(\alpha\right)=D_{\left(-\alpha\right)}\underline{S}
-\]
-
+.
+ Dies bedeutet eine Spiegelung der 2-dimensionalen Trajektorien an der 
+\begin_inset Formula $y_{2}$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
-und (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Ort der Sonne"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-\underline{S} & = & R_{S}\left(\begin{array}{c}
-\cos\Omega\\
-\sin\Omega\\
-0
-\end{array}\right)\\
- & = & \left(\begin{array}{c}
-S_{1}\\
-S_{2}\\
-0
-\end{array}\right)
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-sowie (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Endpunkt"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-\underline{Q} & = & \left(1+\frac{L}{R_{E}}\right)\underline{P}\\
- & = & \left(1+\frac{L}{R_{E}}\right)\left(\begin{array}{c}
-p_{1}\\
-0\\
-p_{2}
-\end{array}\right)\\
- & = & \left(\begin{array}{c}
-Q_{1}\\
-0\\
-Q_{3}
-\end{array}\right)
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-folgt 
-\begin_inset Formula 
-\begin{eqnarray*}
-\underline{x}_{0} & = & \mu\left(\begin{array}{c}
-Q_{1}\\
-0\\
-Q_{3}
-\end{array}\right)-\mu D_{\left(-\alpha\right)}\left(\begin{array}{c}
-S_{1}\\
-S_{2}\\
-0
-\end{array}\right)+D_{\left(-\alpha\right)}\left(\begin{array}{c}
-S_{1}\\
-S_{2}\\
-0
-\end{array}\right).
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Mit 
-\begin_inset Formula $\alpha=\alpha^{M}-\alpha_{M}$
-\end_inset
-
- und (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:AlphaM"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) ergibt sich 
-\begin_inset Formula 
-\begin{eqnarray*}
-\alpha & = & \alpha^{M}-\alpha_{M}\\
- & = & \alpha^{M}-\arctan\left(\frac{\tan\Omega}{\cos\psi}\right)-n\pi.
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Es folgt 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-D_{\left(-\alpha\right)}=\begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & \cos\psi\sin\alpha & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
--\cos\psi\sin\alpha & \cos\alpha & \sin\psi\sin\alpha\\
-\cos\psi\sin\psi\left(1-\cos\alpha\right) & -\sin\psi\sin\alpha & \cos^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
-\end{pmatrix}
-\]
-
-\end_inset
-
- folgt 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Wie man zeigen kann (siehe dazu den Unterabschnitt
+-Koordinaten-Achse.
+ Wie man zeigen kann (siehe dazu den Unterabschnitt
 \begin_inset space ~
 \end_inset
 
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Symmetrie-der-Trajektorien"
+reference "subsec:Symmetrie"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
- im Anhang), sind bezüglich des astronomischen Mittags (d.h.
- für den Drehwinkel 
-\begin_inset Formula $\alpha_{M}$
+ im Anhang), sind die Trajektorien aber symmetrisch zur 
+\begin_inset Formula $y_{2}$
 \end_inset
 
-) die 
-\begin_inset Formula $\left(x_{1},x_{3}\right)$
-\end_inset
-
--Komponenten gerade, die 
-\begin_inset Formula $x_{2}$
-\end_inset
-
--Komponente ist ungerade.
- Oder anders ausgedrückt: es gilt für ein geeignetes 
-\begin_inset Formula $\alpha\in\mathbb{R}$
-\end_inset
-
- 
-\begin_inset Formula 
-\begin{eqnarray*}
-x_{1}^{S}\left(\alpha_{M}+\alpha\right) & = & x_{1}^{S}\left(\alpha_{M}-\alpha\right)\\
-x_{2}^{S}\left(\alpha_{M}+\alpha\right) & = & -x_{2}^{S}\left(\alpha_{M}-\alpha\right)\\
-x_{3}^{S}\left(\alpha_{M}+\alpha\right) & = & x_{3}^{S}\left(\alpha_{M}-\alpha\right).
-\end{eqnarray*}
-
-\end_inset
-
+-Achse und das Problem verschwindet.
  
 \end_layout
 
@@ -2909,7 +2751,11 @@ Die oben beschriebenen Methode zur Bestimmung der Nord-Richtung funktioniert,
 \end_inset
 
  annimmt.
- In der Realität ist dieser Neigungswinkel aber 
+ In der Realität ist dieser Neigungswinkel aber nicht gleich 
+\begin_inset Formula $0°$
+\end_inset
+
+ sondern 
 \begin_inset Formula $\psi=23.44°$
 \end_inset
 
@@ -2918,21 +2764,22 @@ Die oben beschriebenen Methode zur Bestimmung der Nord-Richtung funktioniert,
 \end_layout
 
 \begin_layout Standard
-Die Schattentrajektorie ist deshalb keine Gerade - nicht einmal näherungsweise.
+Die Schattentrajektorie ist deshalb keine Gerade - und das nicht einmal
+ näherungsweise.
  
 \end_layout
 
 \begin_layout Standard
-Die dadurch verursachte Missweisung zur Nordrichtung ist nicht vernachlässigbar.
+Die dadurch verursachte Missweisung zur Nordrichtung ist nicht vernachlässigbar!
  Sie kann z.B.
  in Las Palmas je nach Tages- und Jahreszeit um 45° betragen.
  
 \end_layout
 
 \begin_layout Standard
-Die genaue Nordrichtung erhält man mit der beschriebenen Methode aber, wenn
- man Zeitpunkte untersucht, die symmetrisch um den Zeitpunkt des astronomischen
- Mittags liegen.
+Die genaue Nordrichtung erhält man mit der beschriebenen Methode aber nur,
+ wenn man Zeitpunkte untersucht, die symmetrisch um den Zeitpunkt des astronomis
+chen Mittags liegen.
  
 \end_layout
 
@@ -3900,19 +3747,24 @@ Aus
 
 \end_inset
 
-folgt 
-\begin_inset Formula 
-\[
-\varOmega^{S}<-1.
-\]
-
+ folgt 
+\begin_inset Formula $\varOmega^{S}<-1$
 \end_inset
 
-
+.
+ 
 \end_layout
 
 \begin_layout Subsubsection*
 Beweis 
+\end_layout
+
+\begin_layout Standard
+Es werden für den Nenner 
+\begin_inset Formula $1+\varOmega^{S}$
+\end_inset
+
+ die drei möglichen Fälle untersucht: 
 \end_layout
 
 \begin_layout Itemize
@@ -4382,7 +4234,7 @@ noprefix "false"
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -4516,11 +4368,7 @@ noprefix "false"
 \end_inset
 
 ) bestimmt.
- 
-\end_layout
-
-\begin_layout Standard
-Die Steigung 
+ Die Steigung 
 \begin_inset Formula $S\left(x\right)$
 \end_inset
 
@@ -4611,7 +4459,7 @@ Für
 \begin_inset Formula $\overline{\alpha}_{M}$
 \end_inset
 
- mit dem exakten Wert 
+ mit dem Hauptwert von 
 \begin_inset Formula $\alpha_{M}$
 \end_inset
 
@@ -4622,11 +4470,227 @@ Für
 \begin_layout Subsection
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:Symmetrie-der-Trajektorien"
+name "subsec:Symmetrie"
 
 \end_inset
 
-Symmetrie der Trajektorien 
+Symmetrie 
+\end_layout
+
+\begin_layout Standard
+Es gilt für ein geeignetes 
+\begin_inset Formula $\alpha\in\mathbb{R}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{1}^{S}\left(\alpha_{M}+\alpha\right) & = & x_{1}^{S}\left(\alpha_{M}-\alpha\right)\\
+x_{2}^{S}\left(\alpha_{M}+\alpha\right) & = & -x_{2}^{S}\left(\alpha_{M}-\alpha\right)\\
+x_{3}^{S}\left(\alpha_{M}+\alpha\right) & = & x_{3}^{S}\left(\alpha_{M}-\alpha\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Es gilt nach (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:GesuchterPunktSonneGedreht"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{x}_{0} & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}\left(\alpha\right)\\
+ & = & \mu\underline{Q}-\mu\underline{S}\left(\alpha\right)+\underline{S}\left(\alpha\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Wegen (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:GedrehterSonnenOrt"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\underline{S}\left(\alpha\right)=D_{\left(-\alpha\right)}\underline{S}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+und (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Ort der Sonne"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{S} & = & R_{S}\left(\begin{array}{c}
+\cos\Omega\\
+\sin\Omega\\
+0
+\end{array}\right)\\
+ & = & \left(\begin{array}{c}
+S_{1}\\
+S_{2}\\
+0
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+sowie (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Endpunkt"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{Q} & = & \left(1+\frac{L}{R_{E}}\right)\underline{P}\\
+ & = & \left(1+\frac{L}{R_{E}}\right)\left(\begin{array}{c}
+p_{1}\\
+0\\
+p_{2}
+\end{array}\right)\\
+ & = & \left(\begin{array}{c}
+Q_{1}\\
+0\\
+Q_{3}
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+folgt 
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{x}_{0} & = & \mu\left(\begin{array}{c}
+Q_{1}\\
+0\\
+Q_{3}
+\end{array}\right)-\mu D_{\left(-\alpha\right)}\left(\begin{array}{c}
+S_{1}\\
+S_{2}\\
+0
+\end{array}\right)+D_{\left(-\alpha\right)}\left(\begin{array}{c}
+S_{1}\\
+S_{2}\\
+0
+\end{array}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Mit 
+\begin_inset Formula $\alpha=\alpha^{M}-\alpha_{M}$
+\end_inset
+
+ und (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:AlphaM"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) ergibt sich 
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha & = & \alpha^{M}-\alpha_{M}\\
+ & = & \alpha^{M}-\arctan\left(\frac{\tan\Omega}{\cos\psi}\right)-n\pi.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Es folgt
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+D_{\left(-\alpha\right)}=\begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & \cos\psi\sin\alpha & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
+-\cos\psi\sin\alpha & \cos\alpha & \sin\psi\sin\alpha\\
+\cos\psi\sin\psi\left(1-\cos\alpha\right) & -\sin\psi\sin\alpha & \cos^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
+\end{pmatrix}
+\]
+
+\end_inset
+
+ folgt
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Subsection
