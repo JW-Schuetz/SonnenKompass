@@ -4496,8 +4496,13 @@ x_{3}^{S}\left(\alpha_{M}+\alpha\right) & = & x_{3}^{S}\left(\alpha_{M}-\alpha\r
 \end_layout
 
 \begin_layout Standard
+Der Nachweis fehlt noch.
+ 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Es gilt nach (
