@@ -73,7 +73,7 @@ function SonnenkompassSymbolic
     % Ableitung der Trajektorien-Komponenten nach alpha bestimmen
     y0Strich = simplify( diff( y0, 'alpha' ) );
 
-    save( 'SonnenkompassSymbolic.mat', 'alpha', 'x0', 'y0', 'y0Strich' )
+    save( 'SonnenkompassSymbolic.mat', 'alpha', 'x0', 'y0', 'y0Strich', 'dMinusAlpha' )
 end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -83,17 +83,15 @@ function y = MapToPlane( x0, thetaG, psi )
 
     % Punkt drehen um x2-Achse und den Winkel theta
     if( theta ~= 0 )
-        [ x1, x2, x3 ] = rotateX2( theta, x0( 1 ), x0( 2 ), x0( 3 ) );
+        x = rotateX2( theta, x0 );
     end
 
     % Projizieren auf die Tangentialebene
     A = [ 0, 1, 0; 0, 0, 1 ];
-    x = A * [ x1; x2; x3 ];
-
-    y = [ x( 1 ); x( 2 ) ];
+    y = A * x;
 end
 
-function [ x1, x2, x3 ] = rotateX2( theta, x1, x2, x3 )
+function x = rotateX2( theta, x )
     % Punkt drehen um x2-Achse und den Winkel theta
     c = cos( theta );
     s = sin( theta );
@@ -102,9 +100,5 @@ function [ x1, x2, x3 ] = rotateX2( theta, x1, x2, x3 )
            0, 1, 0;
           -s, 0, c ];
 
-    x = D * [ x1; x2; x3 ];
-
-    x1 = x( 1 );
-    x2 = x( 2 );
-    x3 = x( 3 );
+    x = D * x;
 end

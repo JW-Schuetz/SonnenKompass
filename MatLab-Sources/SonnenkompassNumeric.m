@@ -68,6 +68,9 @@ function SonnenkompassNumeric
     %   x(i,1) =  x(end-i,1)
     %   x(i,2) = -x(end-i,2)
     %   x(i,3) =  x(end-i,3)
+    % und
+    %   y(i,1) = -y(end-1,1)
+    %   y(i,2) =  y(end-1,2)
     for i = 1 : N
         t          = tStart + ( i - 1 );                % t in Minuten
         alpha( i ) = double( pi / ( 12 * 60 ) * t );    % zugehöriger Winkel
