@@ -55,13 +55,17 @@ function SonnenkompassNumeric
 %     xHN3 = double( t );
 %     % Test
 
-    tStart = tHighNoon - TNum;      % Endzeitpunkt = AM - TNum Minuten
-    tEnd   = tHighNoon + 1 + TNum;	% Endzeitpunkt = AM + TNum Minuten
+%   Beispiel: TNum = 3
+%   ==================
+%	tHN-3 tHN-2 tHN-1 tHN tHN+1 tHN+2 tHN+3
+
+    tStart = tHighNoon - TNum;	% Endzeitpunkt = AM - TNum Minuten
+    tEnd   = tHighNoon + TNum;	% Endzeitpunkt = AM + TNum Minuten
 
     % Numerische Auswertung
-    N = fix( tEnd - tStart + 1 );	% Anzahl der Zeitpunkte
-    x = zeros( N, 3 );              % Trajektorie 3-dim [m]
-    y = zeros( N, 2 );              % Trajektorie 2-dim [m]
+    N = fix( 2 * TNum + 1 );	% Anzahl der Zeitpunkte
+    x = zeros( N, 3 );          % Trajektorie 3-dim [m]
+    y = zeros( N, 2 );          % Trajektorie 2-dim [m]
 
     % Position und Zeitpunkt berechnen
     % Rechenzeit halbieren durch Nutzung der Symmetrie, es gilt:

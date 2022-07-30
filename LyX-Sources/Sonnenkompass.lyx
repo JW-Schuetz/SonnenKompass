@@ -95,7 +95,7 @@ Jürgen Womser-Schütz, https://github.com/JW-Schuetz/SonnenKompass
 
 \begin_layout Date
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Kein Datum
@@ -108,7 +108,7 @@ Kein Datum
 
 \begin_layout Standard
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -121,7 +121,7 @@ thispagestyle{empty}
 
 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Keine Seitennummerierung!
@@ -187,7 +187,7 @@ das neue Schattenende des Stabes mit einem zweiten Stein markieren.
 \begin_layout Standard
 Man erhält dann die Nordrichtung mittels der folgenden Regeln
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Die Methode wird in der Nähe der Pole scheitern, da das Stabende in Abhängigkeit
@@ -458,7 +458,7 @@ die Sommersonnenwende (SSW) ist am 21.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -497,7 +497,7 @@ Problemskizze, SSW, astronomischer Mittag
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -835,14 +835,30 @@ Inverse
 \end_layout
 
 \begin_layout Plain Layout
+Es gilt mit der Einheitsmatrix 
+\begin_inset Formula $I$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+D_{\alpha}^{-1}D_{\left(-\alpha\right)}=I.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Gruppeneigenschaft 
+\end_layout
+
+\begin_layout Plain Layout
 Es gilt 
 \begin_inset Formula 
 \[
-D_{\alpha}^{-1}D_{\left(-\alpha\right)}=\left(\begin{array}{ccc}
-1\\
- & 1\\
- &  & 1
-\end{array}\right).
+D_{\left(\alpha+\beta\right)}=D_{\alpha}D_{\beta}=D_{\beta}D_{\alpha}.
 \]
 
 \end_inset
@@ -855,17 +871,27 @@ Zerlegung in geraden und ungeraden Anteil
 \end_layout
 
 \begin_layout Plain Layout
-Für die Drehmatrix 
-\end_layout
+Man kann die Drehmatrix 
+\begin_inset Formula $D_{\alpha}$
+\end_inset
 
-\begin_layout Plain Layout
+ in einen bezüglich des Drehwinkels 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ geraden 
+\begin_inset Formula $G_{\alpha}$
+\end_inset
+
+ und einen ungeraden Anteil 
+\begin_inset Formula $U_{\alpha}$
+\end_inset
+
+ zerlegen 
 \begin_inset Formula 
-\begin{eqnarray*}
-D_{\alpha} & = & \begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & -\cos\psi\sin\alpha & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
-\cos\psi\sin\alpha & \cos\alpha & -\sin\psi\sin\alpha\\
-\cos\psi\sin\psi\left(1-\cos\alpha\right) & \sin\psi\sin\alpha & \cos^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
-\end{pmatrix}
-\end{eqnarray*}
+\[
+D_{\alpha}=G_{\alpha}+U_{\alpha}.
+\]
 
 \end_inset
 
@@ -873,11 +899,7 @@ D_{\alpha} & = & \begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
 \end_layout
 
 \begin_layout Plain Layout
-kann man schreiben 
-\begin_inset Formula $D_{\alpha}=G_{\alpha}+U_{\alpha}$
-\end_inset
-
- mit dem geraden und dem ungeraden Anteil 
+Dabei gilt für die beiden Anteile 
 \end_layout
 
 \begin_layout Plain Layout
@@ -887,14 +909,10 @@ G_{\alpha} & = & \begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
 0 & \cos\alpha & 0\\
 \cos\psi\sin\psi\left(1-\cos\alpha\right) & 0 & \cos^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
 \end{pmatrix}\\
-U_{\alpha} & = & \begin{pmatrix}0 & -\cos\psi\sin\alpha & 0\\
-\cos\psi\sin\alpha & 0 & -\sin\psi\sin\alpha\\
-0 & \sin\psi\sin\alpha & 0
-\end{pmatrix}\\
- & = & \sin\alpha\begin{pmatrix}0 & -\cos\psi & 0\\
+U_{\alpha} & = & \begin{pmatrix}0 & -\cos\psi & 0\\
 \cos\psi & 0 & -\sin\psi\\
 0 & \sin\psi & 0
-\end{pmatrix}.
+\end{pmatrix}\sin\alpha.
 \end{eqnarray*}
 
 \end_inset
@@ -914,7 +932,41 @@ Es folgt für
 \begin_inset Formula 
 \begin{eqnarray*}
 D_{\left(-\alpha\right)} & = & G_{\left(-\alpha\right)}+U_{\left(-\alpha\right)}\\
- & = & G_{\alpha}-U_{\alpha}
+ & = & G_{\alpha}-U_{\alpha}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Astronomischer Mittag 
+\end_layout
+
+\begin_layout Plain Layout
+Es gilt der nachfolgende Zusammenhang 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\cos\alpha_{M}\sin\Omega-\cos\Omega\cos\psi\sin\alpha_{M}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+oder äquivalent 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha_{M} & = & \arctan\left(\frac{\tan\Omega}{\cos\psi}\right)+n\pi.
 \end{eqnarray*}
 
 \end_inset
@@ -923,20 +975,62 @@ D_{\left(-\alpha\right)} & = & G_{\left(-\alpha\right)}+U_{\left(-\alpha\right)}
 \end_layout
 
 \begin_layout Plain Layout
-und damit folgt 
+Mit der Abkürzung 
+\begin_inset Formula $\xi=\sqrt{\cos^{2}\psi+\tan^{2}\Omega}$
+\end_inset
+
+ bekommt man für die Drehmatrix 
+\begin_inset Formula $D_{\left(\alpha_{M}\right)}$
+\end_inset
+
+ (siehe 
+\begin_inset Quotes gld
+\end_inset
+
+Symmetrie.m
+\begin_inset Quotes grd
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+D_{\left(\alpha_{M}\right)}=\frac{1}{\xi}\left(\begin{array}{ccc}
+D_{11} & D_{12} & D_{13}\\
+-D_{12} & D_{22} & D_{23}\\
+D_{13} & -D_{23} & D_{33}
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+mit den Matrizenelementen 
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
-D_{\alpha}-D_{\left(-\alpha\right)} & = & G_{\alpha}+U_{\alpha}-G_{\alpha}+U_{\alpha}\\
- & = & 2U_{\alpha}\\
- & = & 2\sin\alpha\begin{pmatrix}0 & -\cos\psi & 0\\
-\cos\psi & 0 & -\sin\psi\\
-0 & \sin\psi & 0
-\end{pmatrix}.
+D_{11} & = & \xi\sin^{2}\psi+\left|\cos\psi\right|\cos^{2}\psi\\
+D_{12} & = & \left|\cos\psi\right|\tan\Omega\\
+D_{13} & = & -\cos\psi\sin\psi\left(\left|\cos\psi\right|-\xi\right)\\
+D_{22} & = & \left|\cos\psi\right|\\
+D_{23} & = & \left|\cos\psi\right|\tan\psi\tan\Omega\\
+D_{33} & = & \left|\cos\psi\right|\sin^{2}\psi+\xi\cos^{2}\psi.
 \end{eqnarray*}
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+xxx 
 \end_layout
 
 \end_inset
@@ -975,7 +1069,7 @@ besitzt wegen
 
 die Ableitung 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 wegen: sin^2+cos^2=1
@@ -1012,12 +1106,12 @@ wegen: sin^2+cos^2=1
 
  
 \begin_inset Formula 
-\begin{equation}
-D_{\alpha}=\begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & -\cos\psi\sin\alpha & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
+\begin{eqnarray}
+D_{\alpha} & = & \begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & -\cos\psi\sin\alpha & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
 \cos\psi\sin\alpha & \cos\alpha & -\sin\psi\sin\alpha\\
 \cos\psi\sin\psi\left(1-\cos\alpha\right) & \sin\psi\sin\alpha & \cos^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
-\end{pmatrix},\label{eq:DrehmatrixAlpha}
-\end{equation}
+\end{pmatrix}\label{eq:DrehmatrixAlpha}
+\end{eqnarray}
 
 \end_inset
 
@@ -1220,7 +1314,7 @@ p_{3}^{S} & = & 0.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2057,7 +2151,7 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2372,7 +2466,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2442,7 +2536,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2557,7 +2651,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2599,7 +2693,7 @@ Frühlings- und Herbst-Äquinoktikum
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2760,7 +2854,7 @@ p_{1}, & 0, & p_{3}\end{array}\right)^{T}$
 
  gelten
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 ...
@@ -3026,7 +3120,7 @@ noprefix "false"
 
 ) für die Drehmatrix 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -3064,7 +3158,7 @@ Für den Punkt
 
  folgt im Kugelkoordinatensystem 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -3170,7 +3264,7 @@ x_{3}
 \begin_layout Plain Layout
 und damit erwartungsgemäss 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -3213,7 +3307,7 @@ noprefix "false"
 
 ) wegen der SSW 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -3281,7 +3375,7 @@ noprefix "false"
 
 ) liefert 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -3331,7 +3425,7 @@ R_{E}\\
 \begin_layout Plain Layout
 mit der Lösung 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -3371,7 +3465,7 @@ Einsetzen in
 \begin_layout Plain Layout
 den Zusammenhang 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -3457,7 +3551,7 @@ noprefix "false"
 
  der Tangentialebene 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -3508,7 +3602,7 @@ Nebenrechnung und Skizze
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4096,7 +4190,7 @@ Still to do!
 
 \color red
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -4196,7 +4290,7 @@ Es soll nun noch für jeden Jahreszeitpunkt
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4543,7 +4637,7 @@ Beweis
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -4552,7 +4646,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename Symmetrie.eps
-	lyxscale 300
+	lyxscale 200
 
 \end_inset
 
@@ -4560,7 +4654,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Symmetrie
+Symmetrie der 2-dimensionalen Trajektorie 
 \end_layout
 
 \end_inset
@@ -4583,118 +4677,24 @@ Der Nachweis fehlt noch.
 status collapsed
 
 \begin_layout Plain Layout
-Es gilt nach (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:GesuchterPunktSonneGedreht"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) 
+Aus der Drehmatrix 
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
-\underline{x}_{0} & = & \mu\underline{Q}+\left(1-\mu\right)\underline{S}\left(\alpha\right)\\
- & = & \mu\underline{Q}-\mu\underline{S}\left(\alpha\right)+\underline{S}\left(\alpha\right).
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Wegen (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:GedrehterSonnenOrt"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-\underline{S}\left(\alpha\right)=D_{\left(-\alpha\right)}\underline{S}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-und (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Ort der Sonne"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-\underline{S} & = & R_{S}\left(\begin{array}{c}
-\cos\Omega\\
-\sin\Omega\\
-0
-\end{array}\right)\\
- & = & \left(\begin{array}{c}
-S_{1}\\
-S_{2}\\
-0
-\end{array}\right)
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-sowie (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Endpunkt"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-\underline{Q} & = & \left(1+\frac{L}{R_{E}}\right)\underline{P}\\
- & = & \left(1+\frac{L}{R_{E}}\right)\left(\begin{array}{c}
-p_{1}\\
-0\\
-p_{2}
-\end{array}\right)\\
- & = & \left(\begin{array}{c}
-Q_{1}\\
-0\\
-Q_{3}
-\end{array}\right)
+D_{\alpha} & = & \begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & -\cos\psi\sin\alpha & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
+\cos\psi\sin\alpha & \cos\alpha & -\sin\psi\sin\alpha\\
+\cos\psi\sin\psi\left(1-\cos\alpha\right) & \sin\psi\sin\alpha & \cos^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
+\end{pmatrix}\\
+ & = & \begin{pmatrix}\sin^{2}\psi+\left(-\sin^{2}\psi+1\right)\cos\alpha & -\cos\psi\sin\alpha & \sin\psi\cos\psi-\sin\psi\cos\psi\cos\alpha\\
+\cos\psi\sin\alpha & \cos\alpha & -\sin\psi\sin\alpha\\
+\cos\psi\sin\psi-\cos\psi\sin\psi\cos\alpha & \sin\psi\sin\alpha & \cos^{2}\psi+\left(-\cos^{2}\psi+1\right)\cos\alpha
+\end{pmatrix}\\
+ & = & \begin{pmatrix}\sin^{2}\psi+\cos^{2}\psi\cos\alpha & -\cos\psi\sin\alpha & \sin\psi\cos\psi-\sin\psi\cos\psi\cos\alpha\\
+\cos\psi\sin\alpha & \cos\alpha & -\sin\psi\sin\alpha\\
+\cos\psi\sin\psi-\cos\psi\sin\psi\cos\alpha & \sin\psi\sin\alpha & \cos^{2}\psi+\sin^{2}\psi\cos\alpha
+\end{pmatrix}
 \end{eqnarray*}
 
 \end_inset
@@ -4704,57 +4704,6 @@ Q_{3}
 
 \begin_layout Plain Layout
 folgt 
-\begin_inset Formula 
-\begin{eqnarray*}
-\underline{x}_{0} & = & \mu\left(\begin{array}{c}
-Q_{1}\\
-0\\
-Q_{3}
-\end{array}\right)-\mu D_{\left(-\alpha\right)}\left(\begin{array}{c}
-S_{1}\\
-S_{2}\\
-0
-\end{array}\right)+D_{\left(-\alpha\right)}\left(\begin{array}{c}
-S_{1}\\
-S_{2}\\
-0
-\end{array}\right).
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Mit 
-\begin_inset Formula $\alpha=\alpha^{M}-\alpha_{M}$
-\end_inset
-
- und (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:AlphaM"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) ergibt sich 
-\begin_inset Formula 
-\begin{eqnarray*}
-\alpha & = & \alpha^{M}-\alpha_{M}\\
- & = & \alpha^{M}-\arctan\left(\frac{\tan\Omega}{\cos\psi}\right)-n\pi.
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Es folgt 
 \end_layout
 
 \begin_layout Plain Layout
@@ -4768,20 +4717,24 @@ D_{\left(-\alpha\right)}=\begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\c
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Plain Layout
+Es gilt mit der Umbenennung 
+\begin_inset Formula $D_{\left(-\alpha\right)}\Rightarrow D^{-}\left(\alpha\right)$
+\end_inset
+
  folgt 
 \end_layout
 
-\end_inset
-
- 
-\begin_inset Note Note
-status collapsed
-
 \begin_layout Plain Layout
-Zunächst wird 
 \begin_inset Formula 
 \[
-\underline{x}^{S}\left(\alpha_{M}\right)=\mu_{0}\left(\alpha_{M}\right)\underline{Q}+\left[1-\mu_{0}\left(\alpha_{M}\right)\right]\underline{S}\left(\alpha_{M}\right)
+D^{-}\left(\alpha\right)=\begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & \cos\psi\sin\alpha & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
+-\cos\psi\sin\alpha & \cos\alpha & \sin\psi\sin\alpha\\
+\cos\psi\sin\psi\left(1-\cos\alpha\right) & -\sin\psi\sin\alpha & \cos^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
+\end{pmatrix}
 \]
 
 \end_inset
@@ -4790,73 +4743,17 @@ Zunächst wird
 \end_layout
 
 \begin_layout Plain Layout
-berechnet.
- Dabei gilt 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-\mu_{0}\left(\alpha_{M}\right)=\frac{\varOmega^{S}\left(\alpha_{M}\right)}{1+\varOmega^{S}\left(\alpha_{M}\right)}
-\]
-
+Substitution 
+\begin_inset Formula $\alpha\Rightarrow\alpha-\alpha_{M}$
 \end_inset
 
-mit 
-\begin_inset Formula 
-\[
-\varOmega^{S}\left(\alpha_{M}\right)=\frac{R_{E}}{L}-\frac{\underline{P}^{T}\underline{S}\left(\alpha_{M}\right)}{LR_{E}}.
-\]
-
-\end_inset
-
-Wegen 
-\begin_inset Formula 
-\[
-\underline{S}\left(\alpha_{M}\right)=D_{\left(-\alpha_{M}\right)}\underline{S}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-wird die Drehmatrix 
-\begin_inset Formula $D_{\left(-\alpha_{M}\right)}$
-\end_inset
-
- näher untersucht.
- Es gilt 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-D_{\left(-\alpha_{M}\right)}=\begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha_{M}\right)+\cos\alpha_{M} & \cos\psi\sin\alpha_{M} & \sin\psi\cos\psi\left(1-\cos\alpha_{M}\right)\\
--\cos\psi\sin\alpha_{M} & \cos\alpha_{M} & \sin\psi\sin\alpha_{M}\\
-\cos\psi\sin\psi\left(1-\cos\alpha_{M}\right) & -\sin\psi\sin\alpha_{M} & \cos^{2}\psi\left(1-\cos\alpha_{M}\right)+\cos\alpha_{M}
-\end{pmatrix}.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Wegen 
-\begin_inset Formula $\alpha=\alpha_{M}$
-\end_inset
-
- ergibt sich 
-\end_layout
-
-\begin_layout Plain Layout
+ liefert zunächst 
 \begin_inset Formula 
 \begin{eqnarray*}
-\cos\alpha_{M}\sin\Omega-\cos\Omega\cos\psi\sin\alpha_{M} & = & 0\\
-\cos\alpha_{M} & = & \frac{\cos\Omega\cos\psi\sin\alpha_{M}}{\sin\Omega}
+D^{-}\left(\alpha-\alpha_{M}\right) & = & \begin{pmatrix}\sin^{2}\psi\left(1-\cos\left(\alpha-\alpha_{M}\right)\right)+\cos\left(\alpha-\alpha_{M}\right) & \cos\psi\sin\left(\alpha-\alpha_{M}\right) & \sin\psi\cos\psi\left(1-\cos\left(\alpha-\alpha_{M}\right)\right)\\
+-\cos\psi\sin\left(\alpha-\alpha_{M}\right) & \cos\left(\alpha-\alpha_{M}\right) & \sin\psi\sin\left(\alpha-\alpha_{M}\right)\\
+\cos\psi\sin\psi\left(1-\cos\left(\alpha-\alpha_{M}\right)\right) & -\sin\psi\sin\left(\alpha-\alpha_{M}\right) & \cos^{2}\psi\left(1-\cos\left(\alpha-\alpha_{M}\right)\right)+\cos\left(\alpha-\alpha_{M}\right)
+\end{pmatrix}
 \end{eqnarray*}
 
 \end_inset
@@ -4864,9 +4761,53 @@ Wegen
 
 \end_layout
 
+\begin_layout Plain Layout
+mit 
+\begin_inset Formula $\alpha_{M}$
+\end_inset
+
+ nach Gleichung (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:AlphaM"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha_{M} & = & \arctan\left(\frac{\tan\Omega}{\cos\psi}\right)+n\pi
+\end{eqnarray*}
+
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+xxx 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\cos\alpha_{M}\sin\Omega-\cos\Omega\cos\psi\sin\alpha_{M}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -4877,7 +4818,7 @@ Trigonometrische Überprüfung
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -6044,7 +5985,7 @@ Orthogonalprojektion
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
