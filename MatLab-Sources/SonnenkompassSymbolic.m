@@ -73,7 +73,8 @@ function SonnenkompassSymbolic
     % Ableitung der Trajektorien-Komponenten nach alpha bestimmen
     y0Strich = simplify( diff( y0, 'alpha' ) );
 
-    save( 'SonnenkompassSymbolic.mat', 'alpha', 'x0', 'y0', 'y0Strich', 'dMinusAlpha' )
+    save( 'SonnenkompassSymbolic.mat', 'alpha', 'x0', 'y0', 'y0Strich', ...
+          'dMinusAlpha' )
 end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

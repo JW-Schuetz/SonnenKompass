@@ -95,7 +95,7 @@ Jürgen Womser-Schütz, https://github.com/JW-Schuetz/SonnenKompass
 
 \begin_layout Date
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Kein Datum
@@ -108,7 +108,7 @@ Kein Datum
 
 \begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -121,7 +121,7 @@ thispagestyle{empty}
 
 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Keine Seitennummerierung!
@@ -187,7 +187,7 @@ das neue Schattenende des Stabes mit einem zweiten Stein markieren.
 \begin_layout Standard
 Man erhält dann die Nordrichtung mittels der folgenden Regeln
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Die Methode wird in der Nähe der Pole scheitern, da das Stabende in Abhängigkeit
@@ -458,7 +458,7 @@ die Sommersonnenwende (SSW) ist am 21.
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -497,7 +497,7 @@ Problemskizze, SSW, astronomischer Mittag
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -577,7 +577,7 @@ Dazu wird zunächst die Verbindungsgerade zwischen der Sonne und dem Endpunkt
 Es sind zwei äquivalente Lösungsansätze denkbar, die Rotation der Erde um
  ihre Rotationsachse zu berücksichtigen 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Subsection*
 Äquivalenz
@@ -1069,7 +1069,7 @@ besitzt wegen
 
 die Ableitung 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 wegen: sin^2+cos^2=1
@@ -1314,7 +1314,7 @@ p_{3}^{S} & = & 0.
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2151,7 +2151,7 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2466,7 +2466,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2536,7 +2536,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2651,7 +2651,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2693,7 +2693,7 @@ Frühlings- und Herbst-Äquinoktikum
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2854,7 +2854,7 @@ p_{1}, & 0, & p_{3}\end{array}\right)^{T}$
 
  gelten
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 ...
@@ -3120,7 +3120,7 @@ noprefix "false"
 
 ) für die Drehmatrix 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -3158,7 +3158,7 @@ Für den Punkt
 
  folgt im Kugelkoordinatensystem 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -3264,7 +3264,7 @@ x_{3}
 \begin_layout Plain Layout
 und damit erwartungsgemäss 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -3307,7 +3307,7 @@ noprefix "false"
 
 ) wegen der SSW 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -3375,7 +3375,7 @@ noprefix "false"
 
 ) liefert 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -3425,7 +3425,7 @@ R_{E}\\
 \begin_layout Plain Layout
 mit der Lösung 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -3465,7 +3465,7 @@ Einsetzen in
 \begin_layout Plain Layout
 den Zusammenhang 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -3551,7 +3551,7 @@ noprefix "false"
 
  der Tangentialebene 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -3602,7 +3602,7 @@ Nebenrechnung und Skizze
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4190,7 +4190,7 @@ Still to do!
 
 \color red
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -4290,7 +4290,7 @@ Es soll nun noch für jeden Jahreszeitpunkt
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4637,11 +4637,7 @@ Beweis
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4818,7 +4814,7 @@ Trigonometrische Überprüfung
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -5103,7 +5099,7 @@ literal "false"
 ).
  
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Itemize
 Hessesche Normalform: Normalenvektor 
@@ -5281,7 +5277,7 @@ Die Spalten der Matrix
 
 \begin_layout Plain Layout
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Subsubsection*
 Allgemeines LS-Problem 
@@ -5387,7 +5383,7 @@ literal "false"
 
  der Form 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Formula $\left(m\times n\right)=\left(\begin{array}{cc}
@@ -5439,7 +5435,7 @@ literal "false"
 
  definiert man zur Problemlösung einerseits 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Formula 
@@ -5661,7 +5657,7 @@ noprefix "false"
 
  
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Formula $\left(\begin{array}{cc}
@@ -5985,7 +5981,7 @@ Orthogonalprojektion
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -6066,7 +6062,7 @@ P\left(\underline{x}_{0}\right)=\underline{x}_{0}+\left(\underline{n}^{T}\underl
 \begin_layout Plain Layout
 oder in Matrixformulierung 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Formula 

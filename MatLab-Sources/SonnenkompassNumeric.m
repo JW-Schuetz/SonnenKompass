@@ -25,6 +25,7 @@ function SonnenkompassNumeric
     rE   = 6371000.8;                % mittlerer Erdradius [m] (GRS 80, WGS 84)
     rS   = 149597870700.0;           % AE, mittlerer Abstand Erde - Sonne [m]
     psi  = 23.44 / 180.0 * pi;       % Winkel Erd-Rotationsachse senkrecht zur Ekliptik [rad]
+%	psi  = 0;
 
     ssw    = datetime( '21.06.2021' );	% Datum SSW
     tag    = datetime( datum );
@@ -39,8 +40,8 @@ function SonnenkompassNumeric
     p3 = rE * cos( theta );         % z-Koordinate
 
     % Zahlenwerte bis auf alpha substituieren
-    x0 = subs( x0 );
-    y0 = subs( y0 );
+    x0 = subs( x0 );    % die dreidimensionale Trajektorie
+    y0 = subs( y0 );    % die zweidimensionale Trajektorie
 
     % astronomischer Mittag
     alphaHighNoon = double( atan2( tan( omega ), cos( psi ) ) + pi );
