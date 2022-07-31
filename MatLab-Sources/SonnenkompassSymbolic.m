@@ -77,7 +77,7 @@ function SonnenkompassSymbolic
           'dMinusAlpha' )
 end
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function y = MapToPlane( x0, thetaG, psi )
     theta = thetaG - psi;

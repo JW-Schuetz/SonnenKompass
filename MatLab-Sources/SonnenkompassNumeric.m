@@ -43,7 +43,7 @@ function SonnenkompassNumeric
     x0 = subs( x0 );    % die dreidimensionale Trajektorie
     y0 = subs( y0 );    % die zweidimensionale Trajektorie
 
-    % astronomischer Mittag
+    % astronomischer Mittag [rad] und []
     alphaHighNoon = double( atan2( tan( omega ), cos( psi ) ) + pi );
     tHighNoon     = 60 * 12 * alphaHighNoon / pi;
 
