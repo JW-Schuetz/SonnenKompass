@@ -187,7 +187,7 @@ das neue Schattenende des Stabes mit einem zweiten Stein markieren.
 \begin_layout Standard
 Man erhält dann die Nordrichtung mittels der folgenden Regeln
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Die Methode wird in der Nähe der Pole scheitern, da das Stabende in Abhängigkeit
@@ -463,7 +463,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename SonnenKompass.eps
-	lyxscale 250
+	lyxscale 200
 	scale 65
 	BoundingBox 0bp 0bp 769bp 259bp
 	clip
@@ -502,7 +502,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename SonnenKompass1.eps
-	lyxscale 250
+	lyxscale 200
 	scale 65
 	BoundingBox 0bp 0bp 769bp 259bp
 	clip
@@ -577,7 +577,7 @@ Dazu wird zunächst die Verbindungsgerade zwischen der Sonne und dem Endpunkt
 Es sind zwei äquivalente Lösungsansätze denkbar, die Rotation der Erde um
  ihre Rotationsachse zu berücksichtigen 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Subsection*
 Äquivalenz
@@ -1019,10 +1019,6 @@ D_{33} & = & \left|\cos\psi\right|\sin^{2}\psi+\xi\cos^{2}\psi.
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-xxx 
 \end_layout
 
 \end_inset
@@ -2785,8 +2781,8 @@ Die dadurch verursachte Missweisung zur Nordrichtung ist nicht vernachlässigbar
 Die genaue Nordrichtung erhält man mit der beschriebenen Methode jedoch,
  wenn man Zeitpunkte untersucht, die symmetrisch um den Zeitpunkt des astronomis
 chen Mittags liegen.
- Als zusätzliche Hilfsmittel wären neben den beiden Steinen und dem Stab
- weitere Steine sowie eine Uhr nötig.
+ Als zusätzliche Hilfsmittel werden neben den beiden Steinen und dem Stab
+ weitere Steine sowie eine Uhr benötigt.
  
 \end_layout
 
@@ -4283,6 +4279,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename SonnenKompassTopHelp1.eps
+	lyxscale 107
 	scale 30
 
 \end_inset
@@ -4396,7 +4393,7 @@ S\left(x\right) & = & \frac{dy_{2}\left(x\right)}{dy_{1}}=\frac{\frac{\partial y
 \end_layout
 
 \begin_layout Standard
-Dieser (eher längliche 
+Dieser (eher etwas längliche 
 \begin_inset Formula $\smiley$
 \end_inset
 
@@ -4630,7 +4627,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename Symmetrie.eps
-	lyxscale 200
+	lyxscale 150
 
 \end_inset
 
@@ -4652,13 +4649,13 @@ Symmetrie der 2-dimensionalen Trajektorie
 \end_layout
 
 \begin_layout Standard
-Der Nachweis fehlt noch.
+Der Beweis fehlt noch.
  
 \end_layout
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Aus der Drehmatrix 
@@ -4728,15 +4725,15 @@ D^{-}\left(\alpha\right)=\begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\c
 
 \begin_layout Plain Layout
 Substitution 
-\begin_inset Formula $\alpha\Rightarrow\alpha-\alpha_{M}$
+\begin_inset Formula $\alpha\Rightarrow\alpha_{M}-\alpha$
 \end_inset
 
  liefert zunächst 
 \begin_inset Formula 
 \begin{eqnarray*}
-D^{-}\left(\alpha-\alpha_{M}\right) & = & \begin{pmatrix}\sin^{2}\psi\left(1-\cos\left(\alpha-\alpha_{M}\right)\right)+\cos\left(\alpha-\alpha_{M}\right) & \cos\psi\sin\left(\alpha-\alpha_{M}\right) & \sin\psi\cos\psi\left(1-\cos\left(\alpha-\alpha_{M}\right)\right)\\
--\cos\psi\sin\left(\alpha-\alpha_{M}\right) & \cos\left(\alpha-\alpha_{M}\right) & \sin\psi\sin\left(\alpha-\alpha_{M}\right)\\
-\cos\psi\sin\psi\left(1-\cos\left(\alpha-\alpha_{M}\right)\right) & -\sin\psi\sin\left(\alpha-\alpha_{M}\right) & \cos^{2}\psi\left(1-\cos\left(\alpha-\alpha_{M}\right)\right)+\cos\left(\alpha-\alpha_{M}\right)
+D^{-}\left(\alpha_{M}-\alpha\right) & = & \begin{pmatrix}\sin^{2}\psi\left(1-\cos\left(\alpha_{M}-\alpha\right)\right)+\cos\left(\alpha_{M}-\alpha\right) & \cos\psi\sin\left(\alpha_{M}-\alpha\right) & \sin\psi\cos\psi\left(1-\cos\left(\alpha_{M}-\alpha\right)\right)\\
+-\cos\psi\sin\left(\alpha_{M}-\alpha\right) & \cos\left(\alpha_{M}-\alpha\right) & \sin\psi\sin\left(\alpha_{M}-\alpha\right)\\
+\cos\psi\sin\psi\left(1-\cos\left(\alpha_{M}-\alpha\right)\right) & -\sin\psi\sin\left(\alpha_{M}-\alpha\right) & \cos^{2}\psi\left(1-\cos\left(\alpha_{M}-\alpha\right)\right)+\cos\left(\alpha_{M}-\alpha\right)
 \end{pmatrix}
 \end{eqnarray*}
 
@@ -4807,7 +4804,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename SonnenKompassHelp.eps
-	lyxscale 170
+	lyxscale 166
 	scale 50
 
 \end_inset

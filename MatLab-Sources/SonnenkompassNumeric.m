@@ -6,7 +6,8 @@ function SonnenkompassNumeric
     clc
     clear
 
-    load( 'SonnenkompassSymbolic.mat', 'alpha', 'x0', 'y0' )
+    load( 'SonnenkompassSymbolic.mat', 'alpha', 'x0', 'y0', 'y0StrichNom', ...
+          'y0StrichDenom' )
 
     % Variable Daten
     ort   = 'LasPalmas';
@@ -44,15 +45,34 @@ function SonnenkompassNumeric
     y0 = subs( y0 );    % die zweidimensionale Trajektorie
 
     % astronomischer Mittag [rad] und []
-    alphaHighNoon = double( atan2( tan( omega ), cos( psi ) ) + pi );
-    tHighNoon     = 60 * 12 * alphaHighNoon / pi;
+    alphaM = double( atan2( tan( omega ), cos( psi ) ) + pi );
+    tM     = 60 * 12 * alphaM / pi;
+
+    % Zähler (nur der von alpha abhängige Term)
+    t = version( '-release' ) > '2020a';
+    if( ~isempty( find( t, 1 ) ) )
+        childs = children( y0StrichNom );
+        for n = 1 : length( childs )
+            v = symvar( childs{ n } );
+        end
+    else
+        childs = children( y0StrichNom );
+        for n = 1 : length( childs )
+            v = symvar( childs( n ) );
+        end
+    end
+
+    % Ableitung zu gross? Fehlermeldung
+    if( y0StrichNom > 1e-10 )
+        error( 'Ableitung ungleich 0!' )
+    end
 
 %     % Test
-%     t    = subs( x0, 'alpha', alphaHighNoon - 0.01 )';
+%     t    = subs( x0, 'alpha', alphaM - 0.01 )';
 %     xHN1 = double( t );
-%     t    = subs( x0, 'alpha', alphaHighNoon )';
+%     t    = subs( x0, 'alpha', alphaM )';
 %     xHN2 = double( t );
-%     t    = subs( x0, 'alpha', alphaHighNoon + 0.01 )';
+%     t    = subs( x0, 'alpha', alphaM + 0.01 )';
 %     xHN3 = double( t );
 %     % Test
 
@@ -60,8 +80,8 @@ function SonnenkompassNumeric
 %   ==================
 %	tHN-3 tHN-2 tHN-1 tHN tHN+1 tHN+2 tHN+3
 
-    tStart = tHighNoon - TNum;	% Endzeitpunkt = AM - TNum Minuten
-    tEnd   = tHighNoon + TNum;	% Endzeitpunkt = AM + TNum Minuten
+    tStart = tM - TNum;	% Endzeitpunkt = AM - TNum Minuten
+    tEnd   = tM + TNum;	% Endzeitpunkt = AM + TNum Minuten
 
     % Numerische Auswertung
     N = fix( 2 * TNum + 1 );	% Anzahl der Zeitpunkte
@@ -76,6 +96,7 @@ function SonnenkompassNumeric
     % und
     %   y(i,1) = -y(end-1,1)
     %   y(i,2) =  y(end-1,2)
+
     for i = 1 : N
         t          = tStart + ( i - 1 );                % t in Minuten
         alpha( i ) = double( pi / ( 12 * 60 ) * t );    % zugehöriger Winkel

@@ -8,8 +8,7 @@ function Symmetrie
     alpha = sym( 'alpha', 'real' );
     psi   = sym( 'psi', 'real' );
 
-    dMinusAlpha = subs( dMinusAlpha, alpha, ...
-        atan( tan( omega ) / cos( psi ) ) );
+    dMinusAlpha = subs( dMinusAlpha, alpha, str2sym( 'alpha' ) );
 
     dMinusAlpha = simplify( dMinusAlpha, 'Steps', 100 );
     [ z, n ] = numden( dMinusAlpha );
