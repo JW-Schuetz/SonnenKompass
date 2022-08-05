@@ -1095,9 +1095,9 @@ wegen: sin^2+cos^2=1
  
 \begin_inset Formula 
 \begin{eqnarray}
-D_{\alpha} & = & \begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & -\cos\psi\sin\alpha & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
+D_{\alpha} & = & \begin{pmatrix}\sin^{2}\psi+\cos^{2}\psi\cos\alpha & -\cos\psi\sin\alpha & \sin\psi\cos\psi-\sin\psi\cos\psi\cos\alpha\\
 \cos\psi\sin\alpha & \cos\alpha & -\sin\psi\sin\alpha\\
-\cos\psi\sin\psi\left(1-\cos\alpha\right) & \sin\psi\sin\alpha & \cos^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
+\sin\psi\cos\psi-\sin\psi\cos\psi\cos\alpha & \sin\psi\sin\alpha & \cos^{2}\psi+\sin^{2}\psi\cos\alpha
 \end{pmatrix}\label{eq:DrehmatrixAlpha}
 \end{eqnarray}
 

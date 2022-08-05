@@ -26,7 +26,6 @@ function SonnenkompassNumeric
     rE   = 6371000.8;                % mittlerer Erdradius [m] (GRS 80, WGS 84)
     rS   = 149597870700.0;           % AE, mittlerer Abstand Erde - Sonne [m]
     psi  = 23.44 / 180.0 * pi;       % Winkel Erd-Rotationsachse senkrecht zur Ekliptik [rad]
-%	psi  = 0;
 
     ssw    = datetime( '21.06.2021' );	% Datum SSW
     tag    = datetime( datum );
@@ -48,23 +47,27 @@ function SonnenkompassNumeric
     alphaM = double( atan2( tan( omega ), cos( psi ) ) + pi );
     tM     = 60 * 12 * alphaM / pi;
 
-    % Zähler (nur der von alpha abhängige Term)
-    t = version( '-release' ) > '2020a';
-    if( ~isempty( find( t, 1 ) ) )
-        childs = children( y0StrichNom );
-        for n = 1 : length( childs )
-            v = symvar( childs{ n } );
-        end
-    else
-        childs = children( y0StrichNom );
-        for n = 1 : length( childs )
-            v = symvar( childs( n ) );
-        end
-    end
+    % MatLab-Version höher als 2020a?
+    verNewer = ~isempty( find( version( '-release' ) > '2020a', 1 ) );
 
-    % Ableitung zu gross? Fehlermeldung
-    if( y0StrichNom > 1e-10 )
-        error( 'Ableitung ungleich 0!' )
+    % Auswertung des Zählers
+    childs = children( y0StrichNom );
+    for n = 1 : length( childs )
+        % MatLab-Version
+        if( verNewer )
+            c = childs{ n };
+        else
+            c = childs( n );
+        end
+
+        if( has( c, alpha ) )
+            % nur der von alpha abhängige Term
+            y0StrichNom = eval( subs( c, alpha, alphaM ) );
+            % Ableitung zu gross? Fehlermeldung
+            if( y0StrichNom > 1e-10 )
+                error( 'Ableitung ungleich 0!' )
+            end
+        end
     end
 
 %     % Test

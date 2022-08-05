@@ -52,7 +52,36 @@ function SonnenkompassSymbolic
 
     % die Sonne um -alpha drehen
     dMinusAlpha = subs( dAlpha, 'alpha', str2sym( '-alpha' ) );
-    sAlpha      = dMinusAlpha * s;
+
+    % das müsste doch eigentlich einfacher gehen!
+    dM11 = dMinusAlpha( 1, 1 ); 
+    dM11 = collect( dM11, cos( alpha ) ); 
+    dM11 = subs( dM11, sin( psi )^2, 1 - cos( psi )^2 );
+    dM11 = subs( dM11, -cos( psi )^2 + 1, sin( psi )^2 );
+
+    dM12 = dMinusAlpha( 1, 2 );
+    dM13 = dMinusAlpha( 1, 3 );
+    dM13 = collect( dM13, cos( alpha ) );
+    dM21 = dMinusAlpha( 2, 1 );
+    dM22 = dMinusAlpha( 2, 2 );
+    dM23 = dMinusAlpha( 2, 3 );
+    dM31 = dMinusAlpha( 3, 1 );
+    dM31 = collect( dM31, cos( alpha ) );
+    dM32 = dMinusAlpha( 3, 2 );
+
+    % das müsste doch eigentlich einfacher gehen!
+    dM33 = dMinusAlpha( 3, 3 ); 
+    dM33 = collect( dM33, cos( alpha ) ); 
+    dM33 = subs( dM33, cos( psi )^2, 1 - sin( psi )^2 );
+    dM33 = subs( dM33, -sin( psi )^2 + 1, cos( psi )^2 );
+
+    dMinusAlpha = [ ...
+        dM11, dM12, dM13; ...
+        dM21, dM22, dM23; ...
+        dM31, dM32, dM33; ...
+    ];
+
+    sAlpha = dMinusAlpha * s;
 
     % PSAlpha als Koeffizienten des Vektors P ausdrücken 
     pSAlpha = collect( p' * sAlpha, p );
