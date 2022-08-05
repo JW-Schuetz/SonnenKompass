@@ -4628,6 +4628,7 @@ status open
 \begin_inset Graphics
 	filename Symmetrie.eps
 	lyxscale 150
+	scale 55
 
 \end_inset
 
@@ -4655,7 +4656,7 @@ Der Beweis fehlt noch.
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Aus der Drehmatrix 
