@@ -65,7 +65,7 @@ function SonnenkompassNumeric
             y0StrichNom = eval( subs( c, alpha, alphaM ) );
             % Ableitung zu gross? Fehlermeldung
             if( y0StrichNom > 1e-10 )
-                error( 'Ableitung ungleich 0!' )
+                error( 'ACHTUNG: Ableitung ungleich 0!' )
             end
         end
     end
