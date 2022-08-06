@@ -50,18 +50,18 @@ function SonnenkompassNumeric
     % MatLab-Version höher als 2020a?
     verNewer = ~isempty( find( version( '-release' ) > '2020a', 1 ) );
 
-    % Auswertung des Zählers
+    % Auswertung des Zählers der Ableitung nach alpha
     childs = children( y0StrichNom );
     for n = 1 : length( childs )
-        % MatLab-Version
-        if( verNewer )
+        % Term c bestimmen
+        if( verNewer )  % neuere MatLab-Versionen
             c = childs{ n };
-        else
+        else            % ältere MatLab-Versionen
             c = childs( n );
         end
 
+        % Term c von alpha abhängig?
         if( has( c, alpha ) )
-            % nur der von alpha abhängige Term
             y0StrichNom = eval( subs( c, alpha, alphaM ) );
             % Ableitung zu gross? Fehlermeldung
             if( y0StrichNom > 1e-10 )
