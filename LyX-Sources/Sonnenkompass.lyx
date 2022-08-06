@@ -4558,64 +4558,12 @@ Hier soll gezeigt werden, dass die Trajektorien symmetrisch zur
 \begin_inset Formula $y_{2}$
 \end_inset
 
--Achse sind und das Problem somit verschwindet.
+-Achse sind und dass das Problem somit verschwindet.
  
 \end_layout
 
 \begin_layout Subsubsection
 Behauptung 
-\end_layout
-
-\begin_layout Standard
-Für ein geeignetes 
-\begin_inset Formula $\alpha\in\mathbb{R}$
-\end_inset
-
- gilt 
-\begin_inset Formula 
-\begin{eqnarray*}
-x_{1}^{S}\left(\alpha+\alpha_{M}\right) & = & x_{1}^{S}\left(\alpha-\alpha_{M}\right)\\
-x_{2}^{S}\left(\alpha+\alpha_{M}\right) & = & -x_{2}^{S}\left(\alpha-\alpha_{M}\right)\\
-x_{3}^{S}\left(\alpha+\alpha_{M}\right) & = & x_{3}^{S}\left(\alpha-\alpha_{M}\right)
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-und mit 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray*}
-AD_{\left(\Theta_{G}-\psi\right)}^{x_{2}}\underline{x}^{S} & = & \left(\begin{array}{ccc}
-0 & 1 & 0\\
-0 & 0 & 1
-\end{array}\right)\left(\begin{array}{ccc}
-\cos\left(\Theta_{G}-\psi\right) & 0 & \sin\left(\Theta_{G}-\psi\right)\\
-0 & 1 & 0\\
--\sin\left(\Theta_{G}-\psi\right) & 0 & \cos\left(\Theta_{G}-\psi\right)
-\end{array}\right)\left(\begin{array}{c}
-x_{1}^{S}\left(\alpha\right)\\
-x_{2}^{S}\left(\alpha\right)\\
-x_{3}^{S}\left(\alpha\right)
-\end{array}\right)\\
- & = & \left(\begin{array}{c}
-x_{2}^{S}\left(\alpha\right)\\
-x_{3}^{S}\left(\alpha\right)\cos\left(\Theta_{G}-\psi\right)+x_{1}^{S}\left(\alpha\right)\sin\left(\Theta_{G}-\psi\right)
-\end{array}\right).
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Beweis 
 \end_layout
 
 \begin_layout Standard
@@ -4636,7 +4584,13 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Symmetrie der 2-dimensionalen Trajektorie 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Symmetrie"
+
+\end_inset
+
+Symmetrie der 2-dimensionalen Trajektorie
 \end_layout
 
 \end_inset
@@ -4647,6 +4601,52 @@ Symmetrie der 2-dimensionalen Trajektorie
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Verschiebt man die Trajektorie nach Gleichung (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:LösungspunkteSonneGedreht"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) durch die Substitution 
+\begin_inset Formula $\alpha^{'}\rightarrow\alpha-\alpha_{M}$
+\end_inset
+
+ in den Ursprung (siehe Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Symmetrie"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), so gilt für ein geeignetes 
+\begin_inset Formula $\Delta\in\mathbb{R}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{1}^{S}\left(\alpha^{'}+\Delta\right) & = & x_{1}^{S}\left(\alpha^{'}-\Delta\right)\\
+x_{2}^{S}\left(\alpha^{'}+\Delta\right) & = & -x_{2}^{S}\left(\alpha^{'}-\Delta\right)\\
+x_{3}^{S}\left(\alpha^{'}+\Delta\right) & = & x_{3}^{S}\left(\alpha^{'}-\Delta\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Beweis 
 \end_layout
 
 \begin_layout Standard
