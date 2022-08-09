@@ -7,7 +7,7 @@ function SonnenkompassNumeric
     clear
 
     load( 'SonnenkompassSymbolic.mat', 'alpha', 'x0', 'y0', 'y0StrichNom', ...
-          'y0StrichDenom' )
+          'y0StrichDenom', 'mue0' )
 
     % Variable Daten
     ort   = 'LasPalmas';
@@ -70,14 +70,21 @@ function SonnenkompassNumeric
         end
     end
 
-%     % Test
-%     t    = subs( x0, 'alpha', alphaM - 0.01 )';
-%     xHN1 = double( t );
-%     t    = subs( x0, 'alpha', alphaM )';
-%     xHN2 = double( t );
-%     t    = subs( x0, 'alpha', alphaM + 0.01 )';
-%     xHN3 = double( t );
-%     % Test
+% Test
+    eps = 0.05;
+
+    txt = '';
+
+    xHNminus = double( subs( x0, 'alpha', alphaM - eps )' );
+    xHNplus  = double( subs( x0, 'alpha', alphaM + eps )' );
+    txt      = printSymT( txt, xHNminus, xHNplus, length( xHNminus ) );
+
+    % Zahlenwerte bis auf alpha substituieren
+    mue0 = subs( mue0 );
+    mHNminus = double( subs( mue0, 'alpha', alphaM - eps )' );
+    mHNplus  = double( subs( mue0, 'alpha', alphaM + eps ) );
+    printSymGP( txt, mHNminus, mHNplus )
+% Test
 
 %   Beispiel: TNum = 3
 %   ==================
@@ -100,18 +107,48 @@ function SonnenkompassNumeric
     %   y(i,1) = -y(end-1,1)
     %   y(i,2) =  y(end-1,2)
 
-    for i = 1 : N
-        t          = tStart + ( i - 1 );                % t in Minuten
-        alpha( i ) = double( pi / ( 12 * 60 ) * t );    % zugehöriger Winkel
+    for i = 1 : TNum + 1
+        t  = tStart + ( i - 1 );                % t in Minuten
+        al = double( pi / ( 12 * 60 ) * t );    % zugehöriger Winkel
 
-        t         = subs( x0, 'alpha', alpha( i ) )';   % in x0 alpha substituieren
-        x( i, : ) = double( t );                        % Trajektorie 3-dim
+        xLoc = subs( x0, 'alpha', al )';           % in x0 alpha substituieren
+        xLoc = double( xLoc );
+        x( i,         : ) = [ xLoc( 1 ),  xLoc( 2 ), xLoc( 3 ) ]; % Trajektorie 3-dim
+        x( N - i + 1, : ) = [ xLoc( 1 ), -xLoc( 2 ), xLoc( 3 ) ]; % Trajektorie 3-dim
 
-        yLoc = subs( y0, 'alpha', alpha( i ) )';        % in y0 alpha substituieren
+        yLoc = subs( y0, 'alpha', al )';        % in y0 alpha substituieren
         yLoc = double( yLoc );
-
-        y( i, 1 : 2 ) = [ yLoc( 1 ), yLoc( 2 ) ];       % Trajektorie 2-dim
+        y( i, 1 : 2 )         = [  yLoc( 1 ), yLoc( 2 ) ]; % Trajektorie 2-dim
+        y( N - i + 1, 1 : 2 ) = [ -yLoc( 1 ), yLoc( 2 ) ]; % Trajektorie 2-dim
     end
 
     save( fileName, 'rE', 'x', 'y' )
+end
+
+function ret = printSymT( ret, minus, plus, N )
+    for n = 1 : N
+        txt = sprintf( 'Die x%d-Komponente der Trajektorie x0(alpha) ist', n );
+        if( abs( minus( n ) - plus( n ) ) < 1e-12 )
+            ret = [ ret, sprintf( '%s gerade!\n', txt ) ]; %#ok<AGROW>
+        else
+            if( abs( minus( n ) + plus( n ) ) < 1e-12 )
+                ret = [ ret, sprintf( '%s ungerade!\n', txt ) ]; %#ok<AGROW>
+            else
+                error( 'Das sollte nicht passieren!' )
+            end
+        end
+    end
+end
+
+function ret = printSymGP( ret, minus, plus )
+    ret = [ ret, sprintf( '%s', 'Der Geradenparameter mue0(alpha) ist ' ) ];
+    if( abs( minus - plus ) < 1e-12 )
+        ret = [ ret, sprintf( ' gerade!\n' ) ];
+    else
+        if( abs( minus + plus ) < 1e-12 )
+        ret = [ ret, sprintf( ' ungerade!\n' ) ];
+        else
+            error( 'Das sollte nicht passieren!' )
+        end
+    end
 end

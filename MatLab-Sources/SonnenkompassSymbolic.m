@@ -112,7 +112,7 @@ function SonnenkompassSymbolic
     y0StrichDenom = simplify( d );
 
     save( 'SonnenkompassSymbolic.mat', 'alpha', 'x0', 'y0', 'y0StrichNom', ...
-          'y0StrichDenom', 'dMinusAlpha' )
+          'y0StrichDenom', 'dMinusAlpha', 'mue0' )
 end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
