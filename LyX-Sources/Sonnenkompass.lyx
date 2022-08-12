@@ -4762,7 +4762,7 @@ und
 \underline{P} & = & \left(\begin{array}{c}
 p_{1}\\
 0\\
-p_{2}
+p_{3}
 \end{array}\right)
 \end{eqnarray*}
 
@@ -4824,7 +4824,7 @@ S_{2} & = & R_{S}\sin\Omega.
 \begin_layout Plain Layout
 Weiterhin folgt 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Formula 
@@ -4855,7 +4855,7 @@ D_{\alpha} & = & \begin{pmatrix}\sin^{2}\psi+\cos^{2}\psi\cos\alpha & -\cos\psi\
 S_{1}\\
 S_{2}
 \end{array}\right)\\
- & = & \left[G_{0}\left(\psi\right)+G\left(\psi\right)\cos\alpha+U\left(\psi\right)\sin\alpha\right]\left(\begin{array}{c}
+ & = & \left[G_{0}\left(\psi\right)+G_{1}\left(\psi\right)\cos\alpha+U\left(\psi\right)\sin\alpha\right]\left(\begin{array}{c}
 S_{1}\\
 S_{2}
 \end{array}\right)
@@ -4867,7 +4867,7 @@ S_{2}
 \end_layout
 
 \begin_layout Plain Layout
-mit 
+mit den Matrizen 
 \begin_inset Formula 
 \begin{eqnarray*}
 G_{0}\left(\psi\right) & = & \left(\begin{array}{cc}
@@ -4875,7 +4875,7 @@ G_{0}\left(\psi\right) & = & \left(\begin{array}{cc}
 0 & 0\\
 \sin\psi\cos\psi & 0
 \end{array}\right)\\
-G\left(\psi\right) & = & \begin{pmatrix}\cos^{2}\psi & 0\\
+G_{1}\left(\psi\right) & = & \begin{pmatrix}\cos^{2}\psi & 0\\
 0 & 1\\
 -\sin\psi\cos\psi & 0
 \end{pmatrix}\\
@@ -4899,20 +4899,89 @@ Der Geradenparameter
 \begin_inset Formula $\mu_{0}\left(\alpha\right)$
 \end_inset
 
- ist abhängig vom Term 
+ ist abhängig vom skalaren Term 
+\begin_inset Formula $\underline{P}^{T}\underline{S}\left(\alpha\right)$
+\end_inset
+
+ wobei 
+\begin_inset Formula $\underline{P}^{T}$
+\end_inset
+
+ keine 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+-Komponente besitzt (
+\begin_inset Formula $p_{2}=0$
+\end_inset
+
+).
+ Man erhält deshalb die vereinfachten Terme 
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
-\underline{P}^{T}\underline{S}\left(\alpha\right) & = & \left(p_{1},0,p_{2}\right)\underline{S}\left(\alpha\right)\\
- & = & \left[G_{0}\left(\psi\right)+G\left(\psi\right)\cos\alpha+U\left(\psi\right)\sin\alpha\right]\left(p_{1},0,p_{2}\right)\left(\begin{array}{c}
-S_{1}\\
-S_{2}\\
+\underline{P}^{T}G_{0}\left(\psi\right) & = & \left(\begin{array}{c}
+p_{1}\sin^{2}\psi+p_{3}\sin\psi\cos\psi\\
 0
-\end{array}\right)\\
- & = & p_{1}S_{1}\left[G_{0}\left(\psi\right)+G\left(\psi\right)\cos\alpha+U\left(\psi\right)\sin\alpha\right]\\
- & = & p_{1}R_{S}\cos\Omega\left[G_{0}\left(\psi\right)+G\left(\psi\right)\cos\alpha+U\left(\psi\right)\sin\alpha\right]
+\end{array}\right)^{T}\\
+\underline{P}^{T}G_{1}\left(\psi\right) & = & \left(\begin{array}{c}
+p_{1}\cos^{2}\psi-p_{3}\sin\psi\cos\psi\\
+0
+\end{array}\right)^{T}\\
+\underline{P}^{T}U\left(\psi\right) & = & \left(\begin{array}{c}
+0\\
+p_{1}\cos\psi-p_{3}\sin\psi
+\end{array}\right)^{T}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Wegen 
+\begin_inset Formula $\underline{S}^{T}=\left(S_{1},S_{2},0\right)$
+\end_inset
+
+ folgt 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{P}^{T}\underline{S}\left(\alpha\right) & = & \underline{P}^{T}\left[G_{0}\left(\psi\right)+G_{1}\left(\psi\right)\cos\alpha+U\left(\psi\right)\sin\alpha\right]\left(\begin{array}{c}
+S_{1}\\
+S_{2}
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+und 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{P}^{T}G_{0}\left(\psi\right)\left(\begin{array}{c}
+S_{1}\\
+S_{2}
+\end{array}\right) & = & R_{S}\cos\Omega\left(p_{1}\sin^{2}\psi+p_{3}\sin\psi\cos\psi\right)\\
+\underline{P}^{T}G_{1}\left(\psi\right)\left(\begin{array}{c}
+S_{1}\\
+S_{2}
+\end{array}\right) & = & R_{S}\cos\Omega\left(p_{1}\cos^{2}\psi-p_{3}\sin\psi\cos\psi\right)\\
+\underline{P}^{T}U\left(\psi\right)\left(\begin{array}{c}
+S_{1}\\
+S_{2}
+\end{array}\right) & = & R_{S}\sin\Omega\left(p_{1}\cos\psi-p_{3}\sin\psi\right).
 \end{eqnarray*}
 
 \end_inset
@@ -4921,11 +4990,11 @@ S_{2}\\
 \end_layout
 
 \begin_layout Subsection*
-Nebenbedingung für 
+Nebenbedingung für den 
 \begin_inset Quotes gld
 \end_inset
 
-Astronomischer Mittag
+Astronomischen Mittag
 \begin_inset Quotes grd
 \end_inset
 
@@ -4935,8 +5004,48 @@ Astronomischer Mittag
 \begin_layout Plain Layout
 \begin_inset Formula 
 \[
-\sin\Omega\cos\alpha-\cos\Omega\cos\psi\sin\alpha=0
+\sin\Omega\cos\alpha_{M}-\cos\Omega\cos\psi\sin\alpha_{M}=0
 \]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+oder 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\tan\Omega & = & \cos\psi\tan\alpha_{M}\\
+\alpha_{M} & = & \arctan\left(\tan\Omega\cos\psi\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Es folgt (siehe 
+\begin_inset Quotes gld
+\end_inset
+
+Umformung.m
+\begin_inset Quotes grd
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\cos\left(\alpha\mp\alpha_{M}\right) & = & \frac{\cos\alpha\pm\cos\psi\tan\Omega\sin\alpha}{\sqrt{\cos^{2}\psi\tan^{2}\Omega+1}}\\
+\sin\left(\alpha\mp\alpha_{M}\right) & = & \frac{\sin\alpha\mp\cos\psi\tan\Omega\cos\alpha}{\sqrt{\cos^{2}\psi\tan^{2}\Omega+1}}.
+\end{eqnarray*}
 
 \end_inset
 

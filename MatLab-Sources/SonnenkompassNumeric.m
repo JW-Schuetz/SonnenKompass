@@ -70,21 +70,21 @@ function SonnenkompassNumeric
         end
     end
 
-% Test
-    eps = 0.05;
-
-    txt = '';
-
-    xHNminus = double( subs( x0, 'alpha', alphaM - eps )' );
-    xHNplus  = double( subs( x0, 'alpha', alphaM + eps )' );
-    txt      = printSymT( txt, xHNminus, xHNplus, length( xHNminus ) );
-
-    % Zahlenwerte bis auf alpha substituieren
-    mue0 = subs( mue0 );
-    mHNminus = double( subs( mue0, 'alpha', alphaM - eps )' );
-    mHNplus  = double( subs( mue0, 'alpha', alphaM + eps ) );
-    printSymGP( txt, mHNminus, mHNplus )
-% Test
+% Test Symmetrie
+%     eps = 0.05;
+% 
+%     txt = '';
+% 
+%     xHNminus = double( subs( x0, 'alpha', alphaM - eps )' );
+%     xHNplus  = double( subs( x0, 'alpha', alphaM + eps )' );
+%     txt      = printSymT( txt, xHNminus, xHNplus, length( xHNminus ) );
+% 
+%     % Zahlenwerte bis auf alpha substituieren
+%     mue0 = subs( mue0 );
+%     mHNminus = double( subs( mue0, 'alpha', alphaM - eps )' );
+%     mHNplus  = double( subs( mue0, 'alpha', alphaM + eps ) );
+%     printSymGP( txt, mHNminus, mHNplus )
+% Test Symmetrie
 
 %   Beispiel: TNum = 3
 %   ==================
@@ -99,19 +99,11 @@ function SonnenkompassNumeric
     y = zeros( N, 2 );          % Trajektorie 2-dim [m]
 
     % Position und Zeitpunkt berechnen
-    % Rechenzeit halbieren durch Nutzung der Symmetrie, es gilt:
-    %   x(i,1) =  x(end-i,1)
-    %   x(i,2) = -x(end-i,2)
-    %   x(i,3) =  x(end-i,3)
-    % und
-    %   y(i,1) = -y(end-1,1)
-    %   y(i,2) =  y(end-1,2)
-
     for i = 1 : TNum + 1
         t  = tStart + ( i - 1 );                % t in Minuten
         al = double( pi / ( 12 * 60 ) * t );    % zugehöriger Winkel
 
-        xLoc = subs( x0, 'alpha', al )';           % in x0 alpha substituieren
+        xLoc = subs( x0, 'alpha', al )';        % in x0 alpha substituieren
         xLoc = double( xLoc );
         x( i,         : ) = [ xLoc( 1 ),  xLoc( 2 ), xLoc( 3 ) ]; % Trajektorie 3-dim
         x( N - i + 1, : ) = [ xLoc( 1 ), -xLoc( 2 ), xLoc( 3 ) ]; % Trajektorie 3-dim
