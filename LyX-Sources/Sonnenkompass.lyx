@@ -3657,66 +3657,6 @@ R_{E}\\
 \begin_layout Subsection
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:Abbildung-Punkt-P"
-
-\end_inset
-
-Abbildung des Punktes 
-\begin_inset Formula $\underline{P}$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-Der Punkt 
-\begin_inset Formula $\underline{P}$
-\end_inset
-
- wird durch die Drehung 
-\begin_inset Formula $D_{\left(\Theta_{G}-\psi\right)}^{x_{2}}$
-\end_inset
-
- auf 
-\begin_inset Formula $x_{1}=R_{E}$
-\end_inset
-
- und 
-\begin_inset Formula $x_{2}=x_{3}=0$
-\end_inset
-
- abgebildet, denn es gilt 
-\begin_inset Formula 
-\begin{eqnarray*}
-D_{\left(\Theta_{G}-\psi\right)}^{x_{2}}\underline{P} & = & \left(\begin{array}{ccc}
-\cos\left(\Theta_{G}-\psi\right) & 0 & \sin\left(\Theta_{G}-\psi\right)\\
-0 & 1 & 0\\
--\sin\left(\Theta_{G}-\psi\right) & 0 & \cos\left(\Theta_{G}-\psi\right)
-\end{array}\right)\left(\begin{array}{c}
-R_{E}\sin\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]\\
-0\\
-R_{E}\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]
-\end{array}\right)\\
- & = & R_{E}\left(\begin{array}{c}
-\cos\left(\Theta_{G}-\psi\right)\sin\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]+\sin\left(\Theta_{G}-\psi\right)\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]\\
-0\\
--\sin\left(\Theta_{G}-\psi\right)\sin\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]+\cos\left(\Theta_{G}-\psi\right)\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]
-\end{array}\right)\\
- & = & R_{E}\left(\begin{array}{c}
-1\\
-0\\
-0
-\end{array}\right).
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-\begin_inset CommandInset label
-LatexCommand label
 name "subsec:Beweis"
 
 \end_inset
@@ -4551,7 +4491,22 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Hier soll gezeigt werden, dass die Trajektorien symmetrisch zur 
+Hier soll gezeigt werden, dass die Trajektorien unter den getroffenen Annahmen
+ des Abschnittes 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Annahmen"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ symmetrisch zum astronomischen Mittag 
+\begin_inset Formula $\alpha_{M}$
+\end_inset
+
+ der 
 \begin_inset Formula $y_{2}$
 \end_inset
 
@@ -4564,44 +4519,7 @@ Behauptung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename Symmetrie.eps
-	lyxscale 150
-	scale 55
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Symmetrie"
-
-\end_inset
-
-Symmetrie der 2-dimensionalen Trajektorie
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Verschiebt man die Trajektorienkomponenten nach Gleichung (
+Es gelten für die Trajektorienkomponenten nach Gleichung (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:LösungspunkteSonneGedreht"
@@ -4611,25 +4529,10 @@ noprefix "false"
 
 \end_inset
 
-) durch die Substitution 
-\begin_inset Formula $\alpha^{'}\rightarrow\alpha-\alpha_{M}$
-\end_inset
+) mit den Abkürzungen 
+\end_layout
 
- in den Ursprung (siehe Abbildung 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Symmetrie"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-), so gelten für ein geeignetes 
-\begin_inset Formula $\Delta\in\mathbb{R}$
-\end_inset
-
- mit der Abkürzung 
+\begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
 \underline{x}_{0}^{S}\left(\alpha\right) & = & \left[\begin{array}{c}
@@ -4645,12 +4548,16 @@ x_{3}^{S}\left(\alpha\right)
 \end_layout
 
 \begin_layout Standard
-die Beziehungen 
+für ein geeignetes 
+\begin_inset Formula $\Delta\in\mathbb{R}$
+\end_inset
+
+ die Symmetriebeziehungen 
 \begin_inset Formula 
 \begin{eqnarray*}
-x_{1}^{S}\left(\alpha^{'}+\Delta\right) & = & x_{1}^{S}\left(\alpha^{'}-\Delta\right)\\
-x_{2}^{S}\left(\alpha^{'}+\Delta\right) & = & -x_{2}^{S}\left(\alpha^{'}-\Delta\right)\\
-x_{3}^{S}\left(\alpha^{'}+\Delta\right) & = & x_{3}^{S}\left(\alpha^{'}-\Delta\right).
+x_{1}^{S}\left(\alpha_{M}-\Delta\right) & = & x_{1}^{S}\left(\alpha_{M}+\Delta\right)\\
+x_{2}^{S}\left(\alpha_{M}-\Delta\right) & = & -x_{2}^{S}\left(\alpha_{M}+\Delta\right)\\
+x_{3}^{S}\left(\alpha_{M}-\Delta\right) & = & x_{3}^{S}\left(\alpha_{M}+\Delta\right).
 \end{eqnarray*}
 
 \end_inset
@@ -4659,52 +4566,62 @@ x_{3}^{S}\left(\alpha^{'}+\Delta\right) & = & x_{3}^{S}\left(\alpha^{'}-\Delta\r
 \end_layout
 
 \begin_layout Standard
-Oder anders formuliert ist die Funktion 
-\begin_inset Formula $x_{2}^{S}\left(\alpha^{'}\right)$
+Damit folgt die Symmetrie der 
+\begin_inset Formula $y_{2}$
 \end_inset
 
- ungerade, die Funktionen 
-\begin_inset Formula $x_{1}^{S}\left(\alpha^{'}\right)$
+-Komponente der 2-dimensionalen Trajektorie 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{2}\left(\alpha_{M}-\Delta\right)=y_{2}\left(\alpha_{M}+\Delta\right).
+\]
+
 \end_inset
 
- und 
-\begin_inset Formula $x_{3}^{S}\left(\alpha^{'}\right)$
-\end_inset
 
- sind gerade in 
-\begin_inset Formula $\alpha^{'}$
-\end_inset
-
-.
- 
 \end_layout
 
 \begin_layout Subsubsection
-Beweis 
+Nachweis 
 \end_layout
 
 \begin_layout Standard
-Der Beweis fehlt noch.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Subsection*
-Beweisidee 
-\end_layout
-
-\begin_layout Plain Layout
-Die Variable 
-\begin_inset Formula $\alpha$
-\end_inset
-
- taucht in Gleichung (
+Für den Ort der Sonne nach Gleichung (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:LösungspunkteSonneGedreht"
+reference "eq:GedrehterSonnenOrt"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) gilt 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{S}\left(\alpha\right) & = & D_{\left(-\alpha\right)}\left(\begin{array}{c}
+R_{S}\cos\Omega\\
+R_{S}\sin\Omega\\
+0
+\end{array}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Weiter folgt durch Einsetzen der Drehmatrix nach Gleichung (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:DrehmatrixAlpha"
 plural "false"
 caps "false"
 noprefix "false"
@@ -4714,150 +4631,19 @@ noprefix "false"
 ) 
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-\underline{x}_{0}^{S}\left(\alpha\right) & = & \mu_{0}\left(\alpha\right)\underline{Q}+\left[1-\mu_{0}\left(\alpha\right)\right]\underline{S}\left(\alpha\right)\\
- & = & \mu_{0}\left(\alpha\right)\left[\underline{Q}-\underline{S}\left(\alpha\right)\right]+\underline{S}\left(\alpha\right)
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-explizit im Term 
-\begin_inset Formula $\underline{S}\left(\alpha\right)$
-\end_inset
-
- auf und implizit in der Funktion 
-\begin_inset Formula $\mu_{0}\left(\alpha\right)$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Plain Layout
-Der Vektor 
-\begin_inset Formula $\underline{Q}$
-\end_inset
-
- besitzt wegen 
-\begin_inset Formula 
-\begin{eqnarray*}
-\underline{Q} & = & \left(1+\frac{L}{R_{E}}\right)\underline{P}
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-und 
-\begin_inset Formula 
-\begin{eqnarray*}
-\underline{P} & = & \left(\begin{array}{c}
-p_{1}\\
-0\\
-p_{3}
-\end{array}\right)
-\end{eqnarray*}
-
-\end_inset
-
-keine 
-\begin_inset Formula $x_{2}$
-\end_inset
-
--Komponente.
- 
-\end_layout
-
-\begin_layout Subsubsection*
-Explizites Vorkommen 
-\end_layout
-
-\begin_layout Plain Layout
-Es gilt für den 
-\begin_inset Quotes gld
-\end_inset
-
-Sonnen-Term
-\begin_inset Quotes grd
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-\underline{S}\left(\alpha\right) & = & D_{\left(-\alpha\right)}\underline{S}\\
- & = & D_{\left(-\alpha\right)}\left(\begin{array}{c}
-S_{1}\\
-S_{2}\\
-0
-\end{array}\right)
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-mit 
-\begin_inset Formula 
-\begin{eqnarray*}
-S_{1} & = & R_{S}\cos\Omega\\
-S_{2} & = & R_{S}\sin\Omega.
-\end{eqnarray*}
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Plain Layout
-Weiterhin folgt 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-D_{\alpha} & = & \begin{pmatrix}\sin^{2}\psi+\cos^{2}\psi\cos\alpha & -\cos\psi\sin\alpha & \sin\psi\cos\psi-\sin\psi\cos\psi\cos\alpha\\
-\cos\psi\sin\alpha & \cos\alpha & -\sin\psi\sin\alpha\\
-\sin\psi\cos\psi-\sin\psi\cos\psi\cos\alpha & \sin\psi\sin\alpha & \cos^{2}\psi+\sin^{2}\psi\cos\alpha
-\end{pmatrix}
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
 \underline{S}\left(\alpha\right) & = & \begin{pmatrix}\sin^{2}\psi+\cos^{2}\psi\cos\alpha & \cos\psi\sin\alpha\\
 -\cos\psi\sin\alpha & \cos\alpha\\
 \sin\psi\cos\psi-\sin\psi\cos\psi\cos\alpha & -\sin\psi\sin\alpha
 \end{pmatrix}\left(\begin{array}{c}
-S_{1}\\
-S_{2}
+R_{S}\cos\Omega\\
+R_{S}\sin\Omega
 \end{array}\right)\\
  & = & \left[G_{0}\left(\psi\right)+G_{1}\left(\psi\right)\cos\alpha+U\left(\psi\right)\sin\alpha\right]\left(\begin{array}{c}
-S_{1}\\
-S_{2}
+R_{S}\cos\Omega\\
+R_{S}\sin\Omega
 \end{array}\right)
 \end{eqnarray*}
 
@@ -4866,7 +4652,7 @@ S_{2}
 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 mit den Matrizen 
 \begin_inset Formula 
 \begin{eqnarray*}
@@ -4890,146 +4676,25 @@ U\left(\psi\right) & = & \begin{pmatrix}0 & \cos\psi\\
 
 \end_layout
 
-\begin_layout Subsection*
-Implizites Vorkommen 
-\end_layout
-
-\begin_layout Plain Layout
-Der Geradenparameter 
-\begin_inset Formula $\mu_{0}\left(\alpha\right)$
+\begin_layout Standard
+Die 
+\begin_inset Formula $\alpha$
 \end_inset
 
- ist abhängig vom skalaren Term 
-\begin_inset Formula $\underline{P}^{T}\underline{S}\left(\alpha\right)$
+-Abhängigkeit von 
+\begin_inset Formula $\underline{S}\left(\alpha\right)$
 \end_inset
 
- wobei 
-\begin_inset Formula $\underline{P}^{T}$
+ ist also in den beiden Funktionen 
+\begin_inset Formula $\cos\alpha$
 \end_inset
 
- keine 
-\begin_inset Formula $x_{2}$
+ und 
+\begin_inset Formula $\sin\alpha$
 \end_inset
 
--Komponente besitzt (
-\begin_inset Formula $p_{2}=0$
-\end_inset
-
-).
- Man erhält deshalb die vereinfachten Terme 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-\underline{P}^{T}G_{0}\left(\psi\right) & = & \left(\begin{array}{c}
-p_{1}\sin^{2}\psi+p_{3}\sin\psi\cos\psi\\
-0
-\end{array}\right)^{T}\\
-\underline{P}^{T}G_{1}\left(\psi\right) & = & \left(\begin{array}{c}
-p_{1}\cos^{2}\psi-p_{3}\sin\psi\cos\psi\\
-0
-\end{array}\right)^{T}\\
-\underline{P}^{T}U\left(\psi\right) & = & \left(\begin{array}{c}
-0\\
-p_{1}\cos\psi-p_{3}\sin\psi
-\end{array}\right)^{T}.
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Wegen 
-\begin_inset Formula $\underline{S}^{T}=\left(S_{1},S_{2},0\right)$
-\end_inset
-
- folgt 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-\underline{P}^{T}\underline{S}\left(\alpha\right) & = & \underline{P}^{T}\left[G_{0}\left(\psi\right)+G_{1}\left(\psi\right)\cos\alpha+U\left(\psi\right)\sin\alpha\right]\left(\begin{array}{c}
-S_{1}\\
-S_{2}
-\end{array}\right)
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-und 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-\underline{P}^{T}G_{0}\left(\psi\right)\left(\begin{array}{c}
-S_{1}\\
-S_{2}
-\end{array}\right) & = & R_{S}\cos\Omega\left(p_{1}\sin^{2}\psi+p_{3}\sin\psi\cos\psi\right)\\
-\underline{P}^{T}G_{1}\left(\psi\right)\left(\begin{array}{c}
-S_{1}\\
-S_{2}
-\end{array}\right) & = & R_{S}\cos\Omega\left(p_{1}\cos^{2}\psi-p_{3}\sin\psi\cos\psi\right)\\
-\underline{P}^{T}U\left(\psi\right)\left(\begin{array}{c}
-S_{1}\\
-S_{2}
-\end{array}\right) & = & R_{S}\sin\Omega\left(p_{1}\cos\psi-p_{3}\sin\psi\right).
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection*
-Nebenbedingung für den 
-\begin_inset Quotes gld
-\end_inset
-
-Astronomischen Mittag
-\begin_inset Quotes grd
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-\sin\Omega\cos\alpha_{M}-\cos\Omega\cos\psi\sin\alpha_{M}=0
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-oder 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-\tan\Omega & = & \cos\psi\tan\alpha_{M}\\
-\alpha_{M} & = & \arctan\left(\tan\Omega\cos\psi\right).
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Es folgt (siehe 
+ konzentriert.
+ Es gilt (siehe 
 \begin_inset Quotes gld
 \end_inset
 
@@ -5038,19 +4703,11 @@ Umformung.m
 \end_inset
 
 ) 
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
-\cos\left(\alpha\mp\alpha_{M}\right) & = & \frac{\cos\alpha\pm\cos\psi\tan\Omega\sin\alpha}{\sqrt{\cos^{2}\psi\tan^{2}\Omega+1}}\\
-\sin\left(\alpha\mp\alpha_{M}\right) & = & \frac{\sin\alpha\mp\cos\psi\tan\Omega\cos\alpha}{\sqrt{\cos^{2}\psi\tan^{2}\Omega+1}}.
+\cos\left(\alpha_{M}-\Delta\right) & = & \frac{\sin\Delta\tan\Omega+\cos\Delta\cos\psi}{\cos\psi\sqrt{1+\left(\frac{\tan\Omega}{\cos\psi}\right)^{2}}}\\
+\sin\left(\alpha_{M}-\Delta\right) & = & \frac{\cos\Delta\tan\Omega-\sin\Delta\cos\psi}{\cos\psi\sqrt{1+\left(\frac{\tan\Omega}{\cos\psi}\right)^{2}}}.
 \end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
@@ -5059,7 +4716,7 @@ Umformung.m
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Aus der Drehmatrix 
@@ -5167,23 +4824,8 @@ noprefix "false"
 \begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
-\alpha_{M} & = & \arctan\left(\frac{\tan\Omega}{\cos\psi}\right)+n\pi
+\alpha_{M} & = & \arctan\left(\frac{\tan\Omega}{\cos\psi}\right)+n\pi.
 \end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-xxx 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-\cos\alpha_{M}\sin\Omega-\cos\Omega\cos\psi\sin\alpha_{M}=0
-\]
 
 \end_inset
 
@@ -6512,6 +6154,66 @@ TigonometrischerTest.m
 \end_inset
 
  
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Abbildung-Punkt-P"
+
+\end_inset
+
+Abbildung des Punktes 
+\begin_inset Formula $\underline{P}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Der Punkt 
+\begin_inset Formula $\underline{P}$
+\end_inset
+
+ wird durch die Drehung 
+\begin_inset Formula $D_{\left(\Theta_{G}-\psi\right)}^{x_{2}}$
+\end_inset
+
+ auf 
+\begin_inset Formula $x_{1}=R_{E}$
+\end_inset
+
+ und 
+\begin_inset Formula $x_{2}=x_{3}=0$
+\end_inset
+
+ abgebildet, denn es gilt 
+\begin_inset Formula 
+\begin{eqnarray*}
+D_{\left(\Theta_{G}-\psi\right)}^{x_{2}}\underline{P} & = & \left(\begin{array}{ccc}
+\cos\left(\Theta_{G}-\psi\right) & 0 & \sin\left(\Theta_{G}-\psi\right)\\
+0 & 1 & 0\\
+-\sin\left(\Theta_{G}-\psi\right) & 0 & \cos\left(\Theta_{G}-\psi\right)
+\end{array}\right)\left(\begin{array}{c}
+R_{E}\sin\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]\\
+0\\
+R_{E}\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]
+\end{array}\right)\\
+ & = & R_{E}\left(\begin{array}{c}
+\cos\left(\Theta_{G}-\psi\right)\sin\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]+\sin\left(\Theta_{G}-\psi\right)\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]\\
+0\\
+-\sin\left(\Theta_{G}-\psi\right)\sin\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]+\cos\left(\Theta_{G}-\psi\right)\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]
+\end{array}\right)\\
+ & = & R_{E}\left(\begin{array}{c}
+1\\
+0\\
+0
+\end{array}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography

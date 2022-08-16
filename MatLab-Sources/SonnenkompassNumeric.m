@@ -7,7 +7,7 @@ function SonnenkompassNumeric
     clear
 
     load( 'SonnenkompassSymbolic.mat', 'alpha', 'x0', 'y0', 'y0StrichNom', ...
-          'y0StrichDenom', 'mue0' )
+          'y0StrichDenom', 'mue0', 'pSAlpha' )
 
     % Variable Daten
     ort   = 'LasPalmas';
@@ -77,13 +77,22 @@ function SonnenkompassNumeric
 % 
 %     xHNminus = double( subs( x0, 'alpha', alphaM - eps )' );
 %     xHNplus  = double( subs( x0, 'alpha', alphaM + eps )' );
-%     txt      = printSymT( txt, xHNminus, xHNplus, length( xHNminus ) );
+%     txt      = printSymT( txt, xHNminus, xHNplus, length( xHNminus ), ...
+%                  'x%d-Komponente von x0(alphaM) ist ' );
 % 
 %     % Zahlenwerte bis auf alpha substituieren
 %     mue0 = subs( mue0 );
-%     mHNminus = double( subs( mue0, 'alpha', alphaM - eps )' );
+%     mHNminus = double( subs( mue0, 'alpha', alphaM - eps ) );
 %     mHNplus  = double( subs( mue0, 'alpha', alphaM + eps ) );
-%     printSymGP( txt, mHNminus, mHNplus )
+%     txt      = [ txt, 'mue0(alphaM) ist ', ...
+%                     printSym( 1, mHNminus, mHNplus ) ];
+% 
+%     pSAlpha = subs( pSAlpha );
+%     pHNminus = double( subs( pSAlpha, 'alpha', alphaM - eps ) );
+%     pHNplus  = double( subs( pSAlpha, 'alpha', alphaM + eps ) );
+%     txt      = [ txt, 'P^T*S(alphaM) ist ', ...
+%                     printSym( 1, pHNminus, pHNplus ) ];
+%     txt
 % Test Symmetrie
 
 %   Beispiel: TNum = 3
@@ -117,30 +126,20 @@ function SonnenkompassNumeric
     save( fileName, 'rE', 'x', 'y' )
 end
 
-function ret = printSymT( ret, minus, plus, N )
+function ret = printSymT( ret, minus, plus, N, dispTXT )
     for n = 1 : N
-        txt = sprintf( 'Die x%d-Komponente der Trajektorie x0(alpha) ist', n );
-        if( abs( minus( n ) - plus( n ) ) < 1e-12 )
-            ret = [ ret, sprintf( '%s gerade!\n', txt ) ]; %#ok<AGROW>
-        else
-            if( abs( minus( n ) + plus( n ) ) < 1e-12 )
-                ret = [ ret, sprintf( '%s ungerade!\n', txt ) ]; %#ok<AGROW>
-            else
-                error( 'Das sollte nicht passieren!' )
-            end
-        end
+        ret = [ ret, sprintf( dispTXT, n ), printSym( n, minus, plus ) ]; %#ok<AGROW> 
     end
 end
 
-function ret = printSymGP( ret, minus, plus )
-    ret = [ ret, sprintf( '%s', 'Der Geradenparameter mue0(alpha) ist ' ) ];
-    if( abs( minus - plus ) < 1e-12 )
-        ret = [ ret, sprintf( ' gerade!\n' ) ];
+function ret = printSym( n, minus, plus )
+    if( abs( minus( n )  - plus( n ) ) < 1e-12 )
+        ret = sprintf( 'gerade!\n' );
     else
-        if( abs( minus + plus ) < 1e-12 )
-        ret = [ ret, sprintf( ' ungerade!\n' ) ];
+        if( abs( minus( n ) + plus( n ) ) < 1e-12 )
+            ret = sprintf( 'ungerade!\n' );
         else
-            error( 'Das sollte nicht passieren!' )
+            ret = sprintf( 'asymmetrisch!\n' );
         end
     end
 end
