@@ -1353,16 +1353,12 @@ literal "false"
 \begin_inset Formula $\psi$
 \end_inset
 
- der Erdrotationsachse zur Ekliptik, dann folgt für den Polarwinkel im Erd-Kugel
-koordinatensystem 
+ der Erdrotationsachse zur Ekliptik, dann folgt für den Polarwinkel des
+ Stabfusspunktes im Erd-Kugelkoordinatensystem 
 \begin_inset Formula $\left(r,\Theta,\varphi\right)$
 \end_inset
 
- der Ausdruck 
-\begin_inset Formula $\Theta=\frac{\pi}{2}-\Theta_{G}+\psi=\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)$
-\end_inset
-
- (siehe dazu auch die Skizze in Unterabschnitt
+ der Ausdruck (siehe dazu auch die Skizze in Unterabschnitt
 \begin_inset space ~
 \end_inset
 
@@ -1376,8 +1372,15 @@ noprefix "false"
 
 \end_inset
 
- des Anhanges).
- 
+ des Anhanges) 
+\begin_inset Formula 
+\begin{equation}
+\Theta=\frac{\pi}{2}-\left(\Theta_{G}-\psi\right).\label{eq:Theta}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1406,9 +1409,9 @@ noprefix "false"
  die Gleichungen 
 \begin_inset Formula 
 \begin{eqnarray*}
-p_{1} & = & R_{E}\sin\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]\\
+p_{1} & = & R_{E}\sin\Theta\\
 p_{2} & = & 0\\
-p_{3} & = & R_{E}\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right].
+p_{3} & = & R_{E}\cos\Theta.
 \end{eqnarray*}
 
 \end_inset
@@ -2293,11 +2296,21 @@ noprefix "false"
 \begin_inset Formula $x_{2}$
 \end_inset
 
--Achse ist durch 
-\begin_inset Formula $\Theta=\Theta_{G}-\psi$
+-Achse ist 
+\begin_inset Formula $\Theta$
 \end_inset
 
-, die Drehmatrix um die 
+ nach Gleichung (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Theta"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), die Drehmatrix um die 
 \begin_inset Formula $x_{2}$
 \end_inset
 
@@ -2358,7 +2371,7 @@ noprefix "false"
 
 \begin_layout Standard
 Die 3-dimensionalen gedrehten Trajektorienpunkte 
-\begin_inset Formula $D_{\left(\Theta_{G}-\psi\right)}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right)$
+\begin_inset Formula $D_{\Theta}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right)$
 \end_inset
 
  können nun mittels der Projektionsabbildung 
@@ -2402,7 +2415,7 @@ Es ergibt sich schliesslich für die Punkte der gesuchten zweidimensionalen
 \left(\begin{array}{c}
 y_{1}\left(\alpha\right)\\
 y_{2}\left(\alpha\right)
-\end{array}\right)=\underline{x}^{S}\left(\alpha\right)=AD_{\left(\Theta_{G}-\psi\right)}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right).\label{eq:Trajektorie2Dim}
+\end{array}\right)=\underline{x}^{S}\left(\alpha\right)=AD_{\Theta}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right).\label{eq:Trajektorie2Dim}
 \end{equation}
 
 \end_inset
@@ -4566,7 +4579,7 @@ x_{3}^{S}\left(\alpha_{M}-\Delta\right) & = & x_{3}^{S}\left(\alpha_{M}+\Delta\r
 \end_layout
 
 \begin_layout Standard
-Damit folgt die Symmetrie der 
+Damit folgt die gerade Symmetrie der 
 \begin_inset Formula $y_{2}$
 \end_inset
 
@@ -4589,26 +4602,63 @@ Nachweis
 \end_layout
 
 \begin_layout Standard
-Für den Ort der Sonne nach Gleichung (
+Der Nachweis der Symmetrie für 
+\begin_inset Formula $\underline{x}_{0}^{S}\left(\alpha\right)$
+\end_inset
+
+ im Punkt 
+\begin_inset Formula $\alpha=\alpha_{M}$
+\end_inset
+
+ erfolgt mit der MatLab 
+\begin_inset Quotes gld
+\end_inset
+
+Symbolic Math
+\begin_inset Quotes grd
+\end_inset
+
+-Toolbox von (siehe dazu 
+\begin_inset Quotes gld
+\end_inset
+
+SonnenkompassSymbolic.m
+\begin_inset Quotes grd
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+Aus Gleichung (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:GedrehterSonnenOrt"
+reference "eq:Trajektorie2Dim"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
-) gilt 
-\end_layout
-
-\begin_layout Standard
+) folgt 
 \begin_inset Formula 
 \begin{eqnarray*}
-\underline{S}\left(\alpha\right) & = & D_{\left(-\alpha\right)}\left(\begin{array}{c}
-R_{S}\cos\Omega\\
-R_{S}\sin\Omega\\
-0
+\left(\begin{array}{c}
+y_{1}\left(\alpha\right)\\
+y_{2}\left(\alpha\right)
+\end{array}\right) & = & AD_{\Theta}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right)\\
+ & = & \left(\begin{array}{ccc}
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right)\left(\begin{array}{ccc}
+\cos\Theta & 0 & \sin\Theta\\
+0 & 1 & 0\\
+-\sin\Theta & 0 & \cos\Theta
+\end{array}\right)\underline{x}_{0}^{S}\left(\alpha\right)\\
+ & = & \left(\begin{array}{c}
+x_{2}^{S}\left(\alpha\right)\\
+\cos\Theta x_{3}^{S}\left(\alpha\right)
 \end{array}\right).
 \end{eqnarray*}
 
@@ -4618,222 +4668,19 @@ R_{S}\sin\Omega\\
 \end_layout
 
 \begin_layout Standard
-Weiter folgt durch Einsetzen der Drehmatrix nach Gleichung (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:DrehmatrixAlpha"
-plural "false"
-caps "false"
-noprefix "false"
-
+Die Komponente 
+\begin_inset Formula $y_{1}\left(\alpha\right)$
 \end_inset
 
-) 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray*}
-\underline{S}\left(\alpha\right) & = & \begin{pmatrix}\sin^{2}\psi+\cos^{2}\psi\cos\alpha & \cos\psi\sin\alpha\\
--\cos\psi\sin\alpha & \cos\alpha\\
-\sin\psi\cos\psi-\sin\psi\cos\psi\cos\alpha & -\sin\psi\sin\alpha
-\end{pmatrix}\left(\begin{array}{c}
-R_{S}\cos\Omega\\
-R_{S}\sin\Omega
-\end{array}\right)\\
- & = & \left[G_{0}\left(\psi\right)+G_{1}\left(\psi\right)\cos\alpha+U\left(\psi\right)\sin\alpha\right]\left(\begin{array}{c}
-R_{S}\cos\Omega\\
-R_{S}\sin\Omega
-\end{array}\right)
-\end{eqnarray*}
-
+ ist also ungerade bezüglich des Punktes 
+\begin_inset Formula $\alpha=\alpha_{M}$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-mit den Matrizen 
-\begin_inset Formula 
-\begin{eqnarray*}
-G_{0}\left(\psi\right) & = & \left(\begin{array}{cc}
-\sin^{2}\psi & 0\\
-0 & 0\\
-\sin\psi\cos\psi & 0
-\end{array}\right)\\
-G_{1}\left(\psi\right) & = & \begin{pmatrix}\cos^{2}\psi & 0\\
-0 & 1\\
--\sin\psi\cos\psi & 0
-\end{pmatrix}\\
-U\left(\psi\right) & = & \begin{pmatrix}0 & \cos\psi\\
--\cos\psi & 0\\
-0 & -\sin\psi
-\end{pmatrix}.
-\end{eqnarray*}
-
+ und die 
+\begin_inset Formula $y_{2}\left(\alpha\right)$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-Die 
-\begin_inset Formula $\alpha$
-\end_inset
-
--Abhängigkeit von 
-\begin_inset Formula $\underline{S}\left(\alpha\right)$
-\end_inset
-
- ist also in den beiden Funktionen 
-\begin_inset Formula $\cos\alpha$
-\end_inset
-
- und 
-\begin_inset Formula $\sin\alpha$
-\end_inset
-
- konzentriert.
- Es gilt (siehe 
-\begin_inset Quotes gld
-\end_inset
-
-Umformung.m
-\begin_inset Quotes grd
-\end_inset
-
-) 
-\begin_inset Formula 
-\begin{eqnarray*}
-\cos\left(\alpha_{M}-\Delta\right) & = & \frac{\sin\Delta\tan\Omega+\cos\Delta\cos\psi}{\cos\psi\sqrt{1+\left(\frac{\tan\Omega}{\cos\psi}\right)^{2}}}\\
-\sin\left(\alpha_{M}-\Delta\right) & = & \frac{\cos\Delta\tan\Omega-\sin\Delta\cos\psi}{\cos\psi\sqrt{1+\left(\frac{\tan\Omega}{\cos\psi}\right)^{2}}}.
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Aus der Drehmatrix 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-D_{\alpha} & = & \begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & -\cos\psi\sin\alpha & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
-\cos\psi\sin\alpha & \cos\alpha & -\sin\psi\sin\alpha\\
-\cos\psi\sin\psi\left(1-\cos\alpha\right) & \sin\psi\sin\alpha & \cos^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
-\end{pmatrix}\\
- & = & \begin{pmatrix}\sin^{2}\psi+\left(-\sin^{2}\psi+1\right)\cos\alpha & -\cos\psi\sin\alpha & \sin\psi\cos\psi-\sin\psi\cos\psi\cos\alpha\\
-\cos\psi\sin\alpha & \cos\alpha & -\sin\psi\sin\alpha\\
-\cos\psi\sin\psi-\cos\psi\sin\psi\cos\alpha & \sin\psi\sin\alpha & \cos^{2}\psi+\left(-\cos^{2}\psi+1\right)\cos\alpha
-\end{pmatrix}\\
- & = & \begin{pmatrix}\sin^{2}\psi+\cos^{2}\psi\cos\alpha & -\cos\psi\sin\alpha & \sin\psi\cos\psi-\sin\psi\cos\psi\cos\alpha\\
-\cos\psi\sin\alpha & \cos\alpha & -\sin\psi\sin\alpha\\
-\cos\psi\sin\psi-\cos\psi\sin\psi\cos\alpha & \sin\psi\sin\alpha & \cos^{2}\psi+\sin^{2}\psi\cos\alpha
-\end{pmatrix}
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-folgt 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-D_{\left(-\alpha\right)}=\begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & \cos\psi\sin\alpha & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
--\cos\psi\sin\alpha & \cos\alpha & \sin\psi\sin\alpha\\
-\cos\psi\sin\psi\left(1-\cos\alpha\right) & -\sin\psi\sin\alpha & \cos^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
-\end{pmatrix}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Es gilt mit der Umbenennung 
-\begin_inset Formula $D_{\left(-\alpha\right)}\Rightarrow D^{-}\left(\alpha\right)$
-\end_inset
-
- folgt 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-D^{-}\left(\alpha\right)=\begin{pmatrix}\sin^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha & \cos\psi\sin\alpha & \sin\psi\cos\psi\left(1-\cos\alpha\right)\\
--\cos\psi\sin\alpha & \cos\alpha & \sin\psi\sin\alpha\\
-\cos\psi\sin\psi\left(1-\cos\alpha\right) & -\sin\psi\sin\alpha & \cos^{2}\psi\left(1-\cos\alpha\right)+\cos\alpha
-\end{pmatrix}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Substitution 
-\begin_inset Formula $\alpha\Rightarrow\alpha_{M}-\alpha$
-\end_inset
-
- liefert zunächst 
-\begin_inset Formula 
-\begin{eqnarray*}
-D^{-}\left(\alpha_{M}-\alpha\right) & = & \begin{pmatrix}\sin^{2}\psi\left(1-\cos\left(\alpha_{M}-\alpha\right)\right)+\cos\left(\alpha_{M}-\alpha\right) & \cos\psi\sin\left(\alpha_{M}-\alpha\right) & \sin\psi\cos\psi\left(1-\cos\left(\alpha_{M}-\alpha\right)\right)\\
--\cos\psi\sin\left(\alpha_{M}-\alpha\right) & \cos\left(\alpha_{M}-\alpha\right) & \sin\psi\sin\left(\alpha_{M}-\alpha\right)\\
-\cos\psi\sin\psi\left(1-\cos\left(\alpha_{M}-\alpha\right)\right) & -\sin\psi\sin\left(\alpha_{M}-\alpha\right) & \cos^{2}\psi\left(1-\cos\left(\alpha_{M}-\alpha\right)\right)+\cos\left(\alpha_{M}-\alpha\right)
-\end{pmatrix}
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-mit 
-\begin_inset Formula $\alpha_{M}$
-\end_inset
-
- nach Gleichung (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:AlphaM"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-\alpha_{M} & = & \arctan\left(\frac{\tan\Omega}{\cos\psi}\right)+n\pi.
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
+-Komponente ist gerade.
  
 \end_layout
 
@@ -6163,7 +6010,7 @@ name "subsec:Abbildung-Punkt-P"
 
 \end_inset
 
-Abbildung des Punktes 
+Zur Projektion des Punktes 
 \begin_inset Formula $\underline{P}$
 \end_inset
 

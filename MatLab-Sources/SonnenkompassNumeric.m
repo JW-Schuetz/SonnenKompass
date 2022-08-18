@@ -7,7 +7,7 @@ function SonnenkompassNumeric
     clear
 
     load( 'SonnenkompassSymbolic.mat', 'alpha', 'x0', 'y0', 'y0StrichNom', ...
-          'y0StrichDenom', 'mue0', 'pSAlpha' )
+          'y0StrichDenom', 'mue0' )
 
     % Variable Daten
     ort   = 'LasPalmas';
@@ -70,31 +70,6 @@ function SonnenkompassNumeric
         end
     end
 
-% Test Symmetrie
-%     eps = 0.05;
-% 
-%     txt = '';
-% 
-%     xHNminus = double( subs( x0, 'alpha', alphaM - eps )' );
-%     xHNplus  = double( subs( x0, 'alpha', alphaM + eps )' );
-%     txt      = printSymT( txt, xHNminus, xHNplus, length( xHNminus ), ...
-%                  'x%d-Komponente von x0(alphaM) ist ' );
-% 
-%     % Zahlenwerte bis auf alpha substituieren
-%     mue0 = subs( mue0 );
-%     mHNminus = double( subs( mue0, 'alpha', alphaM - eps ) );
-%     mHNplus  = double( subs( mue0, 'alpha', alphaM + eps ) );
-%     txt      = [ txt, 'mue0(alphaM) ist ', ...
-%                     printSym( 1, mHNminus, mHNplus ) ];
-% 
-%     pSAlpha = subs( pSAlpha );
-%     pHNminus = double( subs( pSAlpha, 'alpha', alphaM - eps ) );
-%     pHNplus  = double( subs( pSAlpha, 'alpha', alphaM + eps ) );
-%     txt      = [ txt, 'P^T*S(alphaM) ist ', ...
-%                     printSym( 1, pHNminus, pHNplus ) ];
-%     txt
-% Test Symmetrie
-
 %   Beispiel: TNum = 3
 %   ==================
 %	tHN-3 tHN-2 tHN-1 tHN tHN+1 tHN+2 tHN+3
@@ -124,22 +99,4 @@ function SonnenkompassNumeric
     end
 
     save( fileName, 'rE', 'x', 'y' )
-end
-
-function ret = printSymT( ret, minus, plus, N, dispTXT )
-    for n = 1 : N
-        ret = [ ret, sprintf( dispTXT, n ), printSym( n, minus, plus ) ]; %#ok<AGROW> 
-    end
-end
-
-function ret = printSym( n, minus, plus )
-    if( abs( minus( n )  - plus( n ) ) < 1e-12 )
-        ret = sprintf( 'gerade!\n' );
-    else
-        if( abs( minus( n ) + plus( n ) ) < 1e-12 )
-            ret = sprintf( 'ungerade!\n' );
-        else
-            ret = sprintf( 'asymmetrisch!\n' );
-        end
-    end
 end

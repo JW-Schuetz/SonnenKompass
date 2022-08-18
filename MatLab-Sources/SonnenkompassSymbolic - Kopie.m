@@ -111,21 +111,21 @@ function SonnenkompassSymbolic
     y0StrichNom   = simplify( n );
     y0StrichDenom = simplify( d );
 
-    % Test der Trajektoriensymmetrie zum astronomischen Mittag: START
+    % Test der Symmetrie zum astronomischen Mittag
     eps    = sym( 'eps', 'real' );
     alphaM = atan( tan( omega ) / cos( psi ) ) + pi;
 
     txt = '';
-    x1  = simplify( subs( pSAlpha, 'alpha', alphaM - eps ) );
-    x2  = simplify( subs( pSAlpha, 'alpha', alphaM + eps ) );
-    txt = [ txt, sprintf( 'P^T*sAlpha ist %s\n', printSym( x1, x2 ) ) ];
 
+    x1  = simplify( subs( pSAlpha, 'alpha', alphaM - eps ) );
     % die beiden Koeffizienten A (von p1) und B (von p3) bestimmen
     [ A, B ] = coeff( x1, p );
+    x2  = simplify( subs( pSAlpha, 'alpha', alphaM + eps ) );
     % die beiden Koeffizienten C (von p1) und D (von p3) bestimmen
     [ C, D ] = coeff( x1, p );
-    txt = [ txt, sprintf( 'P^T*sAlpha: Term vor p1 ist %s\n', printSym( A, C ) ) ];
-    txt = [ txt, sprintf( 'P^T*sAlpha: Term vor p3  ist %s\n', printSym( B, D ) ) ];
+    printSym( 'P^T * sAlpha ist %s\n', testSym( A, C ) == 0 && testSym( B, D ) )
+
+    txt = [ txt, sprintf( 'P^T * sAlpha ist %s\n', printSym( x1, x2 ) ) ];
 
     x1  = simplify( subs( mue0, 'alpha', alphaM - eps ) );
     x2  = simplify( subs( mue0, 'alpha', alphaM + eps ) );
@@ -143,16 +143,8 @@ function SonnenkompassSymbolic
     x2  = simplify( subs( x0( 3 ), 'alpha', alphaM + eps ) );
     txt = [ txt, sprintf( 'x0( 3 ) ist %s\n', printSym( x1, x2 ) ) ];
 
-    x1  = simplify( subs( y0( 1 ), 'alpha', alphaM - eps ) );
-    x2  = simplify( subs( y0( 1 ), 'alpha', alphaM + eps ) );
-    txt = [ txt, sprintf( 'y0( 1 ) ist %s\n', printSym( x1, x2 ) ) ];
-
-    x1  = simplify( subs( y0( 2 ), 'alpha', alphaM - eps ) );
-    x2  = simplify( subs( y0( 2 ), 'alpha', alphaM + eps ) );
-    txt = [ txt, sprintf( 'y0( 2 ) ist %s\n', printSym( x1, x2 ) ) ];
-
     txt %#ok<NOPRT> 
-    % Test der Symmetrie: ENDE
+    % Test der Symmetrie zum astronomischen Mittag
 
     save( 'SonnenkompassSymbolic.mat', 'alpha', 'x0', 'y0', 'y0StrichNom', ...
           'y0StrichDenom', 'mue0' )
@@ -185,15 +177,26 @@ function x = rotateX2( theta, x )
     x = D * x;
 end
 
-function ret = printSym( x1, x2 )
+function ret = testSym( x1, x2 )
     if( simplify( x1 - x2 ) == 0 )
-        ret = sprintf( 'gerade!' );
+        ret = 0;        % gerade
     else
         if( simplify( x1 + x2 ) == 0 )
-            ret = sprintf( 'ungerade!' );
+            ret = 1;    % ungerade
         else
-            ret = sprintf( 'asymmetrisch!' );
+            ret = 2;    % asymmetrisch
         end
+    end
+end
+
+function ret = printSym( txt, sym )
+    switch( sym )
+        case 0
+            ret = sprintf( txt, 'gerade!' );
+        case 1
+            ret = sprintf( txt, 'ungerade!' );
+        case 2
+            ret = sprintf( txt, 'asymmetrisch!' );
     end
 end
 
