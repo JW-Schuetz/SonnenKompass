@@ -268,10 +268,11 @@ Vektoren werden durch einen Unterstrich kenntlich gemacht (
 \end_inset
 
 -Norm 
-\begin_inset Formula $\left\Vert \underline{x}\right\Vert $
+\begin_inset Formula $\left\Vert \underline{x}\right\Vert =\sqrt{\sum_{n}\left|x_{n}\right|^{2}}$
 \end_inset
 
  benutzt.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -553,8 +554,8 @@ Dazu wird zunächst die Verbindungsgerade zwischen der Sonne und dem Endpunkt
  Dann werden die Schnittpunkte der verlängerten Verbindungsgeraden mit der
  Tangentialebene der Erdoberfläche im Fusspunkt des Stabes als Funktion
  der Tageszeit bestimmt.
- Schlussendlich werden die gefundenen Schnittpunkte im 3-dimensionealen
- Raum orthogonal auf die Tangentialebene projiziert.
+ Schlussendlich werden die gefundenen Schnittpunkte im 3-dimensionalen Raum
+ orthogonal auf die Tangentialebene projiziert.
  Man erhält damit die 2-dimensionale Darstellung des Schattenverlaufes.
  
 \end_layout
@@ -567,7 +568,7 @@ Dazu wird zunächst die Verbindungsgerade zwischen der Sonne und dem Endpunkt
 \end_layout
 
 \begin_layout Standard
-Es sind zwei äquivalente Lösungsansätze denkbar, die Rotation der Erde um
+Es sind zwei äquivalente Lösungsansätze denkbar die Rotation der Erde um
  ihre Rotationsachse zu berücksichtigen 
 \begin_inset Note Note
 status collapsed
@@ -640,7 +641,7 @@ Den Ort der Sonne um den Winkel
 \end_layout
 
 \begin_layout Standard
-Hier wird der zweite Fall behandelt.
+Hier wird der zweite Fall gewählt.
  
 \end_layout
 
@@ -796,7 +797,7 @@ noprefix "false"
 \begin_inset Formula $\underline{e}$
 \end_inset
 
- ist somit durch 
+ ist somit zur SSW durch 
 \begin_inset Formula 
 \begin{align*}
 e_{1} & =\sin\psi\\
@@ -811,7 +812,16 @@ e_{3} & =\cos\psi
 
 \begin_layout Standard
 gegeben.
- Für die Drehmatrix folgt damit 
+ Wegen des Erhaltungsatzes des Drehimpulses ist 
+\begin_inset Formula $\underline{e}$
+\end_inset
+
+ zeitinvariant.
+ 
+\end_layout
+
+\begin_layout Standard
+Für die Drehmatrix folgt damit 
 \begin_inset Note Note
 status collapsed
 
@@ -1135,19 +1145,6 @@ t^{*}=\frac{12}{\pi}\alpha\label{eq:TagesZeit}
 
 gegeben.
  
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Die Erd-Rotationsachse 
-\begin_inset Formula $\underline{e}$
-\end_inset
-
- ist wegen des Drehimpuls-Erhaltungsatzes zeitinvariant.
- 
 \end_layout
 
 \begin_layout Section
@@ -1331,48 +1328,82 @@ Umlauf der Erde um die Sonne
 Fuss- und Endpunkt des Stabes 
 \end_layout
 
+\begin_layout Subsection*
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename SonnenKompass3.eps
+	lyxscale 300
+	scale 65
+	BoundingBox 0bp 0bp 769bp 285bp
+	clip
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Problemskizze3"
+
+\end_inset
+
+Problemskizze, SSW, astronomischer Mittag
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
-Aus der vorgegebenen geographischen Breite 
-\begin_inset Formula $\Theta_{G}$
+Im 
+\begin_inset Formula $\left(x_{1}^{*},x_{2}^{*},x_{3}^{*}\right)$
 \end_inset
 
- des Stabfusspunktes folgt für den Winkel zur Erd-Rotationsachse 
-\begin_inset Formula $\frac{\pi}{2}-\Theta_{G}$
-\end_inset
-
- (siehe dazu 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Wikipedia4"
-literal "false"
-
-\end_inset
-
-).
- Berücksichtigt man noch den Neigungswinkel 
-\begin_inset Formula $\psi$
-\end_inset
-
- der Erdrotationsachse zur Ekliptik, dann folgt für den Polarwinkel des
- Stabfusspunktes im Erd-Kugelkoordinatensystem 
-\begin_inset Formula $\left(r,\Theta,\varphi\right)$
-\end_inset
-
- der Ausdruck (siehe dazu auch die Skizze in Unterabschnitt
-\begin_inset space ~
-\end_inset
-
-
+-Koordinatensystem der Problemskizze 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Nebenrechnung-und-Skizze"
+reference "fig:Problemskizze3"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
- des Anhanges) 
+ ist die geographische Breite 
+\begin_inset Formula $\Theta_{G}$
+\end_inset
+
+ des Stabfusspunktes gegeben, für den Polarwinkel gilt 
+\begin_inset Formula $\Theta^{*}=\frac{\pi}{2}-\Theta_{G}$
+\end_inset
+
+.
+ Im 
+\begin_inset Formula $\left(x_{1},x_{2},x_{3}\right)$
+\end_inset
+
+-Koordinatensystem der Erde wird der Polarwinkel 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ des Stabfusspunktes um 
+\begin_inset Formula $\psi$
+\end_inset
+
+ grösser und es gilt 
 \begin_inset Formula 
 \begin{equation}
 \Theta=\frac{\pi}{2}-\left(\Theta_{G}-\psi\right).\label{eq:Theta}
@@ -1386,9 +1417,9 @@ noprefix "false"
 \begin_layout Standard
 Für die Komponenten des Stab-Fusspunkts 
 \begin_inset Formula 
-\begin{equation}
-\underline{P}=\left(p_{1},p_{2},p_{3}\right)^{T}\label{eq:StabFusspunkt}
-\end{equation}
+\[
+\underline{P}=\left(p_{1},p_{2},p_{3}\right)^{T}
+\]
 
 \end_inset
 
@@ -1408,11 +1439,11 @@ noprefix "false"
 
  die Gleichungen 
 \begin_inset Formula 
-\begin{eqnarray*}
-p_{1} & = & R_{E}\sin\Theta\\
-p_{2} & = & 0\\
-p_{3} & = & R_{E}\cos\Theta.
-\end{eqnarray*}
+\begin{eqnarray}
+p_{1} & = & R_{E}\sin\Theta\label{eq:StabFusspunkt}\\
+p_{2} & = & 0\nonumber \\
+p_{3} & = & R_{E}\cos\Theta.\nonumber 
+\end{eqnarray}
 
 \end_inset
 
@@ -1680,7 +1711,7 @@ noprefix "false"
 
 \end_inset
 
-) und fixiert die Erde, dann folgt mit dem gedrehten Ort der Sonne 
+) und fixiert die Erde, dann folgt für den Ort der Sonne 
 \begin_inset Formula 
 \begin{equation}
 \underline{S}\left(\alpha\right)=D_{\left(-\alpha\right)}\underline{S}\label{eq:GedrehterSonnenOrt}
@@ -1688,7 +1719,7 @@ noprefix "false"
 
 \end_inset
 
-aus Gleichung
+und aus Gleichung
 \begin_inset space ~
 \end_inset
 
@@ -1924,21 +1955,7 @@ Da im Ausdruck der Verbindungsgeraden mit
 \begin_inset Formula $\varOmega^{S}\left(\alpha\right)<-1$
 \end_inset
 
- gelten (siehe dazu den Beweis im Unterabschnitt
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "subsec:Beweis"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- des Anhanges).
+ gelten.
  
 \begin_inset Note Note
 status collapsed
@@ -2292,45 +2309,15 @@ noprefix "false"
 \end_inset
 
 -Achse zu drehen, dass er in der Ekliptik zu liegen kommt.
- Der notwendige Drehwinkel um die 
+ Eine allgemeine Drehung um den Winkel 
+\begin_inset Formula $\varPhi$
+\end_inset
+
+ um die 
 \begin_inset Formula $x_{2}$
 \end_inset
 
--Achse ist 
-\begin_inset Formula $\Theta$
-\end_inset
-
- nach Gleichung (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Theta"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-), die Drehmatrix um die 
-\begin_inset Formula $x_{2}$
-\end_inset
-
--Achse ist durch 
-\begin_inset Formula 
-\[
-D_{\Theta}^{x_{2}}=\left(\begin{array}{ccc}
-\cos\Theta & 0 & \sin\Theta\\
-0 & 1 & 0\\
--\sin\Theta & 0 & \cos\Theta
-\end{array}\right)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-gegeben (siehe dazu z.B.
+-Achse wird nach
 \begin_inset space ~
 \end_inset
 
@@ -2342,7 +2329,28 @@ literal "false"
 
 \end_inset
 
-).
+ durch die Drehmatrix 
+\begin_inset Formula 
+\[
+D_{\varPhi}^{x_{2}}=\left(\begin{array}{ccc}
+\cos\varPhi & 0 & \sin\varPhi\\
+0 & 1 & 0\\
+-\sin\varPhi & 0 & \cos\varPhi
+\end{array}\right)
+\]
+
+\end_inset
+
+beschrieben.
+ Der hier benötigte Drehwinkel um die 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+-Achse ist 
+\begin_inset Formula $\frac{\pi}{2}-\Theta$
+\end_inset
+
+.
  Der Punkt 
 \begin_inset Formula $\underline{P}$
 \end_inset
@@ -2371,17 +2379,17 @@ noprefix "false"
 
 \begin_layout Standard
 Die 3-dimensionalen gedrehten Trajektorienpunkte 
-\begin_inset Formula $D_{\Theta}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right)$
+\begin_inset Formula $D_{\left(\frac{\pi}{2}-\Theta\right)}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right)$
 \end_inset
 
  können nun mittels der Projektionsabbildung 
 \begin_inset Formula 
-\begin{equation}
+\[
 A=\left(\begin{array}{ccc}
 0 & 1 & 0\\
 0 & 0 & 1
-\end{array}\right)\label{eq:Projektion}
-\end{equation}
+\end{array}\right)
+\]
 
 \end_inset
 
@@ -2415,12 +2423,151 @@ Es ergibt sich schliesslich für die Punkte der gesuchten zweidimensionalen
 \left(\begin{array}{c}
 y_{1}\left(\alpha\right)\\
 y_{2}\left(\alpha\right)
-\end{array}\right)=\underline{x}^{S}\left(\alpha\right)=AD_{\Theta}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right).\label{eq:Trajektorie2Dim}
+\end{array}\right)=AD_{\left(\frac{\pi}{2}-\Theta\right)}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right).\label{eq:Trajektorie2Dim}
 \end{equation}
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection
+Der astronomische Mittag 
+\end_layout
+
+\begin_layout Standard
+Für die 2-dimensionalen Trajektorien gibt es ein Abstandsminimum zum Stabfusspun
+kt, das per Definition zum Zeitpunkt 
+\begin_inset Formula $t_{M}^{*}$
+\end_inset
+
+ des astronomischen Mittags angenommen wird.
+ Der zugehörige Winkel 
+\begin_inset Formula $\alpha_{M}$
+\end_inset
+
+ wird im Anhang (siehe Unterabschnitt 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Astronomischer-Mittag"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) bestimmt.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Symmetrien 
+\end_layout
+
+\begin_layout Standard
+Bei der Projektion auf die Tangentialebene nach Gleichung (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Trajektorie2Dim"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) ist zu beachten, dass für das Sommerhalbjahr die Projektion 
+\begin_inset Quotes gld
+\end_inset
+
+von vorne
+\begin_inset Quotes grd
+\end_inset
+
+ (also mit positiven Werten der 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+-Koordinate) stattfindet und im Winterhalbjahr 
+\begin_inset Quotes gld
+\end_inset
+
+von hinten
+\begin_inset Quotes grd
+\end_inset
+
+ (also mit negativen Werten der 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+-Koordinate) - siehe dazu die beiden Abbildungen
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Problemskizze1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ und
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Problemskizze2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Dies bedeutet eine Spiegelung der 2-dimensionalen Trajektorien an der 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+-Koordinaten-Achse.
+ 
+\end_layout
+
+\begin_layout Standard
+Im Anhang (siehe Unterabschnitt 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Symmetrie"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) werden die Symmetrieeigenschaften der Komponenten der 3-dimensionalen
+ Trajektorien bezüglich des astronomischen Mittags behandelt.
+ Die gerade Symmetrie der 2-dimensionalen Trajektorien wird daraus abgeleitet.
+ Das Problem der Projektion 
+\begin_inset Quotes gld
+\end_inset
+
+von vorne
+\begin_inset Quotes grd
+\end_inset
+
+ versus 
+\begin_inset Quotes gld
+\end_inset
+
+von hinten
+\begin_inset Quotes grd
+\end_inset
+
+ entfällt dadurch.
+ 
 \end_layout
 
 \begin_layout Section
@@ -2810,26 +2957,118 @@ Anhang
 \end_layout
 
 \begin_layout Standard
-In diesem Anhang werden Nebenrechnungen, Überprüfungen und Beweise dargestellt,
- die den obigen Gedankenfluss zu sehr gestört hätten.
+In diesem Anhang werden Nebenrechnungen und Überprüfungen dargestellt, die
+ den obigen Gedankenfluss zu sehr gestört hätten.
+ 
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Abbildung-Punkt-P"
+
+\end_inset
+
+Zur Abbildung des Punktes 
+\begin_inset Formula $\underline{P}$
+\end_inset
+
  
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
+Der Stabfusspunkt 
+\begin_inset Formula $\underline{P}$
+\end_inset
 
-\begin_layout Subsection*
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:Nebenrechnung-und-Skizze"
+ wird durch die Drehung 
+\begin_inset Formula $D_{\left(\frac{\pi}{2}-\Theta\right)}^{x_{2}}$
+\end_inset
+
+ auf 
+\begin_inset Formula $x_{1}=R_{E}$
+\end_inset
+
+ und 
+\begin_inset Formula $x_{2}=x_{3}=0$
+\end_inset
+
+ abgebildet, denn es gilt mit Gleichung (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:StabFusspunkt"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
-Nebenrechnung und Skizze
+) 
+\begin_inset Formula 
+\begin{eqnarray*}
+D_{\left(\frac{\pi}{2}-\Theta\right)}^{x_{2}}\underline{P} & = & \left(\begin{array}{ccc}
+\cos\left(\frac{\pi}{2}-\Theta\right) & 0 & \sin\left(\frac{\pi}{2}-\Theta\right)\\
+0 & 1 & 0\\
+-\sin\left(\frac{\pi}{2}-\Theta\right) & 0 & \cos\left(\frac{\pi}{2}-\Theta\right)
+\end{array}\right)\left(\begin{array}{c}
+R_{E}\sin\Theta\\
+0\\
+R_{E}\cos\Theta
+\end{array}\right)\\
+ & = & R_{E}\left(\begin{array}{c}
+\cos\left(\frac{\pi}{2}-\Theta\right)\sin\Theta+\sin\left(\frac{\pi}{2}-\Theta\right)\cos\Theta\\
+0\\
+-\sin\left(\frac{\pi}{2}-\Theta\right)\sin\Theta+\cos\left(\frac{\pi}{2}-\Theta\right)\cos\Theta
+\end{array}\right)\\
+ & = & R_{E}\left(\begin{array}{c}
+1\\
+0\\
+0
+\end{array}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Astronomischer-Mittag"
+
+\end_inset
+
+Der astronomische Mittag 
+\end_layout
+
+\begin_layout Subsubsection
+Die Näherung für 
+\begin_inset Formula $\psi=0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Es soll nun noch für jeden Jahreszeitpunkt 
+\begin_inset Formula $T^{*}$
+\end_inset
+
+ eine Näherung 
+\begin_inset Formula $\overline{\alpha}_{M}$
+\end_inset
+
+ für den Tageszeit-Rotationswinkel 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ angegeben werden, so dass sich gerade der Sonnenhöchststand (der astronomische
+ Mittag) einstellt.
+ 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -2837,11 +3076,9 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename SonnenKompass3.eps
-	lyxscale 200
-	scale 65
-	BoundingBox 0bp 0bp 769bp 259bp
-	clip
+	filename SonnenKompassTopHelp1.eps
+	lyxscale 107
+	scale 30
 
 \end_inset
 
@@ -2851,17 +3088,632 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:Problemskizze3-1"
+name "fig:Sonnen-Jahres-Umlauf"
 
 \end_inset
 
-Problemskizze, SSW, astronomischer Mittag
+Umlauf der Sonne um die Erde 
 \end_layout
 
 \end_inset
 
 
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wie man der Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Sonnen-Jahres-Umlauf"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) entnehmen kann, gilt im Fall 
+\begin_inset Formula $\psi=0$
+\end_inset
+
+ die Näherung 
+\begin_inset Formula 
+\[
+\overline{\alpha}_{M}=\Omega.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Der exakte Wert für 
+\begin_inset Formula $\psi\neq0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Der exakte Wert 
+\begin_inset Formula $\alpha_{M}$
+\end_inset
+
+ für 
+\begin_inset Formula $\psi\neq0$
+\end_inset
+
+ wird aus der Steigung der 2-dimensionalen Trajektorie 
+\begin_inset Formula $\left(\begin{array}{c}
+y_{1}\left(\alpha\right)\\
+y_{2}\left(\alpha\right)
+\end{array}\right)$
+\end_inset
+
+ nach Gleichung (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Trajektorie2Dim"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) bestimmt.
+ Die Steigung 
+\begin_inset Formula $S\left(x\right)$
+\end_inset
+
+ errechnet sich zu (siehe dazu z.B.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wikipedia6"
+literal "false"
+
+\end_inset
+
+) 
+\begin_inset Formula 
+\begin{eqnarray}
+S\left(x\right) & = & \frac{dy_{2}\left(x\right)}{dy_{1}}=\frac{\frac{\partial y_{2}\left(\alpha\right)}{\partial\alpha}}{\frac{\partial y_{1}\left(\alpha\right)}{\partial\alpha}}.\label{eq:SteigungAllgemein}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dieser (eher etwas längliche 
+\begin_inset Formula $\smiley$
+\end_inset
+
+) Ausdruck wird mittels der 
+\begin_inset Quotes gld
+\end_inset
+
+Symbolic Math Toolbox
+\begin_inset Quotes grd
+\end_inset
+
+ von MatLab berechnet (siehe dazu die MatLab-Quelldatei 
+\begin_inset Quotes gld
+\end_inset
+
+SonnenKompassSymbolic.m
+\begin_inset Quotes grd
+\end_inset
+
+).
+ Aus ihm folgt die notwendige Bedingung für das Verschwinden der Steigung
+ 
+\begin_inset Formula 
+\[
+\sin\Omega\cos\alpha_{M}-\cos\Omega\cos\psi\sin\alpha_{M}=0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mit 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ ist also der astronomische Mittag durch den Erdrotationswinkel 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\alpha_{M} & = & \arctan\left(\frac{\tan\Omega}{\cos\psi}\right)+n\pi\label{eq:AlphaM}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+gekennzeichnet.
+ 
+\end_layout
+
+\begin_layout Standard
+Für 
+\begin_inset Formula $\psi=0$
+\end_inset
+
+ stimmt die Näherung 
+\begin_inset Formula $\overline{\alpha}_{M}$
+\end_inset
+
+ mit dem Hauptwert von 
+\begin_inset Formula $\alpha_{M}$
+\end_inset
+
+ überein.
+ 
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Symmetrie"
+
+\end_inset
+
+Symmetrie der 2-dimensionalen Trajektorie 
+\end_layout
+
+\begin_layout Standard
+Hier soll gezeigt werden, dass die 2-dimensionalen Trajektorien unter den
+ getroffenen Annahmen des Abschnittes 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Annahmen"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ eine gerade Symmetrie zum astronomischen Mittag 
+\begin_inset Formula $\alpha_{M}$
+\end_inset
+
+ der 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+-Achse besitzen.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Behauptung 
+\end_layout
+
+\begin_layout Standard
+Es gelten für die Trajektorienkomponenten nach Gleichung (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:LösungspunkteSonneGedreht"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) mit den Abkürzungen 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{x}_{0}^{S}\left(\alpha\right) & = & \left[\begin{array}{c}
+x_{1}^{S}\left(\alpha\right)\\
+x_{2}^{S}\left(\alpha\right)\\
+x_{3}^{S}\left(\alpha\right)
+\end{array}\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+für ein geeignetes 
+\begin_inset Formula $\Delta\in\mathbb{R}$
+\end_inset
+
+ die Symmetriebeziehungen 
+\begin_inset Formula 
+\begin{eqnarray}
+x_{1}^{S}\left(\alpha_{M}-\Delta\right) & = & x_{1}^{S}\left(\alpha_{M}+\Delta\right)\label{eq:BehaupteteSymmetrie}\\
+x_{2}^{S}\left(\alpha_{M}-\Delta\right) & = & -x_{2}^{S}\left(\alpha_{M}+\Delta\right)\nonumber \\
+x_{3}^{S}\left(\alpha_{M}-\Delta\right) & = & x_{3}^{S}\left(\alpha_{M}+\Delta\right).\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Damit folgt die gerade Symmetrie der 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+-Komponente der 2-dimensionalen Trajektorie 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{2}\left(\alpha_{M}-\Delta\right)=y_{2}\left(\alpha_{M}+\Delta\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Nachweis 
+\end_layout
+
+\begin_layout Standard
+Der Nachweis der behaupteten Symmetrie für 
+\begin_inset Formula $\underline{x}_{0}^{S}\left(\alpha\right)$
+\end_inset
+
+ im Punkt 
+\begin_inset Formula $\alpha=\alpha_{M}$
+\end_inset
+
+ nach den Gleichungen (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:BehaupteteSymmetrie"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) erfolgt mit der 
+\begin_inset Quotes gld
+\end_inset
+
+Symbolic Math
+\begin_inset Quotes grd
+\end_inset
+
+-Toolbox von 
+\begin_inset Quotes gld
+\end_inset
+
+MatLab
+\begin_inset Quotes grd
+\end_inset
+
+ (siehe dazu 
+\begin_inset Quotes gld
+\end_inset
+
+SonnenkompassSymbolic.m
+\begin_inset Quotes grd
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+Mit Gleichung (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Trajektorie2Dim"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) folgt 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\begin{array}{c}
+y_{1}\left(\alpha\right)\\
+y_{2}\left(\alpha\right)
+\end{array}\right) & = & AD_{\Theta}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right)\\
+ & = & \left(\begin{array}{ccc}
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right)\left(\begin{array}{ccc}
+\cos\Theta & 0 & \sin\Theta\\
+0 & 1 & 0\\
+-\sin\Theta & 0 & \cos\Theta
+\end{array}\right)\underline{x}_{0}^{S}\left(\alpha\right)\\
+ & = & \left(\begin{array}{c}
+x_{2}^{S}\left(\alpha\right)\\
+\cos\Theta x_{3}^{S}\left(\alpha\right)
+\end{array}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Komponente 
+\begin_inset Formula $y_{1}\left(\alpha\right)$
+\end_inset
+
+ ist also wegen 
+\begin_inset Formula $x_{2}^{S}\left(\alpha\right)$
+\end_inset
+
+ ungerade bezüglich des Punktes 
+\begin_inset Formula $\alpha=\alpha_{M}$
+\end_inset
+
+ und die Komponente 
+\begin_inset Formula $y_{2}\left(\alpha\right)$
+\end_inset
+
+ ist wegen 
+\begin_inset Formula $x_{3}^{S}\left(\alpha\right)$
+\end_inset
+
+ gerade.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\color red
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Subsection*
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Beweis"
+
+\end_inset
+
+Beweis der Ungleichung 
+\begin_inset Formula $\varOmega^{S}<-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Behauptung
+\end_layout
+
+\begin_layout Plain Layout
+Aus 
+\begin_inset Formula 
+\begin{equation}
+\frac{\varOmega^{S}}{1+\varOmega^{S}}>1\label{eq:Prämisse}
+\end{equation}
+
+\end_inset
+
+ folgt 
+\begin_inset Formula $\varOmega^{S}<-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Beweis
+\end_layout
+
+\begin_layout Plain Layout
+Es werden für den Nenner 
+\begin_inset Formula $1+\varOmega^{S}$
+\end_inset
+
+ die drei möglichen Fälle untersucht:
+\end_layout
+
+\begin_layout Itemize
+Fall 
+\begin_inset Formula $1+\varOmega^{S}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+Also gilt 
+\begin_inset Formula $\varOmega^{S}=-1$
+\end_inset
+
+ und damit folgt aus
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Prämisse"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) der Widerspruch 
+\begin_inset Formula $\frac{-1}{0}>1.$
+\end_inset
+
+ Es existiert für diesen Fall keine Lösung.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Fall 
+\begin_inset Formula $1+\varOmega^{S}>0$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+Es folgt aus
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Prämisse"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\begin_inset Formula $\varOmega^{S}>1+\varOmega^{S}$
+\end_inset
+
+ oder 
+\begin_inset Formula $0>1.$
+\end_inset
+
+ Dies ist offensichtlich falsch.
+ Es existiert für diesen Fall keine Lösung.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Fall 
+\begin_inset Formula $1+\varOmega^{S}<0$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+Es folgt aus
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Prämisse"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 
+\begin_inset Formula $\varOmega^{S}<1+\varOmega^{S}$
+\end_inset
+
+ oder 
+\begin_inset Formula $0<1.$
+\end_inset
+
+ Dies ist offensichtlich richtig.
+ Also existiert für diesen Fall eine Lösung, nämlich 
+\begin_inset Formula $\varOmega^{S}<-1.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Subsection*
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Limits"
+
+\end_inset
+
+Limits für den Erdrotationswinkel 
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+In diesem Unterabschnitt soll die Frage geklärt werden, für welchen Bereich
+ des Drehwinkels 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ zulässige Lösungen (also solche mit 
+\begin_inset Formula $\varOmega^{S}<-1$
+\end_inset
+
+) zu erwarten sind.
+\end_layout
+
+\begin_layout Subsubsection*
+Bestimmung des Drehwinkels 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ für 
+\begin_inset Formula $\varOmega^{S}\left(\alpha\right)=-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Untersucht werden soll zunächst der Fall der Gleichheit 
+\begin_inset Formula $\varOmega^{S}\left(\alpha\right)=-1$
+\end_inset
+
+.
+ Multiplikation mit 
+\begin_inset Formula $LR_{E}$
+\end_inset
+
+ liefert
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+LR_{E}\varOmega^{S}\left(\alpha\right)=-LR_{E}.\label{eq:Zu-Lösen1}
+\end{equation}
 
 \end_inset
 
@@ -2869,42 +3721,289 @@ Problemskizze, SSW, astronomischer Mittag
 \end_layout
 
 \begin_layout Plain Layout
-Gegeben ist im nicht geneigten 
-\begin_inset Formula $\left(x_{1},x_{2},x_{3}\right)$
+Mit dem gedrehten Ort der Sonne nach (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:GedrehterSonnenOrt"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
--Koordinatensystem die geographische Breite 
-\begin_inset Formula $\Theta_{G}$
+), mit dem Ort der Sonne nach (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Ort der Sonne"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
- des Stabfusspunktes.
- Für den Polarwinkel des Stabfusspunktes gilt 
-\begin_inset Formula $\Theta=\frac{\pi}{2}-\Theta_{G}$
+) und mit der Drehmatrix als Funktion des negativen Erdrotationswinkels
+ 
+\begin_inset Formula $-\alpha$
 \end_inset
 
-.
+ nach (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:DrehmatrixAlpha"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) kann man für die linke Seite der obigen Gleichung schreiben
 \end_layout
 
 \begin_layout Plain Layout
-Im um den Winkel 
-\begin_inset Formula $\psi$
+\begin_inset Formula 
+\begin{eqnarray*}
+LR_{E}\varOmega^{S}\left(\alpha\right) & = & A^{*}\sin\alpha+B^{*}\cos\alpha+C^{*}.
+\end{eqnarray*}
+
 \end_inset
 
- geneigten Koordinatensystem wird der Polarwinkel 
-\begin_inset Formula $\Theta$
+
+\end_layout
+
+\begin_layout Plain Layout
+Dabei gilt für die Abkürzungen (siehe dazu die MatLab-Quelldatei 
+\begin_inset Quotes gld
 \end_inset
 
- des Stabfusspunktes grösser.
- Es folgt 
-\begin_inset Formula $\Theta=\frac{\pi}{2}-\Theta_{G}+\psi=\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)$
+SonnenKompassSymbolicAddon.m
+\begin_inset Quotes grd
 \end_inset
 
-.
+)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+A^{*} & = & -p_{1}R_{S}\cos\psi\sin\Omega+p_{2}R_{S}\cos\psi\cos\Omega+p_{3}R_{S}\sin\psi\sin\Omega\\
+B^{*} & = & -p_{1}R_{S}\cos^{2}\psi\cos\Omega-p_{2}R_{S}\sin\Omega+p_{3}R_{S}\sin\psi\cos\psi\cos\Omega\\
+C^{*} & = & R_{E}^{2}+p_{1}R_{S}\left(\cos^{2}\psi-1\right)\cos\Omega-p_{3}R_{S}\sin\psi\cos\psi\cos\Omega.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Wegen Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Zu-Lösen1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) folgt 
+\begin_inset Formula $f\left(\alpha\right)=0$
+\end_inset
+
+ mit
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+g\left(\alpha\right)=A^{*}\sin\alpha+B^{*}\cos\alpha+C^{*}+LR_{E}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+oder umformuliert 
+\begin_inset Formula 
+\begin{equation}
+g\left(\alpha\right)=A\sin\alpha+B\cos\alpha+C.\label{eq:Zu-Lösen2}
+\end{equation}
+
+\end_inset
+
+Mit 
+\begin_inset Formula $p_{2}=0$
+\end_inset
+
+ aus
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:StabFusspunkt"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) folgt 
+\begin_inset Formula 
+\begin{eqnarray*}
+A & = & -R_{S}\left(p_{1}\cos\psi-p_{3}\sin\psi\right)\sin\Omega\\
+B & = & -R_{S}\left(p_{1}\cos\psi-p_{3}\sin\psi\right)\cos\psi\cos\Omega\\
+C & = & R_{E}^{2}-R_{S}\left(p_{1}\sin^{2}\psi+p_{3}\sin\psi\cos\psi\right)\cos\Omega.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Zu-Lösen2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) hat für 
+\begin_inset Formula $k_{\pm}\in\mathbb{N}$
+\end_inset
+
+ die Lösungen (siehe dazu z.B.
+ die MatLab-Quelldatei 
+\begin_inset Quotes gld
+\end_inset
+
+SolveEquation.m
+\begin_inset Quotes grd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\frac{\alpha_{\pm}}{2}=\pi k_{\pm}+\arctan\left(\frac{A\pm\sqrt{A^{2}+B^{2}-C^{2}}}{B-C}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Bestimmung des Drehwinkels 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ für 
+\begin_inset Formula $\varOmega^{S}\left(\alpha\right)<-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Die Frage lautet: Wie muss 
+\begin_inset Formula $k_{\pm}$
+\end_inset
+
+ gewählt werden, damit die zulässigen Lösungen im Intervall 
+\begin_inset Formula $\left[\alpha_{-},\alpha_{+}\right]$
+\end_inset
+
+ liegen?
+\end_layout
+
+\begin_layout Plain Layout
+
+\color red
+Still to do!
+\end_layout
+
+\begin_layout Plain Layout
+
+\color red
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\color red
+Die implementierte Lösung führt zu Problemen im Fall der Sommersonnenwende:
+ Interner Fehler!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Lösung insgesamt
+\end_layout
+
+\begin_layout Plain Layout
+Die beiden physikalisch richtigen Lösungen für die Erdrotationswinkel sind
+ 
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{\alpha_{+}}{2} & = & \arctan\left(\frac{A+\sqrt{A^{2}+B^{2}-C^{2}}}{B-C}\right)\label{eq:LimitsAlpha}\\
+\frac{\alpha_{-}}{2} & = & \pi+\arctan\left(\frac{A-\sqrt{A^{2}+B^{2}-C^{2}}}{B-C}\right).\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Die zu 
+\begin_inset Formula $\alpha_{\pm}$
+\end_inset
+
+ gehörigen Grenz-Trajektorienpunkte sind durch Gleichung
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Trajektorie2Dim"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) bestimmt.
 \end_layout
 
 \end_inset
 
  
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Note
 status collapsed
 
@@ -3664,1023 +4763,6 @@ R_{E}\\
 
 \end_inset
 
- 
-\end_layout
-
-\begin_layout Subsection
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:Beweis"
-
-\end_inset
-
-Beweis der Ungleichung 
-\begin_inset Formula $\varOmega^{S}<-1$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Subsubsection*
-Behauptung 
-\end_layout
-
-\begin_layout Standard
-Aus 
-\begin_inset Formula 
-\begin{equation}
-\frac{\varOmega^{S}}{1+\varOmega^{S}}>1\label{eq:Prämisse}
-\end{equation}
-
-\end_inset
-
- folgt 
-\begin_inset Formula $\varOmega^{S}<-1$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Subsubsection*
-Beweis 
-\end_layout
-
-\begin_layout Standard
-Es werden für den Nenner 
-\begin_inset Formula $1+\varOmega^{S}$
-\end_inset
-
- die drei möglichen Fälle untersucht: 
-\end_layout
-
-\begin_layout Itemize
-Fall 
-\begin_inset Formula $1+\varOmega^{S}=0$
-\end_inset
-
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-Also gilt 
-\begin_inset Formula $\varOmega^{S}=-1$
-\end_inset
-
- und damit folgt aus
-\begin_inset space ~
-\end_inset
-
-(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Prämisse"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) der Widerspruch 
-\begin_inset Formula $\frac{-1}{0}>1.$
-\end_inset
-
- Es existiert für diesen Fall keine Lösung.
- 
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Fall 
-\begin_inset Formula $1+\varOmega^{S}>0$
-\end_inset
-
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-Es folgt aus
-\begin_inset space ~
-\end_inset
-
-(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Prämisse"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) 
-\begin_inset Formula $\varOmega^{S}>1+\varOmega^{S}$
-\end_inset
-
- oder 
-\begin_inset Formula $0>1.$
-\end_inset
-
- Dies ist offensichtlich falsch.
- Es existiert für diesen Fall keine Lösung.
- 
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Fall 
-\begin_inset Formula $1+\varOmega^{S}<0$
-\end_inset
-
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-Es folgt aus
-\begin_inset space ~
-\end_inset
-
-(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Prämisse"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) 
-\begin_inset Formula $\varOmega^{S}<1+\varOmega^{S}$
-\end_inset
-
- oder 
-\begin_inset Formula $0<1.$
-\end_inset
-
- Dies ist offensichtlich richtig.
- Also existiert für diesen Fall eine Lösung, nämlich 
-\begin_inset Formula $\varOmega^{S}<-1.$
-\end_inset
-
-
-\color red
- 
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Subsection
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:Limits"
-
-\end_inset
-
-Limits für den Erdrotationswinkel 
-\begin_inset Formula $\alpha$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Plain Layout
-In diesem Unterabschnitt soll die Frage geklärt werden, für welchen Bereich
- des Drehwinkels 
-\begin_inset Formula $\alpha$
-\end_inset
-
- zulässige Lösungen (also solche mit 
-\begin_inset Formula $\varOmega^{S}<-1$
-\end_inset
-
-) zu erwarten sind.
- 
-\end_layout
-
-\begin_layout Subsubsection*
-Bestimmung des Drehwinkels 
-\begin_inset Formula $\alpha$
-\end_inset
-
- für 
-\begin_inset Formula $\varOmega^{S}\left(\alpha\right)=-1$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Plain Layout
-Untersucht werden soll zunächst der Fall der Gleichheit 
-\begin_inset Formula $\varOmega^{S}\left(\alpha\right)=-1$
-\end_inset
-
-.
- Multiplikation mit 
-\begin_inset Formula $LR_{E}$
-\end_inset
-
- liefert 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{equation}
-LR_{E}\varOmega^{S}\left(\alpha\right)=-LR_{E}.\label{eq:Zu-Lösen1}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Mit dem gedrehten Ort der Sonne nach (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:GedrehterSonnenOrt"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-), mit dem Ort der Sonne nach (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Ort der Sonne"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) und mit der Drehmatrix als Funktion des negativen Erdrotationswinkels
- 
-\begin_inset Formula $-\alpha$
-\end_inset
-
- nach (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:DrehmatrixAlpha"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) kann man für die linke Seite der obigen Gleichung schreiben 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-LR_{E}\varOmega^{S}\left(\alpha\right) & = & A^{*}\sin\alpha+B^{*}\cos\alpha+C^{*}.
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Dabei gilt für die Abkürzungen (siehe dazu die MatLab-Quelldatei 
-\begin_inset Quotes gld
-\end_inset
-
-SonnenKompassSymbolicAddon.m
-\begin_inset Quotes grd
-\end_inset
-
-) 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{eqnarray*}
-A^{*} & = & -p_{1}R_{S}\cos\psi\sin\Omega+p_{2}R_{S}\cos\psi\cos\Omega+p_{3}R_{S}\sin\psi\sin\Omega\\
-B^{*} & = & -p_{1}R_{S}\cos^{2}\psi\cos\Omega-p_{2}R_{S}\sin\Omega+p_{3}R_{S}\sin\psi\cos\psi\cos\Omega\\
-C^{*} & = & R_{E}^{2}+p_{1}R_{S}\left(\cos^{2}\psi-1\right)\cos\Omega-p_{3}R_{S}\sin\psi\cos\psi\cos\Omega.
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Wegen Gleichung
-\begin_inset space ~
-\end_inset
-
-(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Zu-Lösen1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) folgt 
-\begin_inset Formula $f\left(\alpha\right)=0$
-\end_inset
-
- mit 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-g\left(\alpha\right)=A^{*}\sin\alpha+B^{*}\cos\alpha+C^{*}+LR_{E}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-oder umformuliert 
-\begin_inset Formula 
-\begin{equation}
-g\left(\alpha\right)=A\sin\alpha+B\cos\alpha+C.\label{eq:Zu-Lösen2}
-\end{equation}
-
-\end_inset
-
-Mit 
-\begin_inset Formula $p_{2}=0$
-\end_inset
-
- aus
-\begin_inset space ~
-\end_inset
-
-(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:StabFusspunkt"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) folgt 
-\begin_inset Formula 
-\begin{eqnarray*}
-A & = & -R_{S}\left(p_{1}\cos\psi-p_{3}\sin\psi\right)\sin\Omega\\
-B & = & -R_{S}\left(p_{1}\cos\psi-p_{3}\sin\psi\right)\cos\psi\cos\Omega\\
-C & = & R_{E}^{2}-R_{S}\left(p_{1}\sin^{2}\psi+p_{3}\sin\psi\cos\psi\right)\cos\Omega.
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Gleichung
-\begin_inset space ~
-\end_inset
-
-(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Zu-Lösen2"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) hat für 
-\begin_inset Formula $k_{\pm}\in\mathbb{N}$
-\end_inset
-
- die Lösungen (siehe dazu z.B.
- die MatLab-Quelldatei 
-\begin_inset Quotes gld
-\end_inset
-
-SolveEquation.m
-\begin_inset Quotes grd
-\end_inset
-
-) 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-\frac{\alpha_{\pm}}{2}=\pi k_{\pm}+\arctan\left(\frac{A\pm\sqrt{A^{2}+B^{2}-C^{2}}}{B-C}\right).
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection*
-Bestimmung des Drehwinkels 
-\begin_inset Formula $\alpha$
-\end_inset
-
- für 
-\begin_inset Formula $\varOmega^{S}\left(\alpha\right)<-1$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Plain Layout
-Die Frage lautet: Wie muss 
-\begin_inset Formula $k_{\pm}$
-\end_inset
-
- gewählt werden, damit die zulässigen Lösungen im Intervall 
-\begin_inset Formula $\left[\alpha_{-},\alpha_{+}\right]$
-\end_inset
-
- liegen? 
-\end_layout
-
-\begin_layout Plain Layout
-
-\color red
-Still to do! 
-\end_layout
-
-\begin_layout Plain Layout
-
-\color red
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\color red
-Die implementierte Lösung führt zu Problemen im Fall der Sommersonnenwende:
- Interner Fehler!
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Subsubsection*
-Lösung insgesamt 
-\end_layout
-
-\begin_layout Plain Layout
-Die beiden physikalisch richtigen Lösungen für die Erdrotationswinkel sind
- 
-\begin_inset Formula 
-\begin{eqnarray}
-\frac{\alpha_{+}}{2} & = & \arctan\left(\frac{A+\sqrt{A^{2}+B^{2}-C^{2}}}{B-C}\right)\label{eq:LimitsAlpha}\\
-\frac{\alpha_{-}}{2} & = & \pi+\arctan\left(\frac{A-\sqrt{A^{2}+B^{2}-C^{2}}}{B-C}\right).\nonumber 
-\end{eqnarray}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Die zu 
-\begin_inset Formula $\alpha_{\pm}$
-\end_inset
-
- gehörigen Grenz-Trajektorienpunkte sind durch Gleichung
-\begin_inset space ~
-\end_inset
-
-(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Trajektorie2Dim"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) bestimmt.
- 
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Subsection
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:Astronomischer-Mittag"
-
-\end_inset
-
-Der astronomische Mittag 
-\end_layout
-
-\begin_layout Subsubsection
-Näherung für 
-\begin_inset Formula $\psi=0$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-Es soll nun noch für jeden Jahreszeitpunkt 
-\begin_inset Formula $T^{*}$
-\end_inset
-
- eine Näherung 
-\begin_inset Formula $\overline{\alpha}_{M}$
-\end_inset
-
- für den Tageszeit-Rotationswinkel 
-\begin_inset Formula $\alpha$
-\end_inset
-
- angegeben werden, so dass sich gerade der Sonnenhöchststand (der astronomische
- Mittag) einstellt.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename SonnenKompassTopHelp1.eps
-	lyxscale 107
-	scale 30
-
-\end_inset
-
- 
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Sonnen-Jahres-Umlauf"
-
-\end_inset
-
-Umlauf der Sonne um die Erde 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Wie man der Abbildung 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Sonnen-Jahres-Umlauf"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) entnehmen kann, gilt im Fall 
-\begin_inset Formula $\psi=0$
-\end_inset
-
- die Näherung 
-\begin_inset Formula 
-\[
-\overline{\alpha}_{M}=\Omega.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Der exakte Wert für 
-\begin_inset Formula $\psi\neq0$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-Der exakte Wert 
-\begin_inset Formula $\alpha_{M}$
-\end_inset
-
- für 
-\begin_inset Formula $\psi\neq0$
-\end_inset
-
- wird aus der Steigung der 2-dimensionalen Trajektorie 
-\begin_inset Formula $\left(\begin{array}{c}
-y_{1}\left(\alpha\right)\\
-y_{2}\left(\alpha\right)
-\end{array}\right)$
-\end_inset
-
- nach Gleichung (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Trajektorie2Dim"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) bestimmt.
- Die Steigung 
-\begin_inset Formula $S\left(x\right)$
-\end_inset
-
- errechnet sich zu (siehe dazu z.B.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Wikipedia6"
-literal "false"
-
-\end_inset
-
-) 
-\begin_inset Formula 
-\begin{eqnarray}
-S\left(x\right) & = & \frac{dy_{2}\left(x\right)}{dy_{1}}=\frac{\frac{\partial y_{2}\left(\alpha\right)}{\partial\alpha}}{\frac{\partial y_{1}\left(\alpha\right)}{\partial\alpha}}.\label{eq:SteigungAllgemein}
-\end{eqnarray}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Dieser (eher etwas längliche 
-\begin_inset Formula $\smiley$
-\end_inset
-
-) Ausdruck wird mittels der 
-\begin_inset Quotes gld
-\end_inset
-
-Symbolic Math Toolbox
-\begin_inset Quotes grd
-\end_inset
-
- von MatLab berechnet (siehe dazu die MatLab-Quelldatei 
-\begin_inset Quotes gld
-\end_inset
-
-SonnenKompassSymbolic.m
-\begin_inset Quotes grd
-\end_inset
-
-).
- Aus ihm folgt die notwendige Bedingung für das Verschwinden der Steigung
- 
-\begin_inset Formula 
-\[
-\sin\Omega\cos\alpha_{M}-\cos\Omega\cos\psi\sin\alpha_{M}=0.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Mit 
-\begin_inset Formula $n\in\mathbb{N}$
-\end_inset
-
- ist also der astronomische Mittag durch den Erdrotationswinkel 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray}
-\alpha_{M} & = & \arctan\left(\frac{\tan\Omega}{\cos\psi}\right)+n\pi\label{eq:AlphaM}
-\end{eqnarray}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-gekennzeichnet.
- 
-\end_layout
-
-\begin_layout Standard
-Für 
-\begin_inset Formula $\psi=0$
-\end_inset
-
- stimmt die Näherung 
-\begin_inset Formula $\overline{\alpha}_{M}$
-\end_inset
-
- mit dem Hauptwert von 
-\begin_inset Formula $\alpha_{M}$
-\end_inset
-
- überein.
- 
-\end_layout
-
-\begin_layout Subsection
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:Symmetrie"
-
-\end_inset
-
-Symmetrie der 2-dimensionalen Trajektorie
-\end_layout
-
-\begin_layout Standard
-Bei der Projektion 
-\begin_inset Formula $A$
-\end_inset
-
- auf die Tangentialebene nach Gleichung (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Projektion"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) ist zu beachten, dass für das Sommerhalbjahr die Projektion 
-\begin_inset Quotes gld
-\end_inset
-
-von vorne
-\begin_inset Quotes grd
-\end_inset
-
- (also mit positiven Werten der 
-\begin_inset Formula $x_{1}$
-\end_inset
-
--Koordinate) stattfindet und im Winterhalbjahr 
-\begin_inset Quotes gld
-\end_inset
-
-von hinten
-\begin_inset Quotes grd
-\end_inset
-
- (also mit negativen Werten der 
-\begin_inset Formula $x_{1}$
-\end_inset
-
--Koordinate) - siehe dazu die beiden Abbildungen
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Problemskizze1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- und
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Problemskizze2"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
- Dies bedeutet eine Spiegelung der 2-dimensionalen Trajektorien an der 
-\begin_inset Formula $y_{2}$
-\end_inset
-
--Koordinaten-Achse.
- 
-\end_layout
-
-\begin_layout Standard
-Hier soll gezeigt werden, dass die Trajektorien unter den getroffenen Annahmen
- des Abschnittes 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Annahmen"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- symmetrisch zum astronomischen Mittag 
-\begin_inset Formula $\alpha_{M}$
-\end_inset
-
- der 
-\begin_inset Formula $y_{2}$
-\end_inset
-
--Achse sind und dass das Problem somit verschwindet.
- 
-\end_layout
-
-\begin_layout Subsubsection
-Behauptung 
-\end_layout
-
-\begin_layout Standard
-Es gelten für die Trajektorienkomponenten nach Gleichung (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:LösungspunkteSonneGedreht"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) mit den Abkürzungen 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray*}
-\underline{x}_{0}^{S}\left(\alpha\right) & = & \left[\begin{array}{c}
-x_{1}^{S}\left(\alpha\right)\\
-x_{2}^{S}\left(\alpha\right)\\
-x_{3}^{S}\left(\alpha\right)
-\end{array}\right]
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-für ein geeignetes 
-\begin_inset Formula $\Delta\in\mathbb{R}$
-\end_inset
-
- die Symmetriebeziehungen 
-\begin_inset Formula 
-\begin{eqnarray*}
-x_{1}^{S}\left(\alpha_{M}-\Delta\right) & = & x_{1}^{S}\left(\alpha_{M}+\Delta\right)\\
-x_{2}^{S}\left(\alpha_{M}-\Delta\right) & = & -x_{2}^{S}\left(\alpha_{M}+\Delta\right)\\
-x_{3}^{S}\left(\alpha_{M}-\Delta\right) & = & x_{3}^{S}\left(\alpha_{M}+\Delta\right).
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Damit folgt die gerade Symmetrie der 
-\begin_inset Formula $y_{2}$
-\end_inset
-
--Komponente der 2-dimensionalen Trajektorie 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-y_{2}\left(\alpha_{M}-\Delta\right)=y_{2}\left(\alpha_{M}+\Delta\right).
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Nachweis 
-\end_layout
-
-\begin_layout Standard
-Der Nachweis der Symmetrie für 
-\begin_inset Formula $\underline{x}_{0}^{S}\left(\alpha\right)$
-\end_inset
-
- im Punkt 
-\begin_inset Formula $\alpha=\alpha_{M}$
-\end_inset
-
- erfolgt mit der MatLab 
-\begin_inset Quotes gld
-\end_inset
-
-Symbolic Math
-\begin_inset Quotes grd
-\end_inset
-
--Toolbox von (siehe dazu 
-\begin_inset Quotes gld
-\end_inset
-
-SonnenkompassSymbolic.m
-\begin_inset Quotes grd
-\end_inset
-
-).
- 
-\end_layout
-
-\begin_layout Standard
-Aus Gleichung (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Trajektorie2Dim"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) folgt 
-\begin_inset Formula 
-\begin{eqnarray*}
-\left(\begin{array}{c}
-y_{1}\left(\alpha\right)\\
-y_{2}\left(\alpha\right)
-\end{array}\right) & = & AD_{\Theta}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right)\\
- & = & \left(\begin{array}{ccc}
-0 & 1 & 0\\
-0 & 0 & 1
-\end{array}\right)\left(\begin{array}{ccc}
-\cos\Theta & 0 & \sin\Theta\\
-0 & 1 & 0\\
--\sin\Theta & 0 & \cos\Theta
-\end{array}\right)\underline{x}_{0}^{S}\left(\alpha\right)\\
- & = & \left(\begin{array}{c}
-x_{2}^{S}\left(\alpha\right)\\
-\cos\Theta x_{3}^{S}\left(\alpha\right)
-\end{array}\right).
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Die Komponente 
-\begin_inset Formula $y_{1}\left(\alpha\right)$
-\end_inset
-
- ist also ungerade bezüglich des Punktes 
-\begin_inset Formula $\alpha=\alpha_{M}$
-\end_inset
-
- und die 
-\begin_inset Formula $y_{2}\left(\alpha\right)$
-\end_inset
-
--Komponente ist gerade.
  
 \end_layout
 
@@ -5770,7 +5852,7 @@ n_{1}n_{3} & n_{2}n_{3} & 1+n_{3}^{2}
 status collapsed
 
 \begin_layout Subsection*
-Trigonometrische Überprüfung 
+Trigonometrische Überprüfung
 \end_layout
 
 \begin_layout Plain Layout
@@ -5970,7 +6052,7 @@ x & = & L\tan\lambda\\
 
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -5995,72 +6077,11 @@ TigonometrischerTest.m
 \end_inset
 
 ).
- 
 \end_layout
 
 \end_inset
 
  
-\end_layout
-
-\begin_layout Subsection
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:Abbildung-Punkt-P"
-
-\end_inset
-
-Zur Projektion des Punktes 
-\begin_inset Formula $\underline{P}$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-Der Punkt 
-\begin_inset Formula $\underline{P}$
-\end_inset
-
- wird durch die Drehung 
-\begin_inset Formula $D_{\left(\Theta_{G}-\psi\right)}^{x_{2}}$
-\end_inset
-
- auf 
-\begin_inset Formula $x_{1}=R_{E}$
-\end_inset
-
- und 
-\begin_inset Formula $x_{2}=x_{3}=0$
-\end_inset
-
- abgebildet, denn es gilt 
-\begin_inset Formula 
-\begin{eqnarray*}
-D_{\left(\Theta_{G}-\psi\right)}^{x_{2}}\underline{P} & = & \left(\begin{array}{ccc}
-\cos\left(\Theta_{G}-\psi\right) & 0 & \sin\left(\Theta_{G}-\psi\right)\\
-0 & 1 & 0\\
--\sin\left(\Theta_{G}-\psi\right) & 0 & \cos\left(\Theta_{G}-\psi\right)
-\end{array}\right)\left(\begin{array}{c}
-R_{E}\sin\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]\\
-0\\
-R_{E}\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]
-\end{array}\right)\\
- & = & R_{E}\left(\begin{array}{c}
-\cos\left(\Theta_{G}-\psi\right)\sin\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]+\sin\left(\Theta_{G}-\psi\right)\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]\\
-0\\
--\sin\left(\Theta_{G}-\psi\right)\sin\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]+\cos\left(\Theta_{G}-\psi\right)\cos\left[\frac{\pi}{2}-\left(\Theta_{G}-\psi\right)\right]
-\end{array}\right)\\
- & = & R_{E}\left(\begin{array}{c}
-1\\
-0\\
-0
-\end{array}\right).
-\end{eqnarray*}
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Bibliography
