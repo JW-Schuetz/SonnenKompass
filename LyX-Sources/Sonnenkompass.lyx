@@ -3466,7 +3466,7 @@ Die Komponente
 \begin_inset Formula $x_{2}^{S}\left(\alpha\right)$
 \end_inset
 
- ungerade bezüglich des Punktes 
+ ungerade bezüglich 
 \begin_inset Formula $\alpha=\alpha_{M}$
 \end_inset
 
@@ -3483,8 +3483,6 @@ Die Komponente
 \end_layout
 
 \begin_layout Standard
-
-\color red
 \begin_inset Note Note
 status collapsed
 
@@ -3650,12 +3648,12 @@ noprefix "false"
 \end_deeper
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Subsection*
 \begin_inset CommandInset label
@@ -3668,7 +3666,7 @@ Limits für den Erdrotationswinkel
 \begin_inset Formula $\alpha$
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Plain Layout
@@ -3682,6 +3680,16 @@ In diesem Unterabschnitt soll die Frage geklärt werden, für welchen Bereich
 \end_inset
 
 ) zu erwarten sind.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Untersucht werden soll zunächst der Fall der Gleichheit 
+\begin_inset Formula $\varOmega^{S}\left(\alpha\right)=-1$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Subsubsection*
@@ -3693,27 +3701,28 @@ Bestimmung des Drehwinkels
 \begin_inset Formula $\varOmega^{S}\left(\alpha\right)=-1$
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Plain Layout
-Untersucht werden soll zunächst der Fall der Gleichheit 
-\begin_inset Formula $\varOmega^{S}\left(\alpha\right)=-1$
+\begin_inset Note Note
+status open
+
+\begin_layout Subsubsection*
+Bestimmung von 
+\begin_inset Formula $\underline{P}^{T}\underline{S}\left(\alpha\right)$
 \end_inset
 
-.
- Multiplikation mit 
-\begin_inset Formula $LR_{E}$
-\end_inset
-
- liefert
+ 
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Formula 
-\begin{equation}
-LR_{E}\varOmega^{S}\left(\alpha\right)=-LR_{E}.\label{eq:Zu-Lösen1}
-\end{equation}
+\begin{eqnarray*}
+p_{1} & = & R_{E}\sin\Theta\\
+p_{2} & = & 0\\
+p_{3} & = & R_{E}\cos\Theta
+\end{eqnarray*}
 
 \end_inset
 
@@ -3721,7 +3730,175 @@ LR_{E}\varOmega^{S}\left(\alpha\right)=-LR_{E}.\label{eq:Zu-Lösen1}
 \end_layout
 
 \begin_layout Plain Layout
-Mit dem gedrehten Ort der Sonne nach (
+\begin_inset Formula 
+\[
+\underline{S}=R_{S}\left(\begin{array}{c}
+\cos\Omega\\
+\sin\Omega\\
+0
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\underline{S}\left(\alpha\right)=D_{\left(-\alpha\right)}\underline{S}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+D_{\alpha}=\begin{pmatrix}\sin^{2}\psi+\cos^{2}\psi\cos\alpha & -\cos\psi\sin\alpha & \sin\psi\cos\psi-\sin\psi\cos\psi\cos\alpha\\
+\cos\psi\sin\alpha & \cos\alpha & -\sin\psi\sin\alpha\\
+\sin\psi\cos\psi-\sin\psi\cos\psi\cos\alpha & \sin\psi\sin\alpha & \cos^{2}\psi+\sin^{2}\psi\cos\alpha
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\underline{P}^{T}\underline{S}\left(\alpha\right) & = & R_{S}\left(R_{E}\sin\Theta,0,R_{E}\cos\Theta\right)D_{\left(-\alpha\right)}\left(\begin{array}{c}
+\cos\Omega\\
+\sin\Omega\\
+0
+\end{array}\right)\\
+\\
+ & = & R_{S}R_{E}\left(\sin\Theta,0,\cos\Theta\right)\begin{pmatrix}\sin^{2}\psi+\cos^{2}\psi\cos\alpha & \cos\psi\sin\alpha & \sin\psi\cos\psi-\sin\psi\cos\psi\cos\alpha\\
+-\cos\psi\sin\alpha & \cos\alpha & \sin\psi\sin\alpha\\
+\sin\psi\cos\psi-\sin\psi\cos\psi\cos\alpha & -\sin\psi\sin\alpha & \cos^{2}\psi+\sin^{2}\psi\cos\alpha
+\end{pmatrix}\left(\begin{array}{c}
+\cos\Omega\\
+\sin\Omega\\
+0
+\end{array}\right)\\
+\\
+ & = & R_{S}R_{E}\left(\sin\Theta,0,\cos\Theta\right)\begin{pmatrix}\sin^{2}\psi+\cos^{2}\psi\cos\alpha & \cos\psi\sin\alpha\\
+-\cos\psi\sin\alpha & \cos\alpha\\
+\sin\psi\cos\psi-\sin\psi\cos\psi\cos\alpha & -\sin\psi\sin\alpha
+\end{pmatrix}\left(\begin{array}{c}
+\cos\Omega\\
+\sin\Omega
+\end{array}\right)\\
+\\
+ &  & =R_{S}R_{E}\left(\sin\Theta,0,\cos\Theta\right)\begin{pmatrix}\left(\sin^{2}\psi+\cos^{2}\psi\cos\alpha\right)\cos\Omega+\cos\psi\sin\alpha\sin\Omega\\
+-\cos\psi\sin\alpha\cos\Omega+\cos\alpha\sin\Omega\\
+\left(\sin\psi\cos\psi-\sin\psi\cos\psi\cos\alpha\right)\cos\Omega-\sin\psi\sin\alpha\sin\Omega
+\end{pmatrix}\\
+\\
+ &  & =R_{S}R_{E}\left\{ \sin\Theta\left[\left(\sin^{2}\psi+\cos^{2}\psi\cos\alpha\right)\cos\Omega+\cos\psi\sin\alpha\sin\Omega\right]+\cos\Theta\left[\left(\sin\psi\cos\psi-\sin\psi\cos\psi\cos\alpha\right)\cos\Omega-\sin\psi\sin\alpha\sin\Omega\right]\right\} \\
+\\
+ &  & =R_{S}R_{E}\sin\Theta\left[\sin^{2}\psi\cos\Omega+\cos^{2}\psi\cos\alpha\cos\Omega+\cos\psi\sin\alpha\sin\Omega\right]+R_{S}R_{E}\cos\Theta\left[\sin\psi\cos\psi\cos\Omega-\sin\psi\cos\psi\cos\alpha\cos\Omega-\sin\psi\sin\alpha\sin\Omega\right].
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Es soll gelten 
+\end_layout
+
+\begin_layout Subsubsection*
+\begin_inset Formula 
+\[
+\varOmega^{S}\left(\alpha\right)=-1.
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Multiplikation mit 
+\begin_inset Formula $LR_{E}$
+\end_inset
+
+ liefert 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+LR_{E}\varOmega^{S}\left(\alpha\right) & = & -LR_{E}\\
+LR_{E}\left[\frac{R_{E}}{L}-\frac{\underline{P}^{T}\underline{S}\left(\alpha\right)}{LR_{E}}\right] & = & -LR_{E}\\
+R_{E}^{2}-\underline{P}^{T}\underline{S}\left(\alpha\right) & = & -LR_{E}\\
+R_{E}^{2}+LR_{E} & = & \underline{P}^{T}\underline{S}\left(\alpha\right)\\
+R_{E}^{2}+LR_{E} & = & R_{S}R_{E}\sin\Theta\left[\sin^{2}\psi\cos\Omega+\cos^{2}\psi\cos\alpha\cos\Omega+\cos\psi\sin\alpha\sin\Omega\right]+R_{S}R_{E}\cos\Theta\left[\sin\psi\cos\psi\cos\Omega-\sin\psi\cos\psi\cos\alpha\cos\Omega-\sin\psi\sin\alpha\sin\Omega\right]\\
+R_{E}+L & = & R_{S}\sin\Theta\left[\sin^{2}\psi\cos\Omega+\cos^{2}\psi\cos\alpha\cos\Omega+\cos\psi\sin\alpha\sin\Omega\right]+R_{S}\cos\Theta\left[\sin\psi\cos\psi\cos\Omega-\sin\psi\cos\psi\cos\alpha\cos\Omega-\sin\psi\sin\alpha\sin\Omega\right]\\
+R_{E}+L & = & R_{S}\left(\sin\Theta\sin^{2}\psi\cos\Omega+\sin\Theta\cos^{2}\psi\cos\alpha\cos\Omega+\sin\Theta\cos\psi\sin\alpha\sin\Omega+\cos\Theta\sin\psi\cos\psi\cos\Omega-\cos\Theta\sin\psi\cos\psi\cos\alpha\cos\Omega-\cos\Theta\sin\psi\sin\alpha\sin\Omega\right)\\
+R_{E}+L & = & R_{S}\left[\sin\Theta\sin^{2}\psi\cos\Omega+\cos\Theta\sin\psi\cos\psi\cos\Omega+\left(\sin\Theta\cos\psi\sin\Omega-\cos\Theta\sin\psi\sin\Omega\right)\sin\alpha+\left(\sin\Theta\cos^{2}\psi\cos\Omega-\cos\Theta\sin\psi\cos\psi\cos\Omega\right)\cos\alpha\right]\\
+R_{E}+L-R_{S}\cos\Omega\left(\sin\Theta\sin\psi+\cos\Theta\cos\psi\right)\sin\psi & = & R_{S}\left(\sin\Omega\left(\sin\Theta\cos\psi-\cos\Theta\sin\psi\right)\sin\alpha+\cos\Omega\left(\sin\Theta\cos\psi-\cos\Theta\sin\psi\right)\cos\psi\cos\alpha\right)\\
+R_{E}+L-R_{S}\cos\Omega\cos\left(\Theta-\psi\right)\sin\psi & = & R_{S}\left(\sin\Omega\sin\left(\Theta-\psi\right)\sin\alpha+\cos\Omega\sin\left(\Theta-\psi\right)\cos\psi\cos\alpha\right)\\
+A & = & B\sin\alpha+C\cos\alpha
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Mit der Lösung 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\alpha=
+\]
+
+\end_inset
+
+und den Abkürzungen 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+A & = & R_{E}+L-R_{S}\cos\Omega\cos\left(\Theta-\psi\right)\sin\psi\\
+B & = & R_{S}\sin\Omega\sin\left(\Theta-\psi\right)\\
+C & = & R_{S}\cos\Omega\sin\left(\Theta-\psi\right)\cos\psi.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Mit Gleichung (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:OmegaS"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), dem gedrehten Ort der Sonne nach (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:GedrehterSonnenOrt"
@@ -3756,7 +3933,24 @@ noprefix "false"
 
 \end_inset
 
-) kann man für die linke Seite der obigen Gleichung schreiben
+) kann man für die linke Seite der obigen Gleichung schreiben 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\varOmega^{S}\left(\alpha\right) & = & \frac{R_{E}}{L}-\frac{\underline{P}^{T}\underline{S}\left(\alpha\right)}{LR_{E}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -3779,7 +3973,7 @@ SonnenKompassSymbolicAddon.m
 \begin_inset Quotes grd
 \end_inset
 
-)
+) 
 \end_layout
 
 \begin_layout Plain Layout
@@ -3814,7 +4008,7 @@ noprefix "false"
 \begin_inset Formula $f\left(\alpha\right)=0$
 \end_inset
 
- mit
+ mit 
 \end_layout
 
 \begin_layout Plain Layout
@@ -3896,7 +4090,7 @@ SolveEquation.m
 \begin_inset Quotes grd
 \end_inset
 
-)
+) 
 \end_layout
 
 \begin_layout Plain Layout
@@ -3919,7 +4113,7 @@ Bestimmung des Drehwinkels
 \begin_inset Formula $\varOmega^{S}\left(\alpha\right)<-1$
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Plain Layout
@@ -3931,7 +4125,7 @@ Die Frage lautet: Wie muss
 \begin_inset Formula $\left[\alpha_{-},\alpha_{+}\right]$
 \end_inset
 
- liegen?
+ liegen? 
 \end_layout
 
 \begin_layout Plain Layout
@@ -3959,7 +4153,7 @@ Die implementierte Lösung führt zu Problemen im Fall der Sommersonnenwende:
 \end_layout
 
 \begin_layout Subsubsection*
-Lösung insgesamt
+Lösung insgesamt 
 \end_layout
 
 \begin_layout Plain Layout
@@ -3996,6 +4190,7 @@ noprefix "false"
 \end_inset
 
 ) bestimmt.
+ 
 \end_layout
 
 \end_inset

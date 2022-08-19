@@ -6,14 +6,14 @@ function SonnenkompassSymbolic
     clear
 
     % symbolische Variablen
-    omega  = sym( 'omega', 'real' );            % Jahreszeiteinfluss
+    omega  = sym( 'omega', 'real' );            % Jahreszeit
     thetaG = sym( 'thetaG', 'real' );           % Geographische Breite des Stabes
     psi    = sym( 'psi', 'real' );              % Komplementwinkel Erd-Rotationsachse zur Ekliptik
     rS     = sym( 'rS', 'real' );               % Abstand Erde - Sonne
     rE     = sym( 'rE', 'real' );               % Erdradius
     lS     = sym( 'lS', 'real' );               % Stablänge
     e      = sym( 'e', [ 3, 1 ], 'real' );      % Einheitsvektor Rotationsachse
-    alpha  = sym( 'alpha', 'real' );            % Erd-Rotationswinkel (2*pi/24h)
+    alpha  = sym( 'alpha', 'real' );            % Tageszeit, Erd-Rotationswinkel (2*pi/24h)
     dAlpha = sym( 'dAlpha', [ 3, 3 ], 'real' );	% Drehmatrix
     p      = sym( 'p', [ 3, 1 ], 'real' );      % Fusspunkt des Stabes auf der Erdoberfläche und Stabende
     s      = sym( 's', [ 3, 1 ], 'real' );      % Sonnenposition in Bezug zum Erdmittelpunkt
@@ -111,48 +111,8 @@ function SonnenkompassSymbolic
     y0StrichNom   = simplify( n );
     y0StrichDenom = simplify( d );
 
-    % Test der Trajektoriensymmetrie zum astronomischen Mittag: START
-    eps    = sym( 'eps', 'real' );
-    alphaM = atan( tan( omega ) / cos( psi ) ) + pi;
-
-    txt = '';
-    x1  = simplify( subs( pSAlpha, 'alpha', alphaM - eps ) );
-    x2  = simplify( subs( pSAlpha, 'alpha', alphaM + eps ) );
-    txt = [ txt, sprintf( 'P^T*sAlpha ist %s\n', printSym( x1, x2 ) ) ];
-
-    % die beiden Koeffizienten A (von p1) und B (von p3) bestimmen
-    [ A, B ] = coeff( x1, p );
-    % die beiden Koeffizienten C (von p1) und D (von p3) bestimmen
-    [ C, D ] = coeff( x1, p );
-    txt = [ txt, sprintf( 'P^T*sAlpha: Term vor p1 ist %s\n', printSym( A, C ) ) ];
-    txt = [ txt, sprintf( 'P^T*sAlpha: Term vor p3  ist %s\n', printSym( B, D ) ) ];
-
-    x1  = simplify( subs( mue0, 'alpha', alphaM - eps ) );
-    x2  = simplify( subs( mue0, 'alpha', alphaM + eps ) );
-    txt = [ txt, sprintf( 'mue0 ist %s\n', printSym( x1, x2 ) ) ];
-
-    x1  = simplify( subs( x0( 1 ), 'alpha', alphaM - eps ) );
-    x2  = simplify( subs( x0( 1 ), 'alpha', alphaM + eps ) );
-    txt = [ txt, sprintf( 'x0( 1 ) ist %s\n', printSym( x1, x2 ) ) ];
-
-    x1  = simplify( subs( x0( 2 ), 'alpha', alphaM - eps ) );
-    x2  = simplify( subs( x0( 2 ), 'alpha', alphaM + eps ) );
-    txt = [ txt, sprintf( 'x0( 2 ) ist %s\n', printSym( x1, x2 ) ) ];
-
-    x1  = simplify( subs( x0( 3 ), 'alpha', alphaM - eps ) );
-    x2  = simplify( subs( x0( 3 ), 'alpha', alphaM + eps ) );
-    txt = [ txt, sprintf( 'x0( 3 ) ist %s\n', printSym( x1, x2 ) ) ];
-
-    x1  = simplify( subs( y0( 1 ), 'alpha', alphaM - eps ) );
-    x2  = simplify( subs( y0( 1 ), 'alpha', alphaM + eps ) );
-    txt = [ txt, sprintf( 'y0( 1 ) ist %s\n', printSym( x1, x2 ) ) ];
-
-    x1  = simplify( subs( y0( 2 ), 'alpha', alphaM - eps ) );
-    x2  = simplify( subs( y0( 2 ), 'alpha', alphaM + eps ) );
-    txt = [ txt, sprintf( 'y0( 2 ) ist %s\n', printSym( x1, x2 ) ) ];
-
-    txt %#ok<NOPRT> 
-    % Test der Symmetrie: ENDE
+    % Test der Trajektoriensymmetrie in Bezug zum astronomischen Mittag
+    symmetrieTest( omega, psi, p, pSAlpha, mue0, x0, y0 )
 
     save( 'SonnenkompassSymbolic.mat', 'alpha', 'x0', 'y0', 'y0StrichNom', ...
           'y0StrichDenom', 'mue0' )
@@ -183,6 +143,48 @@ function x = rotateX2( theta, x )
           -s, 0, c ];
 
     x = D * x;
+end
+
+function txt = symmetrieTest( omega, psi, p, pSAlpha, mue0, x0, y0 )
+    eps    = sym( 'eps', 'real' );
+    alphaM = atan( tan( omega ) / cos( psi ) ) + pi;
+
+    txt = '';
+    x1  = simplify( subs( pSAlpha, 'alpha', alphaM - eps ) );
+    x2  = simplify( subs( pSAlpha, 'alpha', alphaM + eps ) );
+    txt = [ txt, sprintf( 'P^T*sAlpha ist %s\n', printSym( x1, x2 ) ) ];
+
+    % die beiden Koeffizienten A (von p1) und B (von p3) bestimmen
+    [ A, B ] = coeff( x1, p );
+    % die beiden Koeffizienten C (von p1) und D (von p3) bestimmen
+    [ C, D ] = coeff( x1, p );
+
+    txt = [ txt, sprintf( 'P^T*sAlpha: Term vor p1 ist %s\n', printSym( A, C ) ) ];
+    txt = [ txt, sprintf( 'P^T*sAlpha: Term vor p3  ist %s\n', printSym( B, D ) ) ];
+
+    x1  = simplify( subs( mue0, 'alpha', alphaM - eps ) );
+    x2  = simplify( subs( mue0, 'alpha', alphaM + eps ) );
+    txt = [ txt, sprintf( 'mue0 ist %s\n', printSym( x1, x2 ) ) ];
+
+    x1  = simplify( subs( x0( 1 ), 'alpha', alphaM - eps ) );
+    x2  = simplify( subs( x0( 1 ), 'alpha', alphaM + eps ) );
+    txt = [ txt, sprintf( 'x0( 1 ) ist %s\n', printSym( x1, x2 ) ) ];
+
+    x1  = simplify( subs( x0( 2 ), 'alpha', alphaM - eps ) );
+    x2  = simplify( subs( x0( 2 ), 'alpha', alphaM + eps ) );
+    txt = [ txt, sprintf( 'x0( 2 ) ist %s\n', printSym( x1, x2 ) ) ];
+
+    x1  = simplify( subs( x0( 3 ), 'alpha', alphaM - eps ) );
+    x2  = simplify( subs( x0( 3 ), 'alpha', alphaM + eps ) );
+    txt = [ txt, sprintf( 'x0( 3 ) ist %s\n', printSym( x1, x2 ) ) ];
+
+    x1  = simplify( subs( y0( 1 ), 'alpha', alphaM - eps ) );
+    x2  = simplify( subs( y0( 1 ), 'alpha', alphaM + eps ) );
+    txt = [ txt, sprintf( 'y0( 1 ) ist %s\n', printSym( x1, x2 ) ) ];
+
+    x1  = simplify( subs( y0( 2 ), 'alpha', alphaM - eps ) );
+    x2  = simplify( subs( y0( 2 ), 'alpha', alphaM + eps ) );
+    txt = [ txt, sprintf( 'y0( 2 ) ist %s\n', printSym( x1, x2 ) ) ];
 end
 
 function ret = printSym( x1, x2 )
