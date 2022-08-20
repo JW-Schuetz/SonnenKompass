@@ -115,7 +115,7 @@ function SonnenkompassSymbolic
     symmetrieTest( omega, psi, p, pSAlpha, mue0, x0, y0 )
 
     save( 'SonnenkompassSymbolic.mat', 'alpha', 'x0', 'y0', 'y0StrichNom', ...
-          'y0StrichDenom', 'mue0' )
+          'y0StrichDenom', 'mue0', 'pSAlpha' )
 end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
