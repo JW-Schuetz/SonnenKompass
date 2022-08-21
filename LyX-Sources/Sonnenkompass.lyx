@@ -3474,7 +3474,11 @@ Die Komponente
  
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Subsection*
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Limits"
@@ -3488,7 +3492,7 @@ Limits für den Erdrotationswinkel
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 In diesem Unterabschnitt soll die Frage geklärt werden, für welchen Bereich
  des Drehwinkels 
 \begin_inset Formula $\alpha$
@@ -3519,7 +3523,7 @@ Bestimmung des Drehwinkels
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Es soll gelten 
 \end_layout
 
@@ -3534,7 +3538,7 @@ Es soll gelten
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Multiplikation mit 
 \begin_inset Formula $LR_{E}$
 \end_inset
@@ -3562,7 +3566,7 @@ R_{E}^{2}+LR_{E} & = & \underline{P}^{T}\underline{S}\left(\alpha\right).
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Mit der 
 \begin_inset Quotes gld
 \end_inset
@@ -3586,7 +3590,7 @@ LimitsAlpha.m
 ) 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \[
 \underline{P}^{T}\underline{S}\left(\alpha\right)=A\sin\alpha+B\cos\alpha+C^{*}
@@ -3597,7 +3601,7 @@ LimitsAlpha.m
 mit den Abkürzungen 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
 A & = & R_{S}\sin\Omega\left(p_{1}\cos\psi-p_{3}\sin\psi\right)\\
@@ -3610,7 +3614,7 @@ C^{*} & = & R_{S}\cos\Omega\left(p_{1}\sin^{2}\psi+p_{3}\cos\psi\sin\psi\right).
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Insgesamt folgt für die zu lösende Gleichung 
 \begin_inset Formula 
 \begin{equation}
@@ -3622,7 +3626,7 @@ A\sin\alpha^{*}+B\cos\alpha^{*}+C=0\label{eq:ZuLösenNachAlpha}
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 mit 
 \begin_inset Formula 
 \[
@@ -3634,7 +3638,7 @@ C=C^{*}-\left(R_{E}^{2}+LR_{E}\right).
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Ebenfalls mit der 
 \begin_inset Quotes gld
 \end_inset
@@ -3664,11 +3668,16 @@ LimitsAlpha.m
 ) 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \[
 \alpha^{*}=2\arctan\left(\frac{A\pm\sqrt{A^{2}+B^{2}-C^{2}}}{B-C}\right).
 \]
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
