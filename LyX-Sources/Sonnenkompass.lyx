@@ -653,15 +653,7 @@ Hier wird der zweite Fall gewählt.
 \end_layout
 
 \begin_layout Standard
-Zur Unterstützung der Problemlösung wird 
-\begin_inset Quotes gld
-\end_inset
-
-MatLab
-\begin_inset Quotes grd
-\end_inset
-
- und seine 
+Zur Unterstützung der Problemlösung wird MatLab  und seine 
 \begin_inset Quotes gld
 \end_inset
 
@@ -978,7 +970,7 @@ Mit der Abkürzung
 \begin_inset Formula $D_{\left(\alpha_{M}\right)}$
 \end_inset
 
- (siehe 
+ (siehe dazu die MatLab-Quelldatei 
 \begin_inset Quotes gld
 \end_inset
 
@@ -3400,15 +3392,7 @@ Symbolic Math Toolbox
 \begin_inset Quotes grd
 \end_inset
 
- von 
-\begin_inset Quotes gld
-\end_inset
-
-MatLab
-\begin_inset Quotes grd
-\end_inset
-
- (siehe dazu 
+ von MatLab (siehe dazu die MatLab-Quelldatei 
 \begin_inset Quotes gld
 \end_inset
 
@@ -3515,11 +3499,7 @@ In diesem Unterabschnitt soll die Frage geklärt werden, für welchen Bereich
 \end_inset
 
 ) zu erwarten sind.
- 
-\end_layout
-
-\begin_layout Standard
-Untersucht wird zunächst der Fall der Gleichheit 
+ Untersucht wird zunächst der Fall der Gleichheit 
 \begin_inset Formula $\varOmega^{S}\left(\alpha\right)=-1$
 \end_inset
 
@@ -3591,11 +3571,11 @@ Symbolic Math Toolbox
 \begin_inset Quotes grd
 \end_inset
 
- findet man für den Ausdruck 
+ von MatLab findet man für den Ausdruck 
 \begin_inset Formula $\underline{P}^{T}\underline{S}\left(\alpha\right)$
 \end_inset
 
- die folgende Darstellung (siehe dazu 
+ die folgende Darstellung (siehe dazu die MatLab-Quelldatei 
 \begin_inset Quotes gld
 \end_inset
 
@@ -3673,7 +3653,7 @@ noprefix "false"
 
 \end_inset
 
-) (siehe dazu 
+) (siehe dazu die MatLab-Quelldatei 
 \begin_inset Quotes gld
 \end_inset
 
@@ -4848,7 +4828,7 @@ x & = & L\tan\left[\alpha+\arcsin\left(\frac{h}{H}\right)\right].\label{eq:TestT
 
 \begin_layout Plain Layout
 Die Lösung dieser Gleichung stimmt mit den oben errechneten Ergebnissen
- überein (siehe MatLab-Quelle 
+ überein (siehe dazu die MatLab-Quelldatei 
 \begin_inset Quotes gld
 \end_inset
 
