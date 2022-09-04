@@ -165,6 +165,10 @@ einen Stab senkrecht in die Erde stecken
 \end_layout
 
 \begin_layout Itemize
+warten bis die Sonne scheint 
+\end_layout
+
+\begin_layout Itemize
 das Ende des Schattens des Stabes mit einen Stein markieren 
 \end_layout
 
@@ -556,7 +560,8 @@ Dazu wird zunächst die Verbindungsgerade zwischen der Sonne und dem Endpunkt
  der Tageszeit bestimmt.
  Schlussendlich werden die gefundenen Schnittpunkte im 3-dimensionalen Raum
  orthogonal auf die Tangentialebene projiziert.
- Man erhält damit die 2-dimensionale Darstellung des Schattenverlaufes.
+ Man erhält damit die 2-dimensionale Darstellung des Schattenverlaufes mit
+ gleicher Metrik.
  
 \end_layout
 
@@ -2399,7 +2404,11 @@ auf die
 \end_inset
 
  projiziert werden.
- Die Koordinaten des Bildes der Projektion werden mit 
+ Die Koordinaten des Bildes der Projektion 
+\begin_inset Formula $\underline{y}$
+\end_inset
+
+ werden mit 
 \begin_inset Formula $\left(y_{1},y_{2}\right)$
 \end_inset
 
@@ -2412,10 +2421,7 @@ Es ergibt sich schliesslich für die Punkte der gesuchten zweidimensionalen
  Trajektorie die Gleichung 
 \begin_inset Formula 
 \begin{equation}
-\left(\begin{array}{c}
-y_{1}\left(\alpha\right)\\
-y_{2}\left(\alpha\right)
-\end{array}\right)=AD_{\left(\frac{\pi}{2}-\Theta\right)}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right).\label{eq:Trajektorie2Dim}
+\underline{y}\left(\alpha\right)=AD_{\left(\frac{\pi}{2}-\Theta\right)}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right).\label{eq:Trajektorie2Dim}
 \end{equation}
 
 \end_inset
@@ -2524,7 +2530,7 @@ noprefix "false"
 \begin_inset Formula $y_{2}$
 \end_inset
 
--Koordinaten-Achse.
+-Achse.
  
 \end_layout
 
@@ -3426,10 +3432,7 @@ noprefix "false"
 ) folgt daraus 
 \begin_inset Formula 
 \begin{eqnarray*}
-\left(\begin{array}{c}
-y_{1}\left(\alpha\right)\\
-y_{2}\left(\alpha\right)
-\end{array}\right) & = & AD_{\Theta}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right)\\
+\underline{y}\left(\alpha\right) & = & AD_{\Theta}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right)\\
  & = & \left(\begin{array}{ccc}
 0 & 1 & 0\\
 0 & 0 & 1
