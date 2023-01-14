@@ -461,7 +461,6 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename SonnenKompass.eps
-	lyxscale 200
 	scale 65
 	BoundingBox 0bp 0bp 769bp 259bp
 	clip
@@ -500,7 +499,6 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename SonnenKompass1.eps
-	lyxscale 200
 	scale 65
 	BoundingBox 0bp 0bp 769bp 259bp
 	clip
@@ -556,8 +554,7 @@ In der folgenden Arbeit soll der Verlauf des Schattens des Stabendpunktes
 Dazu wird zunächst die Verbindungsgerade zwischen der Sonne und dem Endpunkt
  des Stabes konstruiert.
  Dann werden die Schnittpunkte der verlängerten Verbindungsgeraden mit der
- Tangentialebene der Erdoberfläche im Fusspunkt des Stabes als Funktion
- der Tageszeit bestimmt.
+ Tangentialebene der Erdoberfläche im Fusspunkt des Stabes bestimmt.
  Schlussendlich werden die gefundenen Schnittpunkte im 3-dimensionalen Raum
  orthogonal auf die Tangentialebene projiziert.
  Man erhält damit die 2-dimensionale Darstellung des Schattenverlaufes mit
@@ -1294,6 +1291,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename SonnenKompassTopHelp.eps
+	lyxscale 50
 	scale 30
 
 \end_inset
@@ -1334,7 +1332,6 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename SonnenKompass3.eps
-	lyxscale 300
 	scale 65
 	BoundingBox 0bp 0bp 769bp 285bp
 	clip
@@ -2610,7 +2607,6 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename LasPalmas-12.10.2021.eps
-	lyxscale 160
 	scale 50
 
 \end_inset
@@ -2680,6 +2676,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename LasPalmas-12.10.2021-13Uhr33.jpeg
+	lyxscale 25
 	scale 23
 	BoundingBox 0bp 0bp 1200bp 1600bp
 
@@ -2688,6 +2685,7 @@ status open
  
 \begin_inset Graphics
 	filename LasPalmas-12.10.2021-13Uhr55.jpeg
+	lyxscale 25
 	scale 23
 	BoundingBox 0bp 0bp 1200bp 1600bp
 
@@ -2795,7 +2793,6 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename LasPalmas-21.06.2021.eps
-	lyxscale 160
 	scale 50
 
 \end_inset
@@ -2837,7 +2834,6 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename LasPalmas-21.03.2021.eps
-	lyxscale 160
 	scale 50
 
 \end_inset
@@ -3075,7 +3071,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename SonnenKompassTopHelp1.eps
-	lyxscale 107
+	lyxscale 50
 	scale 30
 
 \end_inset
