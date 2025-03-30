@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -7,13 +7,16 @@
 \textclass article
 \begin_preamble
 \pagestyle{empty}
+% Added by lyx2lyx
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
 \end_preamble
 \use_default_options false
-\maintain_unincluded_children false
+\maintain_unincluded_children no
 \language ngerman
 \language_package default
-\inputencoding auto
-\fontencoding global
+\inputencoding auto-legacy
+\fontencoding auto
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -21,7 +24,9 @@
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -56,7 +61,9 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_formatted_ref 0
 \use_minted 0
+\use_lineno 0
 \index Stichwortverzeichnis
 \shortcut idx
 \color #008000
@@ -67,8 +74,8 @@
 \bottommargin 1.5cm
 \secnumdepth 3
 \tocdepth 3
-\paragraph_separation skip
-\defskip smallskip
+\paragraph_separation indent
+\paragraph_indentation default
 \is_math_indent 0
 \math_numbering_side default
 \quotes_style german
@@ -76,11 +83,16 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\tablestyle default
 \tracking_changes false
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -90,7 +102,8 @@ Sonnenkompass
 \end_layout
 
 \begin_layout Author
-Jürgen Womser-Schütz, https://github.com/JW-Schuetz/SonnenKompass 
+Jürgen Womser-Schütz,
+ https://github.com/JW-Schuetz/SonnenKompass 
 \end_layout
 
 \begin_layout Date
@@ -137,7 +150,8 @@ Widmung
 \end_layout
 
 \begin_layout Standard
-Für das Geburtstagskind Waldemar, meinem netten Gastgeber in Las Palmas,
+Für das Geburtstagskind Waldemar,
+ meinem netten Gastgeber in Las Palmas,
  zu seinem 73.
  Geburtstag.
  
@@ -148,8 +162,10 @@ Fragestellung
 \end_layout
 
 \begin_layout Standard
-Wie ist die bekannte und unten beschriebene Methode, die Nord-Richtung per
- Sonnenstand zu bestimmen, zu bewerten? 
+Wie ist die bekannte und unten beschriebene Methode,
+ die Nord-Richtung per Sonnenstand zu bestimmen,
+ zu bewerten?
+ 
 \end_layout
 
 \begin_layout Section
@@ -187,10 +203,10 @@ Man erhält dann die Nordrichtung mittels der folgenden Regeln
 status collapsed
 
 \begin_layout Plain Layout
-Die Methode wird in der Nähe der Pole scheitern, da das Stabende in Abhängigkeit
- der Jahreszeit evtl.
- keinen Schatten wirft (und natürlich auch, weil dort nicht immer Erde zum
- Hineinstecken des Stabes vorhanden ist 
+Die Methode wird in der Nähe der Pole scheitern,
+ da das Stabende in Abhängigkeit der Jahreszeit evtl.
+ keinen Schatten wirft (und natürlich auch,
+ weil dort nicht immer Erde zum Hineinstecken des Stabes vorhanden ist 
 \begin_inset Formula $\smiley$
 \end_inset
 
@@ -210,8 +226,8 @@ name "R1"
 
 \end_inset
 
-R1: der Schatten des Stab-Endes bewegt sich auf der Verbindungsgeraden der
- beiden Steine 
+R1:
+ der Schatten des Stab-Endes bewegt sich auf der Verbindungsgeraden der beiden Steine 
 \end_layout
 
 \begin_layout Itemize
@@ -221,7 +237,8 @@ name "R2"
 
 \end_inset
 
-R2: die Nordrichtung ist orthogonal zur Verbindungsgeraden 
+R2:
+ die Nordrichtung ist orthogonal zur Verbindungsgeraden 
 \end_layout
 
 \begin_layout Itemize
@@ -231,8 +248,9 @@ name "R3"
 
 \end_inset
 
-R3: auf der Nordhalbkugel der Erde zeigt der Schatten Richtung Norden, auf
- der Südhalbkugel Richtung Süden.
+R3:
+ auf der Nordhalbkugel der Erde zeigt der Schatten Richtung Norden,
+ auf der Südhalbkugel Richtung Süden.
  
 \end_layout
 
@@ -241,8 +259,7 @@ Vereinbarungen
 \end_layout
 
 \begin_layout Standard
-Im folgenden werden Basiskenntnisse der Mathematik und Physik auf Abitur-Niveau
- des naturwissenschaftlichen Zweiges vorausgesetzt.
+Im folgenden werden Basiskenntnisse der Mathematik und Physik auf Abitur-Niveau des naturwissenschaftlichen Zweiges vorausgesetzt.
  
 \end_layout
 
@@ -280,8 +297,8 @@ Vektoren werden durch einen Unterstrich kenntlich gemacht (
 \end_layout
 
 \begin_layout Standard
-Matrizen werden nicht besonders bezeichnet, sie sind von Skalaren durch
- den Kontext unterscheidbar.
+Matrizen werden nicht besonders bezeichnet,
+ sie sind von Skalaren durch den Kontext unterscheidbar.
  
 \begin_inset VSpace bigskip
 \end_inset
@@ -298,7 +315,8 @@ Weiterhin werden Kugelkoordinaten
 \begin_inset Formula $\left(x_{1},x_{2},x_{3}\right)$
 \end_inset
 
- verwendet, der Ursprung beider Koordinatensysteme ist der Erdmittelpunkt.
+ verwendet,
+ der Ursprung beider Koordinatensysteme ist der Erdmittelpunkt.
  Das kartesische Koordinatenpaar 
 \begin_inset Formula $\left(x_{1},x_{2}\right)$
 \end_inset
@@ -315,6 +333,7 @@ reference "fig:Problemskizze1"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -325,6 +344,7 @@ reference "fig:Problemskizze2"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -343,7 +363,8 @@ Annahmen
 \end_layout
 
 \begin_layout Standard
-Es werden die folgenden Annahmen getroffen: 
+Es werden die folgenden Annahmen getroffen:
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -355,8 +376,7 @@ die Sonne im Punkt
 \end_layout
 
 \begin_layout Itemize
-die Erde bewege sich in der Ekliptikalebene auf einer idealen Kreisbahn
- mit Radius 
+die Erde bewege sich in der Ekliptikalebene auf einer idealen Kreisbahn mit Radius 
 \begin_inset Formula $R_{S}$
 \end_inset
 
@@ -380,7 +400,8 @@ die Erd-Rotationsachse habe den Neigungswinkel
 \begin_inset Formula $\psi=23.44°$
 \end_inset
 
- zu einer Achse, die orthogonal auf der Ekliptikalebene steht 
+ zu einer Achse,
+ die orthogonal auf der Ekliptikalebene steht 
 \end_layout
 
 \begin_layout Itemize
@@ -392,8 +413,7 @@ im Punkt
 \begin_inset Formula $\underline{P}$
 \end_inset
 
- der Erdoberfläche befinde sich der Fusspunkt des senkrecht orientierten
- Stabes der Länge 
+ der Erdoberfläche befinde sich der Fusspunkt des senkrecht orientierten Stabes der Länge 
 \begin_inset Formula $L$
 \end_inset
 
@@ -421,15 +441,18 @@ die Erdoberfläche um den Fusspunk des Stabes
 \end_layout
 
 \begin_layout Itemize
-es werden zwei Zeiten betrachtet: die Jahreszeit 
+es werden zwei Zeiten betrachtet:
+ die Jahreszeit 
 \begin_inset Formula $T^{*}\in\left[0,365\right)$
 \end_inset
 
-, gemessen in Tagen und die Tageszeit 
+,
+ gemessen in Tagen und die Tageszeit 
 \begin_inset Formula $t^{*}\in\left[0,24\right)$
 \end_inset
 
-, gemessen in Stunden 
+,
+ gemessen in Stunden 
 \end_layout
 
 \begin_layout Itemize
@@ -441,19 +464,22 @@ der Ablauf der Tageszeit
 \begin_inset Formula $T^{*}$
 \end_inset
 
- unbeeinflusst lassen, die beiden Zeiten seien also voneinander entkoppelt
- 
+ unbeeinflusst lassen,
+ die beiden Zeiten seien also voneinander entkoppelt 
 \end_layout
 
 \begin_layout Itemize
 die Sommersonnenwende (SSW) ist am 21.
- Juni, die Wintersonnenwende (WSW) ist am 21.
+ Juni,
+ die Wintersonnenwende (WSW) ist am 21.
  Dezember.
  
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
+placement document
+alignment document
 wide false
 sideways false
 status open
@@ -477,7 +503,9 @@ name "fig:Problemskizze1"
 
 \end_inset
 
-Problemskizze, SSW, astronomischer Mittag 
+Problemskizze,
+ SSW,
+ astronomischer Mittag 
 \end_layout
 
 \end_inset
@@ -492,6 +520,8 @@ Problemskizze, SSW, astronomischer Mittag
 
 \begin_layout Standard
 \begin_inset Float figure
+placement document
+alignment document
 wide false
 sideways false
 status open
@@ -515,7 +545,9 @@ name "fig:Problemskizze2"
 
 \end_inset
 
-Problemskizze, WSW, astronomischer Mittag 
+Problemskizze,
+ WSW,
+ astronomischer Mittag 
 \end_layout
 
 \end_inset
@@ -550,21 +582,15 @@ Generelles zur Lösung
 \end_layout
 
 \begin_layout Standard
-In der folgenden Arbeit soll der Verlauf des Schattens des Stabendpunktes
- als Funktion der Tageszeit für einen vorgegebenen Tag im Jahr berechnet
- werden.
+In der folgenden Arbeit soll der Verlauf des Schattens des Stabendpunktes als Funktion der Tageszeit für einen vorgegebenen Tag im Jahr berechnet werden.
  
 \end_layout
 
 \begin_layout Standard
-Dazu wird zunächst für eine feste Tageszeit die Verbindungsgerade zwischen
- der Sonne und dem Endpunkt des Stabes konstruiert.
- Dann wird der Schnittpunkt der verlängerten Verbindungsgeraden mit der
- Tangentialebene der Erdoberfläche im Fusspunkt des Stabes bestimmt.
- Schlussendlich wird der gefundene Schnittpunkt im 3-dimensionalen Raum
- orthogonal auf die Tangentialebene projiziert.
- Man erhält damit die 2-dimensionale Darstellung des Schattenverlaufes mit
- gleicher Metrik.
+Dazu wird zunächst für eine feste Tageszeit die Verbindungsgerade zwischen der Sonne und dem Endpunkt des Stabes konstruiert.
+ Dann wird der Schnittpunkt der verlängerten Verbindungsgeraden mit der Tangentialebene der Erdoberfläche im Fusspunkt des Stabes bestimmt.
+ Schlussendlich wird der gefundene Schnittpunkt im 3-dimensionalen Raum orthogonal auf die Tangentialebene projiziert.
+ Man erhält damit die 2-dimensionale Darstellung des Schattenverlaufes mit gleicher Metrik.
  
 \end_layout
 
@@ -576,8 +602,8 @@ Dazu wird zunächst für eine feste Tageszeit die Verbindungsgerade zwischen
 \end_layout
 
 \begin_layout Standard
-Es sind zwei äquivalente Lösungsansätze denkbar, die Rotation der Erde um
- ihre Rotationsachse zu berücksichtigen 
+Es sind zwei äquivalente Lösungsansätze denkbar,
+ die Rotation der Erde um ihre Rotationsachse zu berücksichtigen 
 \begin_inset Note Note
 status collapsed
 
@@ -586,11 +612,13 @@ status collapsed
 \end_layout
 
 \begin_layout Itemize
-alles auf der Erde Rotieren und die Sonne fix lassen: 
+alles auf der Erde Rotieren und die Sonne fix lassen:
+ 
 \begin_inset Formula $D_{\alpha}\underline{E}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $D_{0}\underline{S}$
 \end_inset
 
@@ -598,11 +626,13 @@ alles auf der Erde Rotieren und die Sonne fix lassen:
 \end_layout
 
 \begin_layout Itemize
-alles auf der Erde fix lassen und die Sonne entgegengesetzt Rotieren: 
+alles auf der Erde fix lassen und die Sonne entgegengesetzt Rotieren:
+ 
 \begin_inset Formula $D_{0}\underline{E}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $D_{\left(-\alpha\right)}\underline{S}$
 \end_inset
 
@@ -713,8 +743,7 @@ Tageszeitabhängigkeit
 \end_layout
 
 \begin_layout Standard
-Die tägliche Rotation der Erde um ihre Rotationsachse wird in Abhängigkeit
- des Rotationswinkels 
+Die tägliche Rotation der Erde um ihre Rotationsachse wird in Abhängigkeit des Rotationswinkels 
 \begin_inset Formula $\alpha\in\left[0,2\pi\right)$
 \end_inset
 
@@ -769,13 +798,16 @@ ein Vektor mit
 \begin_inset Formula $\left\Vert \underline{e}\right\Vert =1$
 \end_inset
 
-, der Richtung und Orientierung der Rotationsachse definiert.
+,
+ der Richtung und Orientierung der Rotationsachse definiert.
  
 \end_layout
 
 \begin_layout Standard
-Zum Zeitpunkt der SSW, am 21.
- Juni, liegt die Rotationsachse in der 
+Zum Zeitpunkt der SSW,
+ am 21.
+ Juni,
+ liegt die Rotationsachse in der 
 \begin_inset Formula $\left(x_{1},x_{3}\right)$
 \end_inset
 
@@ -790,10 +822,12 @@ reference "fig:Problemskizze1"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
-), der Einheitsvektor 
+),
+ der Einheitsvektor 
 \begin_inset Formula $\underline{e}$
 \end_inset
 
@@ -1063,7 +1097,8 @@ die Ableitung
 status open
 
 \begin_layout Plain Layout
-wegen: sin^2+cos^2=1
+wegen:
+ sin^2+cos^2=1
 \end_layout
 
 \end_inset
@@ -1152,8 +1187,9 @@ Jahreszeitabhängigkeit
 \end_layout
 
 \begin_layout Standard
-Die Erde bewegt sich rechtshändig, also entgegen dem Uhrzeigersinn, um die
- Sonne (siehe dazu z.B.
+Die Erde bewegt sich rechtshändig,
+ also entgegen dem Uhrzeigersinn,
+ um die Sonne (siehe dazu z.B.
 \begin_inset space ~
 \end_inset
 
@@ -1165,7 +1201,8 @@ literal "false"
 
 \end_inset
 
-, und die nicht massstäbliche Abbildung
+,
+ und die nicht massstäbliche Abbildung
 \begin_inset space ~
 \end_inset
 
@@ -1176,6 +1213,7 @@ reference "fig:Erd-Jahres-Umlauf"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -1184,21 +1222,19 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-In dieser Arbeit wird der jahreszeitliche Einfluss durch eine Kreisbewegung
- der Sonne um die als fixiert angenommene Erde berücksichtigt (siehe die
- Wahl in Abschnitt 
+In dieser Arbeit wird der jahreszeitliche Einfluss durch eine Kreisbewegung der Sonne um die als fixiert angenommene Erde berücksichtigt (siehe die Wahl in Abschnitt 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Generelles"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
 ).
- Man kann deshalb im Erd-Koordinatensystem den Ort der Sonne als Funktion
- des jahreszeitlichen Umlaufwinkels 
+ Man kann deshalb im Erd-Koordinatensystem den Ort der Sonne als Funktion des jahreszeitlichen Umlaufwinkels 
 \begin_inset Formula 
 \begin{equation}
 \Omega=\frac{2\pi}{365}T^{*}\label{eq:Omega}
@@ -1230,7 +1266,8 @@ beschreiben.
 \begin_inset Formula $T^{*}\in\left[0,365\right)$
 \end_inset
 
- die Jahreszeit, gemessen in Tagen seit der SSW am 21.
+ die Jahreszeit,
+ gemessen in Tagen seit der SSW am 21.
  Juni.
  
 \begin_inset Note Note
@@ -1249,7 +1286,8 @@ Erdposition
 \begin_inset Formula $T^{*}$
 \end_inset
 
-: 
+:
+ 
 \end_layout
 
 \begin_layout Plain Layout
@@ -1278,7 +1316,8 @@ Sonnenposition
 \begin_inset Formula $T^{*}$
 \end_inset
 
-: 
+:
+ 
 \end_layout
 
 \begin_layout Plain Layout
@@ -1301,6 +1340,8 @@ p_{3}^{S} & = & 0.
 
 \begin_layout Standard
 \begin_inset Float figure
+placement document
+alignment document
 wide false
 sideways false
 status open
@@ -1342,6 +1383,8 @@ Fuss- und Endpunkt des Stabes
 
 \begin_layout Subsection*
 \begin_inset Float figure
+placement document
+alignment document
 wide false
 sideways false
 status open
@@ -1365,7 +1408,9 @@ name "fig:Problemskizze3"
 
 \end_inset
 
-Problemskizze, SSW, astronomischer Mittag
+Problemskizze,
+ SSW,
+ astronomischer Mittag
 \end_layout
 
 \end_inset
@@ -1390,6 +1435,7 @@ reference "fig:Problemskizze3"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -1397,7 +1443,8 @@ noprefix "false"
 \begin_inset Formula $\Theta_{G}$
 \end_inset
 
- des Stabfusspunktes gegeben, für den Polarwinkel gilt 
+ des Stabfusspunktes gegeben,
+ für den Polarwinkel gilt 
 \begin_inset Formula $\Theta^{*}=\frac{\pi}{2}-\Theta_{G}$
 \end_inset
 
@@ -1422,10 +1469,6 @@ noprefix "false"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 Für die Komponenten des Stab-Fusspunkts 
 \begin_inset Formula 
 \[
@@ -1441,6 +1484,7 @@ reference "sec:Annahmen"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -1458,10 +1502,6 @@ p_{3} & = & R_{E}\cos\Theta.\nonumber
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 Mit der Stablänge 
 \begin_inset Formula $L$
 \end_inset
@@ -1592,8 +1632,7 @@ Für die Kugel gilt
 \end_layout
 
 \begin_layout Standard
-In vektorieller Schreibweise lässt sich die Tangentialebene im Erd-Koordinatensy
-stem durch 
+In vektorieller Schreibweise lässt sich die Tangentialebene im Erd-Koordinatensystem durch 
 \end_layout
 
 \begin_layout Standard
@@ -1625,7 +1664,8 @@ Die Punkte der Verbindungsgerade
 \begin_inset Formula $\underline{S}$
 \end_inset
 
-, nach Gleichung
+,
+ nach Gleichung
 \begin_inset space ~
 \end_inset
 
@@ -1636,14 +1676,17 @@ reference "eq:Ort der Sonne"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
-), mit dem Stabende 
+),
+ mit dem Stabende 
 \begin_inset Formula $\underline{Q}$
 \end_inset
 
-, nach Gleichung
+,
+ nach Gleichung
 \begin_inset space ~
 \end_inset
 
@@ -1654,10 +1697,12 @@ reference "eq:Endpunkt"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
-), sind durch 
+),
+ sind durch 
 \end_layout
 
 \begin_layout Standard
@@ -1727,10 +1772,12 @@ reference "eq:DrehmatrixAlpha"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
-) und fixiert die Erde, dann folgt für den Ort der Sonne 
+) und fixiert die Erde,
+ dann folgt für den Ort der Sonne 
 \begin_inset Formula 
 \begin{equation}
 \underline{S}\left(\alpha\right)=D_{\left(-\alpha\right)}\underline{S}\label{eq:GedrehterSonnenOrt}
@@ -1749,6 +1796,7 @@ reference "eq:Verbindungsgerade"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -1771,11 +1819,13 @@ Gesucht ist der Schnittpunkt dieser Geraden mit der Tangentialebene
 \begin_inset Formula $T$
 \end_inset
 
- oder anders formuliert, gesucht wird der Geradenparameter 
+ oder anders formuliert,
+ gesucht wird der Geradenparameter 
 \begin_inset Formula $\mu$
 \end_inset
 
-, der eine Lösung 
+,
+ der eine Lösung 
 \begin_inset Formula $\underline{x}$
 \end_inset
 
@@ -1790,6 +1840,7 @@ reference "eq:Tangentialebene"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -1819,6 +1870,7 @@ reference "eq:GesuchterPunktSonneGedreht"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -1833,6 +1885,7 @@ reference "eq:Tangentialebene"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -1852,8 +1905,7 @@ Wegen
 \begin_inset Formula $\underline{P}^{T}\underline{P}=R_{E}^{2}$
 \end_inset
 
- folgt nach kurzer Rechnung die Bestimmungsgleichung für den Geradenparameter
- 
+ folgt nach kurzer Rechnung die Bestimmungsgleichung für den Geradenparameter 
 \begin_inset Note Note
 status collapsed
 
@@ -1966,11 +2018,13 @@ Da im Ausdruck der Verbindungsgeraden mit
 \begin_inset Formula $\mu=1$
 \end_inset
 
- das Stabende beschrieben wird, muss 
+ das Stabende beschrieben wird,
+ muss 
 \begin_inset Formula $\mu_{0}\left(\alpha\right)>1$
 \end_inset
 
-, und damit 
+,
+ und damit 
 \begin_inset Formula $\varOmega^{S}\left(\alpha\right)<-1$
 \end_inset
 
@@ -2020,11 +2074,13 @@ Wie bestimmt man
 \begin_inset Formula $k^{-}$
 \end_inset
 
- ? 
+ ?
+ 
 \end_layout
 
 \begin_layout Plain Layout
-Forderungen: 
+Forderungen:
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -2050,7 +2106,8 @@ Forderungen:
 \begin_inset Formula $\alpha^{-}$
 \end_inset
 
- liegen, also soll entweder 
+ liegen,
+ also soll entweder 
 \begin_inset Formula $\alpha^{+}<\alpha^{0}<\alpha^{-}$
 \end_inset
 
@@ -2087,6 +2144,7 @@ reference "eq:LösungsgleichungSonneGedreht"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -2145,6 +2203,7 @@ reference "eq:LösungspunkteSonneGedreht"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -2153,12 +2212,12 @@ noprefix "false"
 \end_inset
 
  der Erde gegeben.
- Sie sollen orthogonal auf ein zweidimensionales Koordinatensystem der Tangentia
-lebene 
+ Sie sollen orthogonal auf ein zweidimensionales Koordinatensystem der Tangentialebene 
 \begin_inset Formula $T$
 \end_inset
 
- abgebildet werden, dessen Ursprung im Stabfusspunkt 
+ abgebildet werden,
+ dessen Ursprung im Stabfusspunkt 
 \begin_inset Formula $\underline{P}$
 \end_inset
 
@@ -2169,6 +2228,8 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Float figure
+placement document
+alignment document
 wide false
 sideways false
 status open
@@ -2207,11 +2268,13 @@ Alle Punkte
 \begin_inset Formula $\underline{x}$
 \end_inset
 
-, die die Bedingung 
+,
+ die die Bedingung 
 \begin_inset Formula $\underline{P}^{T}\left(\underline{x}-\underline{P}\right)=0$
 \end_inset
 
- erfüllen, liegen in der Tangentialebene 
+ erfüllen,
+ liegen in der Tangentialebene 
 \begin_inset Formula $T$
 \end_inset
 
@@ -2264,7 +2327,8 @@ D.h.
 \begin_inset Formula $\underline{P}$
 \end_inset
 
-, liegt also im orthogonalen Komplement von 
+,
+ liegt also im orthogonalen Komplement von 
 \begin_inset Formula $T$
 \end_inset
 
@@ -2286,7 +2350,8 @@ Zur Bestimmung dieser Abbildung wird der Punkt
 \begin_inset Formula $\underline{x}_{0}^{S}\left(\alpha\right)$
 \end_inset
 
- gemeinsam so gedreht, dass 
+ gemeinsam so gedreht,
+ dass 
 \begin_inset Formula $\underline{P}$
 \end_inset
 
@@ -2295,8 +2360,7 @@ Zur Bestimmung dieser Abbildung wird der Punkt
 \end_inset
 
 -Koordinate zu liegen kommt.
- Anschliessend werden die gedrehten Trajektorienpunkte orthogonal auf die
- 
+ Anschliessend werden die gedrehten Trajektorienpunkte orthogonal auf die 
 \begin_inset Formula $\left(x_{2},x_{3}\right)$
 \end_inset
 
@@ -2305,7 +2369,8 @@ Zur Bestimmung dieser Abbildung wird der Punkt
 \end_layout
 
 \begin_layout Standard
-Da vorausgesetzt wurde, dass 
+Da vorausgesetzt wurde,
+ dass 
 \begin_inset Formula $\varphi=0$
 \end_inset
 
@@ -2316,10 +2381,13 @@ reference "sec:Annahmen"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
-), genügt es, 
+),
+ genügt es,
+ 
 \begin_inset Formula $\underline{P}$
 \end_inset
 
@@ -2327,7 +2395,8 @@ noprefix "false"
 \begin_inset Formula $x_{2}$
 \end_inset
 
--Achse zu drehen, dass er in der Ekliptik zu liegen kommt.
+-Achse zu drehen,
+ dass er in der Ekliptik zu liegen kommt.
  Eine allgemeine Drehung um den Winkel 
 \begin_inset Formula $\varPhi$
 \end_inset
@@ -2389,6 +2458,7 @@ reference "subsec:Abbildung-Punkt-P"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -2439,8 +2509,7 @@ auf die
 \end_layout
 
 \begin_layout Standard
-Es ergibt sich schliesslich für die Punkte der gesuchten zweidimensionalen
- Trajektorie die Gleichung 
+Es ergibt sich schliesslich für die Punkte der gesuchten zweidimensionalen Trajektorie die Gleichung 
 \begin_inset Formula 
 \begin{equation}
 \underline{y}\left(\alpha\right)=AD_{\left(\frac{\pi}{2}-\Theta\right)}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right).\label{eq:Trajektorie2Dim}
@@ -2452,7 +2521,8 @@ Es ergibt sich schliesslich für die Punkte der gesuchten zweidimensionalen
 \end_layout
 
 \begin_layout Standard
-Es sei daran erinnert, dass der Drehwinkel 
+Es sei daran erinnert,
+ dass der Drehwinkel 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -2467,6 +2537,7 @@ reference "eq:TagesZeit"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -2483,8 +2554,8 @@ Der astronomische Mittag
 \end_layout
 
 \begin_layout Standard
-Für die 2-dimensionalen Trajektorien gibt es ein Abstandsminimum zum Stabfusspun
-kt, das per Definition zum Zeitpunkt 
+Für die 2-dimensionalen Trajektorien gibt es ein Abstandsminimum zum Stabfusspunkt,
+ das per Definition zum Zeitpunkt 
 \begin_inset Formula $t_{M}^{*}$
 \end_inset
 
@@ -2500,6 +2571,7 @@ reference "subsec:Astronomischer-Mittag"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -2519,10 +2591,12 @@ reference "eq:Trajektorie2Dim"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
-) ist zu beachten, dass für das Sommerhalbjahr die Projektion 
+) ist zu beachten,
+ dass für das Sommerhalbjahr die Projektion 
 \begin_inset Quotes gld
 \end_inset
 
@@ -2557,6 +2631,7 @@ reference "fig:Problemskizze1"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -2571,6 +2646,7 @@ reference "fig:Problemskizze2"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -2591,11 +2667,11 @@ reference "subsec:Symmetrie"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
-) werden die Symmetrieeigenschaften der Komponenten der 3-dimensionalen
- Trajektorien bezüglich des astronomischen Mittags behandelt.
+) werden die Symmetrieeigenschaften der Komponenten der 3-dimensionalen Trajektorien bezüglich des astronomischen Mittags behandelt.
  Die gerade Symmetrie der 2-dimensionalen Trajektorien wird daraus abgeleitet.
  Das Problem der Projektion 
 \begin_inset Quotes gld
@@ -2641,17 +2717,20 @@ reference "fig:Schattentrajektorie"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
  zeigt die berechnete Schattentrajektorie für Las Palmas am 12.
  Oktober.
- Die Koordinaten der beiden markierten Punkte (13:28 Uhr und 13:48 Uhr Ortszeit)
- sind dargestellt, ihr geometrischer Abstand beträgt 16.16 cm, ihr zeitlicher
- Abstand beträgt 20 Minuten.
+ Die Koordinaten der beiden markierten Punkte (13:28 Uhr und 13:48 Uhr Ortszeit) sind dargestellt,
+ ihr geometrischer Abstand beträgt 16.16 cm,
+ ihr zeitlicher Abstand beträgt 20 Minuten.
  Für die Stablänge wurde 1.5 m angenommen.
  
 \begin_inset Float figure
+placement document
+alignment document
 wide false
 sideways false
 status open
@@ -2675,8 +2754,7 @@ name "fig:Schattentrajektorie"
 
 Schattentrajektorie am 12.
  Oktober in Las Palmas.
- Der Sonnenhöchststand ist an diesem Tag in Las Palmas um 13:48 Uhr (siehe
- z.B.
+ Der Sonnenhöchststand ist an diesem Tag in Las Palmas um 13:48 Uhr (siehe z.B.
   
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2711,6 +2789,7 @@ reference "fig:Schattentrajektorie"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -2721,6 +2800,8 @@ noprefix "false"
 
 \begin_layout Standard
 \begin_inset Float figure
+placement document
+alignment document
 wide false
 sideways false
 status open
@@ -2779,6 +2860,7 @@ reference "fig:SchattenFotos"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -2786,15 +2868,13 @@ noprefix "false"
  Der Zeitunterschied beider Aufnahmen beträgt 22 Minuten.
  In dieser Zeit ist der Schatten ca.
  20 cm weiter gewandert.
- Dieses Ergebnis passt recht gut zum rechnerisch ermittelten Abstand von
- ca.
+ Dieses Ergebnis passt recht gut zum rechnerisch ermittelten Abstand von ca.
  17 cm
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-Leider habe ich vor Ort weder die genaue Länge des Stabes noch die genaue
- Länge der Trajektorie gemessen.
+Leider habe ich vor Ort weder die genaue Länge des Stabes noch die genaue Länge der Trajektorie gemessen.
 \end_layout
 
 \end_inset
@@ -2808,8 +2888,9 @@ SSW und WSW
 \end_layout
 
 \begin_layout Standard
-Die Schattentrajektorie und den Standort des Stabes für den Strand in Las
- Palmas (28.136683° Breite, -15.438392° Länge, nach 
+Die Schattentrajektorie und den Standort des Stabes für den Strand in Las Palmas (28.136683° Breite,
+ -15.438392° Länge,
+ nach 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "GoogleMaps"
@@ -2829,6 +2910,7 @@ reference "fig:SchattentrajektorieSSW"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -2838,6 +2920,8 @@ noprefix "false"
 
 \begin_layout Standard
 \begin_inset Float figure
+placement document
+alignment document
 wide false
 sideways false
 status open
@@ -2879,6 +2963,8 @@ Frühlings- und Herbst-Äquinoktikum
 
 \begin_layout Standard
 \begin_inset Float figure
+placement document
+alignment document
 wide false
 sideways false
 status open
@@ -2926,12 +3012,13 @@ reference "fig:SchattentrajektorieFAE"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
  zeigt die berechnete Schattentrajektorie für den 21.
- März, dem Frühlings-Äquinoktikum - das Herbst-Äquinoktikum hat eine identische
- Trajektorie.
+ März,
+ dem Frühlings-Äquinoktikum - das Herbst-Äquinoktikum hat eine identische Trajektorie.
  
 \end_layout
 
@@ -2945,8 +3032,7 @@ Die oben beschriebenen Methode zur Bestimmung der Nord-Richtung funktioniert,
 \begin_inset Formula $\psi$
 \end_inset
 
- der Erd-Rotationsachse zu einer Achse orthogonal zur Ekliptikalebene zu
- 
+ der Erd-Rotationsachse zu einer Achse orthogonal zur Ekliptikalebene zu 
 \begin_inset Formula $0°$
 \end_inset
 
@@ -2964,8 +3050,7 @@ Die oben beschriebenen Methode zur Bestimmung der Nord-Richtung funktioniert,
 \end_layout
 
 \begin_layout Standard
-Die Schattentrajektorie ist deshalb keine Gerade - und das nicht einmal
- näherungsweise.
+Die Schattentrajektorie ist deshalb keine Gerade - und das nicht einmal näherungsweise.
  
 \end_layout
 
@@ -2978,10 +3063,9 @@ Die dadurch verursachte Missweisung zur Nordrichtung ist nicht vernachlässigbar
 
 \begin_layout Standard
 Die genaue Nordrichtung erhält man mit der beschriebenen Methode jedoch,
- wenn man Zeitpunkte untersucht, die symmetrisch um den Zeitpunkt des astronomis
-chen Mittags liegen.
- Als zusätzliche Hilfsmittel werden neben den beiden Steinen und dem Stab
- weitere Steine sowie eine Uhr benötigt.
+ wenn man Zeitpunkte untersucht,
+ die symmetrisch um den Zeitpunkt des astronomischen Mittags liegen.
+ Als zusätzliche Hilfsmittel werden neben den beiden Steinen und dem Stab weitere Steine sowie eine Uhr benötigt.
  
 \end_layout
 
@@ -3003,8 +3087,8 @@ Anhang
 \end_layout
 
 \begin_layout Standard
-In diesem Anhang werden Nebenrechnungen und Überprüfungen dargestellt, die
- den obigen Gedankenfluss zu sehr gestört hätten.
+In diesem Anhang werden Nebenrechnungen und Überprüfungen dargestellt,
+ die den obigen Gedankenfluss zu sehr gestört hätten.
  
 \end_layout
 
@@ -3039,13 +3123,15 @@ Der Stabfusspunkt
 \begin_inset Formula $x_{2}=x_{3}=0$
 \end_inset
 
- abgebildet, denn es gilt mit Gleichung (
+ abgebildet,
+ denn es gilt mit Gleichung (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:StabFusspunkt"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -3109,13 +3195,15 @@ Es soll nun noch für jeden Jahreszeitpunkt
 \begin_inset Formula $\alpha$
 \end_inset
 
- angegeben werden, so dass sich gerade der Sonnenhöchststand (der astronomische
- Mittag) einstellt.
+ angegeben werden,
+ so dass sich gerade der Sonnenhöchststand (der astronomische Mittag) einstellt.
  
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
+placement document
+alignment document
 wide false
 sideways false
 status open
@@ -3159,10 +3247,12 @@ reference "fig:Sonnen-Jahres-Umlauf"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
-) entnehmen kann, gilt im Fall 
+) entnehmen kann,
+ gilt im Fall 
 \begin_inset Formula $\psi=0$
 \end_inset
 
@@ -3208,6 +3298,7 @@ reference "eq:Trajektorie2Dim"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -3258,8 +3349,7 @@ SonnenKompassSymbolic.m
 \end_inset
 
 ).
- Aus ihm folgt die notwendige Bedingung für das Verschwinden der Steigung
- 
+ Aus ihm folgt die notwendige Bedingung für das Verschwinden der Steigung 
 \begin_inset Formula 
 \[
 \sin\Omega\cos\alpha_{M}-\cos\Omega\cos\psi\sin\alpha_{M}=0.
@@ -3322,14 +3412,15 @@ Symmetrie der 2-dimensionalen Trajektorie
 \end_layout
 
 \begin_layout Standard
-Hier soll gezeigt werden, dass die 2-dimensionalen Trajektorien unter den
- getroffenen Annahmen des Abschnittes 
+Hier soll gezeigt werden,
+ dass die 2-dimensionalen Trajektorien unter den getroffenen Annahmen des Abschnittes 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Annahmen"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -3357,6 +3448,7 @@ reference "eq:LösungspunkteSonneGedreht"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -3435,6 +3527,7 @@ reference "eq:BehaupteteSymmetrie"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -3454,7 +3547,8 @@ SonnenkompassSymbolic.m
 \begin_inset Quotes grd
 \end_inset
 
-, Funktion 
+,
+ Funktion 
 \begin_inset Quotes gld
 \end_inset
 
@@ -3474,6 +3568,7 @@ reference "eq:Trajektorie2Dim"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -3544,8 +3639,8 @@ Limits für den Erdrotationswinkel
 \end_layout
 
 \begin_layout Plain Layout
-In diesem Unterabschnitt soll die Frage geklärt werden, für welchen Bereich
- des Drehwinkels 
+In diesem Unterabschnitt soll die Frage geklärt werden,
+ für welchen Bereich des Drehwinkels 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -3601,6 +3696,7 @@ reference "eq:OmegaS"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -3705,6 +3801,7 @@ reference "eq:ZuLösenNachAlpha"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -3810,6 +3907,7 @@ reference "eq:Prämisse"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -3842,6 +3940,7 @@ reference "eq:Prämisse"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -3879,6 +3978,7 @@ reference "eq:Prämisse"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -3891,7 +3991,8 @@ noprefix "false"
 \end_inset
 
  Dies ist offensichtlich richtig.
- Also existiert für diesen Fall eine Lösung, nämlich 
+ Also existiert für diesen Fall eine Lösung,
+ nämlich 
 \begin_inset Formula $\varOmega^{S}<-1.$
 \end_inset
 
@@ -3913,8 +4014,8 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-Es werden einige Spezialfälle daraufhin untersucht, ob die obige Herleitung
- erwartungsgemässe Ergebnisse liefert.
+Es werden einige Spezialfälle daraufhin untersucht,
+ ob die obige Herleitung erwartungsgemässe Ergebnisse liefert.
 \end_layout
 
 \begin_layout Subsection
@@ -4003,6 +4104,7 @@ reference "eq:ForderungZ"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -4032,6 +4134,7 @@ reference "eq:DrehmatrixAlpha"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -4114,7 +4217,8 @@ A_{y}D_{\alpha}\underline{P}=-A_{y}D_{\left(-\alpha\right)}\underline{P}\label{e
 \begin_deeper
 \begin_layout Plain Layout
 gelten.
- Man sieht sofort, dass 
+ Man sieht sofort,
+ dass 
 \begin_inset Formula 
 \begin{eqnarray*}
 A_{Y}U_{\alpha}\underline{P} & = & \left(p_{1}\cos\psi-p_{2}\sin\psi\right)\sin\alpha
@@ -4139,15 +4243,18 @@ Neigung Erdachse
 \begin_inset Formula $0°$
 \end_inset
 
-, geographische Breite und Länge 
+,
+ geographische Breite und Länge 
 \begin_inset Formula $0°$
 \end_inset
 
-, Punkt mit 
+,
+ Punkt mit 
 \begin_inset Formula $p_{1}=R_{E}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $p_{2}=p_{3}=0$
 \end_inset
 
@@ -4163,11 +4270,13 @@ Es wird angenommen
 \begin_inset Formula $\psi=0$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\Theta=0$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\varphi=0$
 \end_inset
 
@@ -4194,6 +4303,7 @@ reference "eq:DrehmatrixAlpha"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -4227,7 +4337,8 @@ D_{\alpha} & = & \begin{pmatrix}\cos\alpha & -\sin\alpha & 0\\
 \end_layout
 
 \begin_layout Subsubsection
-Erde fixiert, Sonne gedreht
+Erde fixiert,
+ Sonne gedreht
 \end_layout
 
 \begin_layout Plain Layout
@@ -4274,6 +4385,7 @@ reference "eq:Endpunkt"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -4309,6 +4421,7 @@ reference "eq:Tangentialebene"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -4381,6 +4494,7 @@ reference "eq:Verbindungsgerade"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -4449,6 +4563,7 @@ reference "eq:TangentialebeneSonderfall"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -4491,8 +4606,7 @@ R_{E}\\
 -\left(1-\mu_{0}\right)R_{S}\sin\alpha\\
 0
 \end{array}\right) & = & 0\\
-\\
-\mu_{0}\left(R_{E}+L\right)+\left(1-\mu_{0}\right)R_{S}\cos\alpha-R_{E} & = & 0\\
+\\\mu_{0}\left(R_{E}+L\right)+\left(1-\mu_{0}\right)R_{S}\cos\alpha-R_{E} & = & 0\\
 \mu_{0}\left(R_{E}+L-R_{S}\cos\alpha\right)+R_{S}\cos\alpha-R_{E} & = & 0
 \end{eqnarray*}
 
@@ -4590,7 +4704,8 @@ Drehen des Punktes um
 \end_layout
 
 \begin_layout Plain Layout
-Dieses Ergebnis ist erwartungskonform, denn 
+Dieses Ergebnis ist erwartungskonform,
+ denn 
 \begin_inset Formula $\underline{x}_{0}$
 \end_inset
 
@@ -4621,6 +4736,7 @@ reference "eq:Projektion"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -4677,6 +4793,8 @@ Trigonometrische Überprüfung
 
 \begin_layout Plain Layout
 \begin_inset Float figure
+placement document
+alignment document
 wide false
 sideways false
 status collapsed
@@ -4714,7 +4832,8 @@ Für das linke rechtwinklige Dreieck (A) mit dem Winkel
 \begin_inset Formula $\alpha$
 \end_inset
 
-, der Hypotenuse 
+,
+ der Hypotenuse 
 \begin_inset Formula $R_{E}+L$
 \end_inset
 
@@ -4760,7 +4879,8 @@ Für die Hypotenuse
 \begin_inset Formula $\gamma$
 \end_inset
 
-, der Hypotenuse 
+,
+ der Hypotenuse 
 \begin_inset Formula $H$
 \end_inset
 
@@ -4830,7 +4950,8 @@ Für
 \begin_inset Formula $\lambda$
 \end_inset
 
-, und mit den Katheten 
+,
+ und mit den Katheten 
 \begin_inset Formula $L$
 \end_inset
 
@@ -4887,8 +5008,7 @@ x & = & L\tan\left[\alpha+\arcsin\left(\frac{h}{H}\right)\right].\label{eq:TestT
 \end_layout
 
 \begin_layout Plain Layout
-Die Lösung dieser Gleichung stimmt mit den oben errechneten Ergebnissen
- überein (siehe dazu die MatLab-Quelldatei 
+Die Lösung dieser Gleichung stimmt mit den oben errechneten Ergebnissen überein (siehe dazu die MatLab-Quelldatei 
 \begin_inset Quotes gld
 \end_inset
 
@@ -4920,6 +5040,7 @@ reference "eq:Tangentialebene"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -4927,7 +5048,8 @@ noprefix "false"
 \begin_inset Formula $\underline{P}^{T}\left(\underline{x}-\underline{P}\right)=0$
 \end_inset
 
- beschrieben, 
+ beschrieben,
+ 
 \begin_inset Formula $\underline{P}$
 \end_inset
 
@@ -4952,7 +5074,8 @@ noprefix "false"
 
 \end_inset
 
-beschreiben, dabei ist 
+beschreiben,
+ dabei ist 
 \begin_inset Formula $\underline{n}=\left(a,b,c\right)^{T}$
 \end_inset
 
@@ -4971,7 +5094,8 @@ literal "false"
 status open
 
 \begin_layout Itemize
-Hessesche Normalform: Normalenvektor 
+Hessesche Normalform:
+ Normalenvektor 
 \begin_inset Formula $\underline{n}$
 \end_inset
 
@@ -4996,7 +5120,8 @@ Hessesche Normalform: Normalenvektor
 \end_layout
 
 \begin_layout Itemize
-Koordinatenform: Reelle Zahlen 
+Koordinatenform:
+ Reelle Zahlen 
 \begin_inset Formula $a_{1},a_{2},a_{3}$
 \end_inset
 
@@ -5026,7 +5151,8 @@ Koordinatenform: Reelle Zahlen
 \end_layout
 
 \begin_layout Itemize
-Normalenform: Stützvektor 
+Normalenform:
+ Stützvektor 
 \begin_inset Formula $\underline{p}$
 \end_inset
 
@@ -5216,7 +5342,8 @@ literal "false"
 
 \end_inset
 
-, so existiert für 
+,
+ so existiert für 
 \begin_inset Formula $A$
 \end_inset
 
@@ -5232,7 +5359,8 @@ literal "false"
 \begin_inset Formula $H$
 \end_inset
 
-, eine orthogonale 
+,
+ eine orthogonale 
 \begin_inset Formula $n\times n$
 \end_inset
 
@@ -5410,7 +5538,8 @@ Bezeichnet man mit
 \begin_inset Formula $R_{11}\underline{y}_{1}=\underline{g}_{1}$
 \end_inset
 
-, so ist jede Lösung 
+,
+ so ist jede Lösung 
 \begin_inset Formula $\underline{x}_{0}$
 \end_inset
 
@@ -5421,6 +5550,7 @@ reference "eq:LSAllgemein"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -5456,7 +5586,8 @@ darstellbar.
 \begin_inset Formula $\underline{y}_{2}=\underline{0}$
 \end_inset
 
-, so erhält man die Lösung mit kleinster Nom 
+,
+ so erhält man die Lösung mit kleinster Nom 
 \begin_inset Formula $\left\Vert \underline{x}_{0}\right\Vert $
 \end_inset
 
@@ -5475,6 +5606,7 @@ reference "eq:LSAllgemein"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -5508,6 +5640,7 @@ reference "eq:Lösung-LS"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -5588,6 +5721,7 @@ reference "eq:HTB"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -5691,6 +5825,7 @@ reference "eq:LS"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -5770,6 +5905,7 @@ reference "eq:LösungspunkteSonneGedreht"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -5793,7 +5929,8 @@ Die Matrix
 \begin_inset Formula $U$
 \end_inset
 
-, in eine obere 
+,
+ in eine obere 
 \begin_inset Formula $M\times3$
 \end_inset
 
@@ -5840,6 +5977,8 @@ Orthogonalprojektion
 
 \begin_layout Plain Layout
 \begin_inset Float figure
+placement document
+alignment document
 wide false
 sideways false
 status open
@@ -5903,6 +6042,7 @@ reference "fig:Orthogonal"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -5994,8 +6134,9 @@ literal "false"
 
 \end_inset
 
-https://de.wikipedia.org/wiki/Drehmatrix; Abschnitt: Drehmatrizen des Raumes
- 
+https://de.wikipedia.org/wiki/Drehmatrix;
+ Abschnitt:
+ Drehmatrizen des Raumes 
 \begin_inset Formula $\mathbb{R}^{3}$
 \end_inset
 
@@ -6011,7 +6152,9 @@ literal "false"
 
 \end_inset
 
-https://de.wikipedia.org/wiki/Erdrotation; Abschnitt: Rotationsachse 
+https://de.wikipedia.org/wiki/Erdrotation;
+ Abschnitt:
+ Rotationsachse 
 \end_layout
 
 \begin_layout Bibliography
@@ -6035,8 +6178,9 @@ literal "false"
 
 \end_inset
 
-https://de.wikipedia.org/wiki/Kugelkoordinaten; Abschnitt: Andere Konventionen
- 
+https://de.wikipedia.org/wiki/Kugelkoordinaten;
+ Abschnitt:
+ Andere Konventionen 
 \end_layout
 
 \begin_layout Bibliography
@@ -6048,8 +6192,9 @@ literal "false"
 
 \end_inset
 
-https://de.wikipedia.org/wiki/Tangentialebene; Abschnitt: Tangentialebene
- an eine implizit gegebene Fläche 
+https://de.wikipedia.org/wiki/Tangentialebene;
+ Abschnitt:
+ Tangentialebene an eine implizit gegebene Fläche 
 \end_layout
 
 \begin_layout Bibliography
@@ -6061,8 +6206,9 @@ literal "false"
 
 \end_inset
 
-https://en.wikipedia.org/wiki/Parametric_derivative, Abschnitt: First derivative
- 
+https://en.wikipedia.org/wiki/Parametric_derivative,
+ Abschnitt:
+ First derivative 
 \end_layout
 
 \begin_layout Bibliography
@@ -6074,8 +6220,9 @@ literal "false"
 
 \end_inset
 
-https://de.wikipedia.org/wiki/Gleichschenkliges_Dreieck, Abschnitt: Berechnung
- und Konstruktion 
+https://de.wikipedia.org/wiki/Gleichschenkliges_Dreieck,
+ Abschnitt:
+ Berechnung und Konstruktion 
 \end_layout
 
 \begin_layout Bibliography
@@ -6087,8 +6234,7 @@ literal "false"
 
 \end_inset
 
-https://www.cactus2000.de/sun/city.php?id=Las+Palmas+de+Gran+Canaria&year=2021&mont
-h=10&c=ES 
+https://www.cactus2000.de/sun/city.php?id=Las+Palmas+de+Gran+Canaria&year=2021&month=10&c=ES 
 \end_layout
 
 \begin_layout Bibliography
@@ -6100,8 +6246,13 @@ literal "false"
 
 \end_inset
 
-Solving Least Squares Problems; Lawson, C.L.; Hanson, R.J.; SIAM Classics in
- Applied Mathematics 15; 1995 
+Solving Least Squares Problems;
+ Lawson,
+ C.L.;
+ Hanson,
+ R.J.;
+ SIAM Classics in Applied Mathematics 15;
+ 1995 
 \end_layout
 
 \begin_layout Bibliography
@@ -6113,8 +6264,9 @@ literal "false"
 
 \end_inset
 
-https://de.wikipedia.org/wiki/Koordinatenform; Abschnitt: Koordinatenform
- einer Ebenengleichung 
+https://de.wikipedia.org/wiki/Koordinatenform;
+ Abschnitt:
+ Koordinatenform einer Ebenengleichung 
 \end_layout
 
 \begin_layout Bibliography
