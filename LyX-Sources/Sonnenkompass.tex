@@ -1,0 +1,748 @@
+%% LyX 2.4.3 created this file.  For more info, see https://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[ngerman]{article}
+\usepackage{eulervm}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[latin9]{inputenc}
+\usepackage{color}
+\usepackage{cprotect}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{verbose,tmargin=1cm,bmargin=1.5cm,lmargin=2cm,rmargin=2cm}
+\usepackage{wasysym}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% A simple dot to overcome graphicx limitations
+\newcommand{\lyxdot}{.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\pagestyle{empty}
+% Added by lyx2lyx
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+\title{Sonnenkompass }
+\author{Jürgen Womser-Schütz, https://github.com/JW-Schuetz/SonnenKompass }
+\date{ }
+
+\maketitle
+\thispagestyle{empty} 
+
+\section*{Widmung }
+
+Für das Geburtstagskind Waldemar, meinem netten Gastgeber in Las Palmas,
+zu seinem 73. Geburtstag. 
+
+\section{Fragestellung }
+
+Wie ist die bekannte und unten beschriebene Methode, die Nord-Richtung
+per Sonnenstand zu bestimmen, zu bewerten? 
+
+\section{Methodenbeschreibung }
+
+Die folgenden Aktionen sind zur Durchführung der Methode notwendig 
+\begin{itemize}
+\item einen Stab senkrecht in die Erde stecken 
+\item warten bis die Sonne scheint 
+\item das Ende des Schattens des Stabes mit einen Stein markieren 
+\item einige Zeit abwarten bis der Schatten weiter gewandert ist 
+\item das neue Schattenende des Stabes mit einem zweiten Stein markieren. 
+\end{itemize}
+Man erhält dann die Nordrichtung mittels der folgenden Regeln\footnote{Die Methode wird in der Nähe der Pole scheitern, da das Stabende in
+Abhängigkeit der Jahreszeit evtl. keinen Schatten wirft (und natürlich
+auch, weil dort nicht immer Erde zum Hineinstecken des Stabes vorhanden
+ist $\smiley$). } 
+\begin{itemize}
+\item \label{R1}R1: der Schatten des Stab-Endes bewegt sich auf der Verbindungsgeraden
+der beiden Steine 
+\item \label{R2}R2: die Nordrichtung ist orthogonal zur Verbindungsgeraden 
+\item \label{R3}R3: auf der Nordhalbkugel der Erde zeigt der Schatten Richtung
+Norden, auf der Südhalbkugel Richtung Süden. 
+\end{itemize}
+
+\section{Vereinbarungen }
+
+Im folgenden werden Basiskenntnisse der Mathematik und Physik auf
+Abitur-Niveau des naturwissenschaftlichen Zweiges vorausgesetzt. 
+
+\bigskip{}
+
+Vektoren werden durch einen Unterstrich kenntlich gemacht ($\underline{x}$)
+und ihre Transponierten ($\underline{x}^{T}$) durch ein hochgestelltes
+$T$. Es wird die $L_{2}$-Norm $\left\Vert \underline{x}\right\Vert =\sqrt{\sum_{n}\left|x_{n}\right|^{2}}$
+benutzt. 
+
+Matrizen werden nicht besonders bezeichnet, sie sind von Skalaren
+durch den Kontext unterscheidbar. \bigskip{}
+
+Weiterhin werden Kugelkoordinaten $\left(r,\Theta,\varphi\right)$
+und kartesische Koordinaten $\left(x_{1},x_{2},x_{3}\right)$ verwendet,
+der Ursprung beider Koordinatensysteme ist der Erdmittelpunkt. Das
+kartesische Koordinatenpaar $\left(x_{1},x_{2}\right)$ spannt die
+Ekliptikalebene auf. Siehe dazu die Problemskizzen in den Abbildungen~\ref{fig:Problemskizze1}
+und \ref{fig:Problemskizze2}. 
+
+\section{\label{sec:Annahmen}Annahmen }
+
+Es werden die folgenden Annahmen getroffen: 
+\begin{itemize}
+\item die Sonne im Punkt $\underline{S}$ sei ein Punktstrahler 
+\item die Erde bewege sich in der Ekliptikalebene auf einer idealen Kreisbahn
+mit Radius $R_{S}$ um die Sonne 
+\item die Erde benötige 365 Tage für einen Umlauf um die Sonne 
+\item die Erdoberfläche habe ideale Kugelgestalt mit dem Radius $R_{E}$ 
+\item die Erd-Rotationsachse habe den Neigungswinkel $\psi=23.44{^\circ}$
+zu einer Achse, die orthogonal auf der Ekliptikalebene steht 
+\item die Erd-Präzession und Erd-Nutation werden vernachlässigt 
+\item im Punkt $\underline{P}$ der Erdoberfläche befinde sich der Fusspunkt
+des senkrecht orientierten Stabes der Länge $L$ 
+\item für die geographische Länge des Punktes $\underline{P}$ wird stets
+$\varphi=0$ angenommen 
+\item die Erdoberfläche um den Fusspunk des Stabes $\underline{P}$ herum
+werde durch eine Tangentialebene an die Erdkugel angenähert 
+\item es werden zwei Zeiten betrachtet: die Jahreszeit $T^{*}\in\left[0,365\right)$,
+gemessen in Tagen und die Tageszeit $t^{*}\in\left[0,24\right)$,
+gemessen in Stunden 
+\item der Ablauf der Tageszeit $t^{*}$ soll die Jahreszeit $T^{*}$ unbeeinflusst
+lassen, die beiden Zeiten seien also voneinander entkoppelt 
+\item die Sommersonnenwende (SSW) ist am 21. Juni, die Wintersonnenwende
+(WSW) ist am 21. Dezember. 
+\end{itemize}
+\begin{figure}[H]
+\includegraphics[viewport=0bp 0bp 769bp 259bp,clip,scale=0.65]{SonnenKompass}
+\caption{\label{fig:Problemskizze1}Problemskizze, SSW, astronomischer Mittag }
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[viewport=0bp 0bp 769bp 259bp,clip,scale=0.65]{SonnenKompass1}
+\caption{\label{fig:Problemskizze2}Problemskizze, WSW, astronomischer Mittag }
+
+\end{figure}
+
+\newpage{}
+
+\section{\label{sec:Generelles}Generelles zur Lösung }
+
+In der folgenden Arbeit soll der Verlauf des Schattens des Stabendpunktes
+als Funktion der Tageszeit für einen vorgegebenen Tag im Jahr berechnet
+werden. 
+
+Dazu wird zunächst für eine feste Tageszeit die Verbindungsgerade
+zwischen der Sonne und dem Endpunkt des Stabes konstruiert. Dann wird
+der Schnittpunkt der verlängerten Verbindungsgeraden mit der Tangentialebene
+der Erdoberfläche im Fusspunkt des Stabes bestimmt. Schlussendlich
+wird der gefundene Schnittpunkt im 3-dimensionalen Raum orthogonal
+auf die Tangentialebene projiziert. Man erhält damit die 2-dimensionale
+Darstellung des Schattenverlaufes mit gleicher Metrik. 
+
+\bigskip{}
+
+Es sind zwei äquivalente Lösungsansätze denkbar, die Rotation der
+Erde um ihre Rotationsachse zu berücksichtigen  
+\begin{itemize}
+\item \textcolor{blue}{\label{Fall 1}}Die Erde um den Winkel $\alpha$
+rotieren und die Sonne fixiert lassen. 
+\item \label{Fall 2}Den Ort der Sonne um den Winkel $-\alpha$ rotieren
+und die Erde fixiert lassen. 
+\end{itemize}
+Hier wird der zweite Fall gewählt. 
+
+\bigskip{}
+
+Zur Unterstützung der Problemlösung wird MatLab  und seine ,,Symbolic
+Math Toolbox`` verwendet. 
+
+Die MatLab-Quellen finden sich in meinem GitHub-Repository ,,Sonnenkompass``
+unter ,,https://github.com/JW-Schuetz`` im Unterverzeichnis ,,Matlab-Sources``. 
+
+\section{\label{sec:Erdrotation}Tageszeitabhängigkeit }
+
+Die tägliche Rotation der Erde um ihre Rotationsachse wird in Abhängigkeit
+des Rotationswinkels $\alpha\in\left[0,2\pi\right)$ durch die Drehmatrix
+(siehe dazu z.B.~\cite{Wikipedia1}) 
+
+\[
+D_{\alpha}=\begin{pmatrix}e_{1}^{2}\left(1-\cos\alpha\right)+\cos\alpha & e_{1}e_{2}\left(1-\cos\alpha\right)-e_{3}\sin\alpha & e_{1}e_{3}\left(1-\cos\alpha\right)+e_{2}\sin\alpha\\
+e_{2}e_{1}\left(1-\cos\alpha\right)+e_{3}\sin\alpha & e_{2}^{2}\left(1-\cos\alpha\right)+\cos\alpha & e_{2}e_{3}\left(1-\cos\alpha\right)-e_{1}\sin\alpha\\
+e_{3}e_{1}\left(1-\cos\alpha\right)-e_{2}\sin\alpha & e_{3}e_{2}\left(1-\cos\alpha\right)+e_{1}\sin\alpha & e_{3}^{2}\left(1-\cos\alpha\right)+\cos\alpha
+\end{pmatrix}
+\]
+
+beschrieben. Dabei ist 
+\[
+\underline{e}=\left(\begin{array}{c}
+e_{1}\\
+e_{2}\\
+e_{3}
+\end{array}\right)
+\]
+
+ein Vektor mit $\left\Vert \underline{e}\right\Vert =1$, der Richtung
+und Orientierung der Rotationsachse definiert. 
+
+Zum Zeitpunkt der SSW, am 21. Juni, liegt die Rotationsachse in der
+$\left(x_{1},x_{3}\right)$-Ebene (siehe die nicht massstäbliche Abbildung~\ref{fig:Problemskizze1}),
+der Einheitsvektor $\underline{e}$ ist somit zur SSW durch 
+\begin{align*}
+e_{1} & =\sin\psi\\
+e_{2} & =0\\
+e_{3} & =\cos\psi
+\end{align*}
+
+gegeben. Wegen des Erhaltungsatzes des Drehimpulses ist $\underline{e}$
+zeitinvariant. 
+
+Für die Drehmatrix folgt damit   
+\begin{eqnarray}
+D_{\alpha} & = & \begin{pmatrix}\sin^{2}\psi+\cos^{2}\psi\cos\alpha & -\cos\psi\sin\alpha & \sin\psi\cos\psi-\sin\psi\cos\psi\cos\alpha\\
+\cos\psi\sin\alpha & \cos\alpha & -\sin\psi\sin\alpha\\
+\sin\psi\cos\psi-\sin\psi\cos\psi\cos\alpha & \sin\psi\sin\alpha & \cos^{2}\psi+\sin^{2}\psi\cos\alpha
+\end{pmatrix}\label{eq:DrehmatrixAlpha}
+\end{eqnarray}
+
+der Winkel $\psi$ hat den numerischen Wert $\psi=23.44{^\circ}$
+(siehe dazu z.B.~\cite{Wikipedia2}). Die zum Rotationswinkel $\alpha$
+gehörige Tageszeit in Stunden ist durch 
+\begin{equation}
+t^{*}=\frac{12}{\pi}\alpha\label{eq:TagesZeit}
+\end{equation}
+gegeben. 
+
+\section{Jahreszeitabhängigkeit }
+
+Die Erde bewegt sich rechtshändig, also entgegen dem Uhrzeigersinn,
+um die Sonne (siehe dazu z.B.~\cite{Wikipedia3}, und die nicht massstäbliche
+Abbildung~\ref{fig:Erd-Jahres-Umlauf}). 
+
+In dieser Arbeit wird der jahreszeitliche Einfluss durch eine Kreisbewegung
+der Sonne um die als fixiert angenommene Erde berücksichtigt (siehe
+die Wahl in Abschnitt \ref{sec:Generelles}). Man kann deshalb im
+Erd-Koordinatensystem den Ort der Sonne als Funktion des jahreszeitlichen
+Umlaufwinkels 
+\begin{equation}
+\Omega=\frac{2\pi}{365}T^{*}\label{eq:Omega}
+\end{equation}
+durch 
+
+\begin{equation}
+\underline{S}=R_{S}\left(\begin{array}{c}
+\cos\Omega\\
+\sin\Omega\\
+0
+\end{array}\right)\label{eq:Ort der Sonne}
+\end{equation}
+
+beschreiben. Dabei ist $T^{*}\in\left[0,365\right)$ die Jahreszeit,
+gemessen in Tagen seit der SSW am 21. Juni.  
+
+\begin{figure}[H]
+\includegraphics[scale=0.3]{SonnenKompassTopHelp} \caption{\label{fig:Erd-Jahres-Umlauf}Umlauf der Erde um die Sonne }
+\end{figure}
+
+
+\section{Fuss- und Endpunkt des Stabes }
+
+\cprotect\subsection*{
+\begin{figure}[H]
+\protect\includegraphics[viewport=0bp 0bp 769bp 285bp,clip,scale=0.65]{SonnenKompass3}
+\protect\caption{\label{fig:Problemskizze3}Problemskizze, SSW, astronomischer Mittag}
+\end{figure}
+}
+
+Im $\left(x_{1}^{*},x_{2}^{*},x_{3}^{*}\right)$-Koordinatensystem
+der Problemskizze \ref{fig:Problemskizze3} ist die geographische
+Breite $\Theta_{G}$ des Stabfusspunktes gegeben, für den Polarwinkel
+gilt $\Theta^{*}=\frac{\pi}{2}-\Theta_{G}$. Im $\left(x_{1},x_{2},x_{3}\right)$-Koordinatensystem
+der Erde wird der Polarwinkel $\Theta$ des Stabfusspunktes um $\psi$
+grösser und es gilt 
+\begin{equation}
+\Theta=\frac{\pi}{2}-\left(\Theta_{G}-\psi\right).\label{eq:Theta}
+\end{equation}
+Für die Komponenten des Stab-Fusspunkts 
+\[
+\underline{P}=\left(p_{1},p_{2},p_{3}\right)^{T}
+\]
+gelten damit wegen der in Abschnitt \ref{sec:Annahmen} getroffenen
+Annahme $\varphi=0$ die Gleichungen 
+\begin{eqnarray}
+p_{1} & = & R_{E}\sin\Theta\label{eq:StabFusspunkt}\\
+p_{2} & = & 0\nonumber \\
+p_{3} & = & R_{E}\cos\Theta.\nonumber 
+\end{eqnarray}
+Mit der Stablänge $L$ gilt für den Stabendpunkt $\underline{Q}$
+\begin{equation}
+\underline{Q}=\left(1+\frac{L}{R_{E}}\right)\underline{P}.\label{eq:Endpunkt}
+\end{equation}
+
+
+\section{Tangentialebene $T$ }
+
+Die Kugel mit Radius $R_{E}$ um den Ursprung ist mit der Funktion
+\[
+f(x_{1},x_{2},x_{3})=\sum_{i}x_{i}^{2}-R_{E}^{2}
+\]
+
+durch die Gleichung $f(x_{1},x_{2},x_{3})=0$ gegeben. Für den Index
+gilt hier und im folgenden $i\in\left[1,3\right]$. 
+
+Für die Tangentialebene im Berührpunkt $\underline{P}=\left(p_{1},p_{2,}p_{3}\right)^{T}$
+gilt (siehe dazu z.B.~\cite{Wikipedia5}) 
+
+\[
+\sum_{i}\frac{\partial f}{\partial x_{i}}\left(x_{i}-p_{i}\right)=0.
+\]
+
+Die Ableitungen $\frac{\partial}{\partial x_{i}}$ sind im Berührpunkt
+$\underline{P}$ zu bilden. 
+
+Für die Kugel gilt 
+\begin{eqnarray*}
+\frac{\partial}{\partial x_{i}}x_{i}^{2} & = & 2x_{i}
+\end{eqnarray*}
+ und für die implizite Gleichung der Tangentialebene $T$ im Berührpunkt
+$\underline{P}$ folgt schliesslich der Ausdruck 
+\[
+\sum_{i}p_{i}\left(x_{i}-p_{i}\right)=0.
+\]
+
+In vektorieller Schreibweise lässt sich die Tangentialebene im Erd-Koordinatensystem
+durch 
+
+\begin{equation}
+\underline{P}^{T}\left(\underline{x}-\underline{P}\right)=\left(\underline{P}-\underline{x}\right)^{T}\underline{P}=0\label{eq:Tangentialebene}
+\end{equation}
+
+charakterisieren. 
+
+\section{Verbindungsgerade }
+
+Die Punkte der Verbindungsgerade $G$ der Sonne $\underline{S}$,
+nach Gleichung~(\ref{eq:Ort der Sonne}), mit dem Stabende $\underline{Q}$,
+nach Gleichung~(\ref{eq:Endpunkt}), sind durch 
+
+\begin{equation}
+\underline{x}=\mu\underline{Q}+\left(1-\mu\right)\underline{S}\label{eq:Verbindungsgerade}
+\end{equation}
+
+gegeben. Der reelle Geradenparameter $\mu$ beschreibt für $\mu=0$
+den Punkt $\underline{S}$ (also die Sonne) und für $\mu=1$ den Punkt
+$\underline{Q}$ (also das Stabende). 
+
+\section{Analytische Problemlösung }
+
+\subsection{\label{sec:FixierungErde}Lösung durch Fixierung der Erde }
+
+Berücksichtigt man die Drehung der Sonne durch die Drehmatrix $D_{\left(-\alpha\right)}$
+nach Gleichung~(\ref{eq:DrehmatrixAlpha}) und fixiert die Erde,
+dann folgt für den Ort der Sonne 
+\begin{equation}
+\underline{S}\left(\alpha\right)=D_{\left(-\alpha\right)}\underline{S}\label{eq:GedrehterSonnenOrt}
+\end{equation}
+und aus Gleichung~(\ref{eq:Verbindungsgerade}) die Darstellung 
+
+\begin{equation}
+\underline{x}=\mu\underline{Q}+\left(1-\mu\right)\underline{S}\left(\alpha\right).\label{eq:GesuchterPunktSonneGedreht}
+\end{equation}
+
+Gesucht ist der Schnittpunkt dieser Geraden mit der Tangentialebene
+$T$ oder anders formuliert, gesucht wird der Geradenparameter $\mu$,
+der eine Lösung $\underline{x}$ der Gleichung~(\ref{eq:Tangentialebene})
+zulässt. 
+
+\subsubsection{\label{subsec:L=0000F6sungspunkt}Lösungspunkt }
+
+Einsetzen von Gleichung~(\ref{eq:GesuchterPunktSonneGedreht}) in
+Gleichung~(\ref{eq:Tangentialebene}) liefert 
+\[
+\underline{P}^{T}\left[\mu\underline{Q}+\left(1-\mu\right)\underline{S}\left(\alpha\right)-\underline{P}\right]=0.
+\]
+
+Wegen $\underline{P}^{T}\underline{P}=R_{E}^{2}$ folgt nach kurzer
+Rechnung die Bestimmungsgleichung für den Geradenparameter  
+\begin{equation}
+\mu_{0}\left(\alpha\right)=\frac{\varOmega^{S}\left(\alpha\right)}{1+\varOmega^{S}\left(\alpha\right)}\label{eq:L=0000F6sungsgleichungSonneGedreht}
+\end{equation}
+
+mit der Abkürzung 
+
+\begin{equation}
+\varOmega^{S}\left(\alpha\right)=\frac{R_{E}}{L}-\frac{\underline{P}^{T}\underline{S}\left(\alpha\right)}{LR_{E}}.\label{eq:OmegaS}
+\end{equation}
+
+Da im Ausdruck der Verbindungsgeraden mit $\mu=0$ die Sonne und mit
+$\mu=1$ das Stabende beschrieben wird, muss $\mu_{0}\left(\alpha\right)>1$,
+und damit $\varOmega^{S}\left(\alpha\right)<-1$ gelten.  
+
+Der gesuchte Lösungspunkt $\underline{x}_{0}$ ergibt sich als Funktion
+des Drehwinkels $\alpha$ mit dem nach Gleichung~(\ref{eq:L=0000F6sungsgleichungSonneGedreht})
+bestimmten $\mu_{0}\left(\alpha\right)$ zu 
+
+\begin{equation}
+\underline{x}_{0}^{S}\left(\alpha\right)=\mu_{0}\left(\alpha\right)\underline{Q}+\left[1-\mu_{0}\left(\alpha\right)\right]\underline{S}\left(\alpha\right).\label{eq:L=0000F6sungspunkteSonneGedreht}
+\end{equation}
+
+Die mit dem Winkel $\alpha$ parametrierten Lösungspunkte $\underline{x}_{0}^{S}\left(\alpha\right)$
+bilden eine Trajektorie im $\mathbb{R}^{3}$. 
+
+\subsubsection{Die zweidimensionale Trajektorie }
+
+Die gefundenen 3-dimensionalen Trajektorienpunkte $\underline{x}_{0}^{S}\left(\alpha\right)$
+der Gleichung~(\ref{eq:L=0000F6sungspunkteSonneGedreht}) sind im
+Koordinatensystem $\left(x_{1},x_{2},x_{3}\right)$ der Erde gegeben.
+Sie sollen orthogonal auf ein zweidimensionales Koordinatensystem
+der Tangentialebene $T$ abgebildet werden, dessen Ursprung im Stabfusspunkt
+$\underline{P}$ liegen soll.  
+
+Zur Bestimmung dieser Abbildung wird der Punkt $\underline{P}$ und
+die Trajektorienpunkte $\underline{x}_{0}^{S}\left(\alpha\right)$
+gemeinsam so gedreht, dass $\underline{P}$ auf der positiven Achse
+der $x_{1}$-Koordinate zu liegen kommt. Anschliessend werden die
+gedrehten Trajektorienpunkte orthogonal auf die $\left(x_{2},x_{3}\right)$-Ebene
+projiziert. 
+
+Da vorausgesetzt wurde, dass $\varphi=0$ gilt (siehe Abschnitt \ref{sec:Annahmen}),
+genügt es, $\underline{P}$ so um die $x_{2}$-Achse zu drehen, dass
+er in der Ekliptik zu liegen kommt. Eine allgemeine Drehung um den
+Winkel $\varPhi$ um die $x_{2}$-Achse wird nach~\cite{Wikipedia1}
+durch die Drehmatrix 
+\[
+D_{\varPhi}^{x_{2}}=\left(\begin{array}{ccc}
+\cos\varPhi & 0 & \sin\varPhi\\
+0 & 1 & 0\\
+-\sin\varPhi & 0 & \cos\varPhi
+\end{array}\right)
+\]
+beschrieben. Der hier benötigte Drehwinkel um die $x_{2}$-Achse ist
+$\frac{\pi}{2}-\Theta$. Der Punkt $\underline{P}$ wird durch diese
+Drehung auf $x_{1}=R_{E}$ und $x_{2}=x_{3}=0$ abgebildet (siehe
+Unterabschnitt \ref{subsec:Abbildung-Punkt-P} im Anhang). 
+
+Die 3-dimensionalen gedrehten Trajektorienpunkte $D_{\left(\frac{\pi}{2}-\Theta\right)}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right)$
+können nun mittels der Projektionsabbildung 
+\[
+A=\left(\begin{array}{ccc}
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right)
+\]
+
+auf die $\left(x_{2},x_{3}\right)$-Ebene bzw. die Tangentialebene
+$T$ projiziert werden. Die Koordinaten des Bildes der Projektion
+$\underline{y}$ werden mit $\left(y_{1},y_{2}\right)$ bezeichnet. 
+
+Es ergibt sich schliesslich für die Punkte der gesuchten zweidimensionalen
+Trajektorie die Gleichung 
+\begin{equation}
+\underline{y}\left(\alpha\right)=AD_{\left(\frac{\pi}{2}-\Theta\right)}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right).\label{eq:Trajektorie2Dim}
+\end{equation}
+
+Es sei daran erinnert, dass der Drehwinkel $\alpha$ durch die Beziehung~(\ref{eq:TagesZeit})
+mit der Tageszeit $t^{*}$ verknüpft ist. 
+
+\subsubsection{Der astronomische Mittag }
+
+Für die 2-dimensionalen Trajektorien gibt es ein Abstandsminimum zum
+Stabfusspunkt, das per Definition zum Zeitpunkt $t_{M}^{*}$ des astronomischen
+Mittags erreicht wird. Der zugehörige Winkel $\alpha_{M}$ wird im
+Anhang (siehe Unterabschnitt \ref{subsec:Astronomischer-Mittag})
+bestimmt. 
+
+\subsubsection{Symmetrien }
+
+Bei der Projektion auf die Tangentialebene nach Gleichung (\ref{eq:Trajektorie2Dim})
+ist zu beachten, dass für das Sommerhalbjahr die Projektion ,,von
+vorne`` (also mit positiven Werten der $x_{1}$-Koordinate) stattfindet
+und im Winterhalbjahr ,,von hinten`` (also mit negativen Werten
+der $x_{1}$-Koordinate) - siehe dazu die beiden Abbildungen~\ref{fig:Problemskizze1}
+und~\ref{fig:Problemskizze2}. Dies bedeutet eine Spiegelung der
+2-dimensionalen Trajektorien an der $y_{2}$-Achse. 
+
+Im Anhang (siehe Unterabschnitt \ref{subsec:Symmetrie}) werden die
+Symmetrieeigenschaften der Komponenten der 3-dimensionalen Trajektorien
+bezüglich des astronomischen Mittags behandelt. Die gerade Symmetrie
+der 2-dimensionalen Trajektorien wird daraus abgeleitet. Das Problem
+der Projektion ,,von vorne`` versus ,,von hinten`` entfällt dadurch. 
+
+\section{Ergebnisse }
+
+\subsection{Las Palmas de Gran Canaria }
+
+\subsubsection{Vergleich mit empirisch ermittelten Resultaten }
+
+Abbildung~\ref{fig:Schattentrajektorie} zeigt die berechnete Schattentrajektorie
+für Las Palmas am 12. Oktober. Die Koordinaten der beiden markierten
+Punkte (13:28 Uhr und 13:48 Uhr Ortszeit) sind dargestellt, ihr geometrischer
+Abstand beträgt 16.16 cm, ihr zeitlicher Abstand beträgt 20 Minuten.
+Für die Stablänge wurde 1.5 m angenommen. 
+\begin{figure}[H]
+\includegraphics[scale=0.5]{LasPalmas-12\lyxdot 10\lyxdot 2021} \caption{\label{fig:Schattentrajektorie}Schattentrajektorie am 12. Oktober
+in Las Palmas. Der Sonnenhöchststand ist an diesem Tag in Las Palmas
+um 13:48 Uhr (siehe z.B.  \cite{Cactus2000}). }
+\end{figure}
+ 
+
+Korrespondierend zur Abbildung~\ref{fig:Schattentrajektorie} sind
+in Las Palmas am 12. Oktober 2021 die nachfolgenden Fotos entstanden. 
+
+\begin{figure}[H]
+\includegraphics[viewport=0bp 0bp 900bp 1200bp,scale=0.23]{LasPalmas-12.10.2021-13Uhr33.jpeg}
+\includegraphics[viewport=0bp 0bp 900bp 1200bp,scale=0.23]{LasPalmas-12.10.2021-13Uhr55.jpeg}
+\caption{\label{fig:SchattenFotos}Schatten in Las Palmas am 12. Oktober 2021
+um 13:33 Uhr und um 13:55 Uhr Ortszeit }
+\end{figure}
+
+Im ersten der beiden Fotos der Abbildung~\ref{fig:SchattenFotos}
+sieht man am unteren Bildrand das gelbe Fussende des Stabes. Der Zeitunterschied
+beider Aufnahmen beträgt 22 Minuten. In dieser Zeit ist der Schatten
+ca. 20 cm weiter gewandert. Dieses Ergebnis passt recht gut zum rechnerisch
+ermittelten Abstand von ca. 17 cm\footnote{Leider habe ich vor Ort weder die genaue Länge des Stabes noch die
+genaue Länge der Trajektorie gemessen.}. 
+
+\subsubsection{SSW und WSW }
+
+Die Schattentrajektorie und den Standort des Stabes für den Strand
+in Las Palmas (28.136683° Breite, -15.438392° Länge, nach \cite{GoogleMaps})
+für die SSW am 21. Juni findet sich in der Abbildung~\ref{fig:SchattentrajektorieSSW}
+- die WSW unterscheidet sich nicht. 
+
+\begin{figure}[H]
+\includegraphics[scale=0.5]{LasPalmas-21\lyxdot 06\lyxdot 2021} \caption{\label{fig:SchattentrajektorieSSW}Schattentrajektorie zur SSW am
+21. Juni in Las Palmas }
+\end{figure}
+ 
+
+\subsubsection{Frühlings- und Herbst-Äquinoktikum }
+
+\begin{figure}[H]
+\includegraphics[scale=0.5]{LasPalmas-21\lyxdot 03\lyxdot 2021} \caption{\label{fig:SchattentrajektorieFAE}Schattentrajektorie zum Frühlings-Äquinoktikum
+am 21. März in Las Palmas }
+\end{figure}
+ 
+
+Abbildung~\ref{fig:SchattentrajektorieFAE} zeigt die berechnete
+Schattentrajektorie für den 21. März, dem Frühlings-Äquinoktikum -
+das Herbst-Äquinoktikum hat eine identische Trajektorie. 
+
+\section{Bewertung der Methode }
+
+Die oben beschriebenen Methode zur Bestimmung der Nord-Richtung funktioniert,
+falls man den Neigungswinkel $\psi$ der Erd-Rotationsachse zu einer
+Achse orthogonal zur Ekliptikalebene zu $0{^\circ}$ annimmt. In der
+Realität ist dieser Neigungswinkel aber nicht gleich $0{^\circ}$
+sondern $\psi=23.44{^\circ}$. 
+
+Die Schattentrajektorie ist deshalb keine Gerade - und das nicht einmal
+näherungsweise. 
+
+Die dadurch verursachte Missweisung zur Nordrichtung ist nicht vernachlässigbar!
+Sie kann z.B. in Las Palmas je nach Tages- und Jahreszeit bis zu 45°
+betragen. 
+
+Die genaue Nordrichtung erhält man mit der beschriebenen Methode jedoch,
+wenn man Zeitpunkte untersucht, die symmetrisch um den Zeitpunkt des
+astronomischen Mittags liegen. Als zusätzliche Hilfsmittel werden
+neben den beiden Steinen und dem Stab weitere Steine sowie eine Uhr
+benötigt. 
+
+\newpage{}
+
+\section{\label{sec:Anhang}Anhang }
+
+In diesem Anhang werden Nebenrechnungen und Überprüfungen dargestellt,
+die den obigen Gedankenfluss zu sehr gestört hätten. 
+
+\subsection{\label{subsec:Abbildung-Punkt-P}Zur Abbildung des Punktes $\underline{P}$ }
+
+Der Stabfusspunkt $\underline{P}$ wird durch die Drehung $D_{\left(\frac{\pi}{2}-\Theta\right)}^{x_{2}}$
+auf $x_{1}=R_{E}$ und $x_{2}=x_{3}=0$ abgebildet, denn es gilt mit
+Gleichung (\ref{eq:StabFusspunkt}) 
+\begin{eqnarray*}
+D_{\left(\frac{\pi}{2}-\Theta\right)}^{x_{2}}\underline{P} & = & \left(\begin{array}{ccc}
+\cos\left(\frac{\pi}{2}-\Theta\right) & 0 & \sin\left(\frac{\pi}{2}-\Theta\right)\\
+0 & 1 & 0\\
+-\sin\left(\frac{\pi}{2}-\Theta\right) & 0 & \cos\left(\frac{\pi}{2}-\Theta\right)
+\end{array}\right)\left(\begin{array}{c}
+R_{E}\sin\Theta\\
+0\\
+R_{E}\cos\Theta
+\end{array}\right)\\
+ & = & R_{E}\left(\begin{array}{c}
+\cos\left(\frac{\pi}{2}-\Theta\right)\sin\Theta+\sin\left(\frac{\pi}{2}-\Theta\right)\cos\Theta\\
+0\\
+-\sin\left(\frac{\pi}{2}-\Theta\right)\sin\Theta+\cos\left(\frac{\pi}{2}-\Theta\right)\cos\Theta
+\end{array}\right)\\
+ & = & R_{E}\left(\begin{array}{c}
+1\\
+0\\
+0
+\end{array}\right).
+\end{eqnarray*}
+
+
+\subsection{\label{subsec:Astronomischer-Mittag}Der astronomische Mittag }
+
+\subsubsection{Die Näherung für $\psi=0$ }
+
+Es soll nun noch für jeden Jahreszeitpunkt $T^{*}$ eine Näherung
+$\overline{\alpha}_{M}$ für den Tageszeit-Rotationswinkel $\alpha$
+angegeben werden, so dass sich gerade der Sonnenhöchststand (der astronomische
+Mittag) einstellt. 
+
+\begin{figure}[H]
+\includegraphics[scale=0.3]{SonnenKompassTopHelp1} \caption{\label{fig:Sonnen-Jahres-Umlauf}Umlauf der Sonne um die Erde }
+\end{figure}
+
+Wie man der Abbildung \ref{fig:Sonnen-Jahres-Umlauf}) entnehmen kann,
+gilt im Fall $\psi=0$ die Näherung 
+\[
+\overline{\alpha}_{M}=\Omega.
+\]
+
+
+\subsubsection{Der exakte Wert für $\psi\protect\neq0$ }
+
+Der exakte Wert $\alpha_{M}$ für $\psi\neq0$ wird aus der Steigung
+der 2-dimensionalen Trajektorie $\left(\begin{array}{c}
+y_{1}\left(\alpha\right)\\
+y_{2}\left(\alpha\right)
+\end{array}\right)$ nach Gleichung (\ref{eq:Trajektorie2Dim}) bestimmt. Die Steigung
+$S\left(x\right)$ errechnet sich zu (siehe dazu z.B. \cite{Wikipedia6})
+\begin{eqnarray}
+S\left(x\right) & = & \frac{dy_{2}\left(x\right)}{dy_{1}}=\frac{\frac{\partial y_{2}\left(\alpha\right)}{\partial\alpha}}{\frac{\partial y_{1}\left(\alpha\right)}{\partial\alpha}}.\label{eq:SteigungAllgemein}
+\end{eqnarray}
+
+Dieser (eher etwas längliche $\smiley$) Ausdruck wird mittels der
+,,Symbolic Math Toolbox`` von MatLab berechnet (siehe dazu die MatLab-Quelldatei
+,,SonnenKompassSymbolic.m``). Aus ihm folgt die notwendige Bedingung
+für das Verschwinden der Steigung 
+\[
+\sin\Omega\cos\alpha_{M}-\cos\Omega\cos\psi\sin\alpha_{M}=0.
+\]
+
+Mit $n\in\mathbb{N}$ ist also der astronomische Mittag durch den
+Erdrotationswinkel 
+
+\begin{eqnarray}
+\alpha_{M} & = & \arctan\left(\frac{\tan\Omega}{\cos\psi}\right)+n\pi\label{eq:AlphaM}
+\end{eqnarray}
+
+gekennzeichnet. 
+
+Für $\psi=0$ stimmt die Näherung $\overline{\alpha}_{M}$ mit dem
+Hauptwert von $\alpha_{M}$ überein. 
+
+\subsection{\label{subsec:Symmetrie}Symmetrie der 2-dimensionalen Trajektorie }
+
+Hier soll gezeigt werden, dass die 2-dimensionalen Trajektorien unter
+den getroffenen Annahmen des Abschnittes \ref{sec:Annahmen} eine
+gerade Symmetrie zum astronomischen Mittag $\alpha_{M}$ der $y_{2}$-Achse
+besitzen. 
+
+\subsubsection{Behauptung }
+
+Es gelten für die Trajektorienkomponenten nach Gleichung (\ref{eq:L=0000F6sungspunkteSonneGedreht})
+mit den Abkürzungen 
+
+\begin{eqnarray*}
+\underline{x}_{0}^{S}\left(\alpha\right) & = & \left[\begin{array}{c}
+x_{1}^{S}\left(\alpha\right)\\
+x_{2}^{S}\left(\alpha\right)\\
+x_{3}^{S}\left(\alpha\right)
+\end{array}\right]
+\end{eqnarray*}
+
+für ein geeignetes $\Delta\in\mathbb{R}$ die Symmetriebeziehungen
+\begin{eqnarray}
+x_{1}^{S}\left(\alpha_{M}-\Delta\right) & = & x_{1}^{S}\left(\alpha_{M}+\Delta\right)\label{eq:BehaupteteSymmetrie}\\
+x_{2}^{S}\left(\alpha_{M}-\Delta\right) & = & -x_{2}^{S}\left(\alpha_{M}+\Delta\right)\nonumber \\
+x_{3}^{S}\left(\alpha_{M}-\Delta\right) & = & x_{3}^{S}\left(\alpha_{M}+\Delta\right).\nonumber 
+\end{eqnarray}
+
+Damit folgt die gerade Symmetrie der $y_{2}$-Komponente der 2-dimensionalen
+Trajektorie 
+
+\[
+y_{2}\left(\alpha_{M}-\Delta\right)=y_{2}\left(\alpha_{M}+\Delta\right).
+\]
+
+
+\subsubsection{Nachweis }
+
+Der Nachweis der behaupteten Symmetrie für $\underline{x}_{0}^{S}\left(\alpha\right)$
+im Punkt $\alpha=\alpha_{M}$ nach den Gleichungen (\ref{eq:BehaupteteSymmetrie})
+erfolgt mit der ,,Symbolic Math Toolbox`` von MatLab (siehe dazu
+die MatLab-Quelldatei ,,SonnenkompassSymbolic.m``, Funktion ,,symmetrieTest()``). 
+
+Mit Gleichung (\ref{eq:Trajektorie2Dim}) folgt daraus 
+\begin{eqnarray*}
+\underline{y}\left(\alpha\right) & = & AD_{\Theta}^{x_{2}}\underline{x}_{0}^{S}\left(\alpha\right)\\
+ & = & \left(\begin{array}{ccc}
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right)\left(\begin{array}{ccc}
+\cos\Theta & 0 & \sin\Theta\\
+0 & 1 & 0\\
+-\sin\Theta & 0 & \cos\Theta
+\end{array}\right)\underline{x}_{0}^{S}\left(\alpha\right)\\
+ & = & \left(\begin{array}{c}
+x_{2}^{S}\left(\alpha\right)\\
+\cos\Theta x_{3}^{S}\left(\alpha\right)
+\end{array}\right).
+\end{eqnarray*}
+
+Die Komponente $y_{1}\left(\alpha\right)$ ist also wegen $x_{2}^{S}\left(\alpha\right)$
+ungerade bezüglich $\alpha=\alpha_{M}$ und die Komponente $y_{2}\left(\alpha\right)$
+ist wegen $x_{3}^{S}\left(\alpha\right)$ gerade. 
+
+ 
+
+ 
+
+ 
+
+ 
+\begin{thebibliography}{10}
+\bibitem[1]{Wikipedia1}https://de.wikipedia.org/wiki/Drehmatrix;
+Abschnitt: Drehmatrizen des Raumes $\mathbb{R}^{3}$ 
+
+\bibitem[2]{Wikipedia2}https://de.wikipedia.org/wiki/Erdrotation;
+Abschnitt: Rotationsachse 
+
+\bibitem[3]{Wikipedia3}https://de.wikipedia.org/wiki/Erdrotation 
+
+\bibitem[4]{Wikipedia4}https://de.wikipedia.org/wiki/Kugelkoordinaten;
+Abschnitt: Andere Konventionen 
+
+\bibitem[5]{Wikipedia5}https://de.wikipedia.org/wiki/Tangentialebene;
+Abschnitt: Tangentialebene an eine implizit gegebene Fläche 
+
+\bibitem[6]{Wikipedia6}https://en.wikipedia.org/wiki/Parametric\_derivative,
+Abschnitt: First derivative 
+
+\bibitem[7]{Wikipedia7}https://de.wikipedia.org/wiki/Gleichschenkliges\_Dreieck,
+Abschnitt: Berechnung und Konstruktion 
+
+\bibitem[8]{Cactus2000}https://www.cactus2000.de/sun/city.php?id=Las+Palmas+de+Gran+Canaria\&year=2021\&month=10\&c=ES 
+
+\bibitem[9]{SIAM}Solving Least Squares Problems; Lawson, C.L.; Hanson,
+R.J.; SIAM Classics in Applied Mathematics 15; 1995 
+
+\bibitem[10]{Wikipedia10}https://de.wikipedia.org/wiki/Koordinatenform;
+Abschnitt: Koordinatenform einer Ebenengleichung 
+
+\bibitem[11]{GoogleMaps}https://www.google.de/maps
+
+\end{thebibliography}
+
+\end{document}
